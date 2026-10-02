@@ -8,7 +8,11 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 option(LMS_BUILD_TESTS "Build the tests" ON)
 option(LMS_COVERAGE "Build with coverage flags" OFF)
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(SODIUM REQUIRED IMPORTED_TARGET libsodium)
+
 add_subdirectory(src/domain)
+add_subdirectory(src/data)
 
 if(LMS_BUILD_TESTS)
   enable_testing()
