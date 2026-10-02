@@ -49,6 +49,7 @@ jobs:
             mingw-w64-ucrt-x86_64-ninja
             mingw-w64-ucrt-x86_64-gtest
             mingw-w64-ucrt-x86_64-libsodium
+            mingw-w64-ucrt-x86_64-sqlite3
             mingw-w64-ucrt-x86_64-pkgconf
 
       - name: Configure
