@@ -9,7 +9,9 @@ add_library(lms_domain STATIC
   Extension.cpp
   Assignment.cpp
   Course.cpp
-  TenPercentPerDayPenalty.cpp)
+  TenPercentPerDayPenalty.cpp
+  TimeFormat.cpp
+  MarkAuditEntry.cpp)
 target_include_directories(lms_domain PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_options(lms_domain PRIVATE -Wall -Wextra -Wpedantic)
 

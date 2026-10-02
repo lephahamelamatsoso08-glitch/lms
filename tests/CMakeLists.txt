@@ -9,7 +9,7 @@ if(NOT GTest_FOUND)
   FetchContent_MakeAvailable(googletest)
 endif()
 
-add_executable(domain_tests PenaltyTests.cpp UserTests.cpp SubmissionTests.cpp LateDaysTests.cpp AssignmentTests.cpp)
+add_executable(domain_tests PenaltyTests.cpp UserTests.cpp SubmissionTests.cpp LateDaysTests.cpp AssignmentTests.cpp TimeFormatTests.cpp)
 target_link_libraries(domain_tests PRIVATE lms_domain GTest::gtest_main)
 
 include(GoogleTest)
@@ -21,7 +21,7 @@ gtest_discover_tests(data_tests)
 
 target_compile_definitions(data_tests PRIVATE LMS_SCHEMA_PATH="${CMAKE_SOURCE_DIR}/db/schema.sql")
 
-add_executable(app_tests AuthServiceTests.cpp)
+add_executable(app_tests AuthServiceTests.cpp AuditTests.cpp)
 target_link_libraries(app_tests PRIVATE lms_application lms_data GTest::gtest_main)
 target_compile_definitions(app_tests PRIVATE LMS_SCHEMA_PATH="${CMAKE_SOURCE_DIR}/db/schema.sql")
 gtest_discover_tests(app_tests)
