@@ -18,6 +18,7 @@ endif()
 
 add_subdirectory(src/domain)
 add_subdirectory(src/data)
+add_subdirectory(src/application)
 
 if(LMS_BUILD_TESTS)
   enable_testing()

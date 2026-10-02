@@ -20,3 +20,8 @@ target_link_libraries(data_tests PRIVATE lms_data GTest::gtest_main)
 gtest_discover_tests(data_tests)
 
 target_compile_definitions(data_tests PRIVATE LMS_SCHEMA_PATH="${CMAKE_SOURCE_DIR}/db/schema.sql")
+
+add_executable(app_tests AuthServiceTests.cpp)
+target_link_libraries(app_tests PRIVATE lms_application lms_data GTest::gtest_main)
+target_compile_definitions(app_tests PRIVATE LMS_SCHEMA_PATH="${CMAKE_SOURCE_DIR}/db/schema.sql")
+gtest_discover_tests(app_tests)
