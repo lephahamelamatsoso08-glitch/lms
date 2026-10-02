@@ -6,6 +6,9 @@ add_library(lms_domain STATIC
   SubmissionStatus.cpp
   Submission.cpp
   LateDays.cpp
+  Extension.cpp
+  Assignment.cpp
+  Course.cpp
   TenPercentPerDayPenalty.cpp)
 target_include_directories(lms_domain PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_options(lms_domain PRIVATE -Wall -Wextra -Wpedantic)
