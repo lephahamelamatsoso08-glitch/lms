@@ -5,7 +5,7 @@ Language: C++17. Based on the C++ Core Guidelines.
 ## Naming and files
 - Classes and enums: `PascalCase`. Functions and variables: `camelCase`.
 - Private data members end with an underscore (`ratePerDay_`).
-- One class per header and source file, named after the class. Use `#pragma once`.
+- One class per header and source file, named after the class (the four small user-role classes share `UserRoles.h` and `UserRoles.cpp`). Use `#pragma once`.
 - Namespaces follow the layers: `lms::domain`, `lms::application`, `lms::data`, `lms::ui`.
 
 ## Architecture rules

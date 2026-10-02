@@ -9,7 +9,7 @@ if(NOT GTest_FOUND)
   FetchContent_MakeAvailable(googletest)
 endif()
 
-add_executable(domain_tests PenaltyTests.cpp)
+add_executable(domain_tests PenaltyTests.cpp UserTests.cpp)
 target_link_libraries(domain_tests PRIVATE lms_domain GTest::gtest_main)
 
 include(GoogleTest)
