@@ -11,6 +11,11 @@ option(LMS_COVERAGE "Build with coverage flags" OFF)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(SODIUM REQUIRED IMPORTED_TARGET libsodium)
 
+find_package(SQLite3 REQUIRED)
+if(NOT TARGET SQLite3::SQLite3)
+  add_library(SQLite3::SQLite3 ALIAS SQLite::SQLite3)
+endif()
+
 add_subdirectory(src/domain)
 add_subdirectory(src/data)
 
