@@ -15,7 +15,7 @@ target_link_libraries(domain_tests PRIVATE lms_domain GTest::gtest_main)
 include(GoogleTest)
 gtest_discover_tests(domain_tests)
 
-add_executable(data_tests Argon2Tests.cpp DatabaseTests.cpp)
+add_executable(data_tests Argon2Tests.cpp DatabaseTests.cpp SqliteUserRepositoryTests.cpp)
 target_link_libraries(data_tests PRIVATE lms_data GTest::gtest_main)
 gtest_discover_tests(data_tests)
 
