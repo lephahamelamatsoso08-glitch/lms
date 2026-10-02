@@ -3,6 +3,8 @@ add_library(lms_domain STATIC
   User.cpp
   UserRoles.cpp
   UserFactory.cpp
+  SubmissionStatus.cpp
+  Submission.cpp
   TenPercentPerDayPenalty.cpp)
 target_include_directories(lms_domain PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_options(lms_domain PRIVATE -Wall -Wextra -Wpedantic)
