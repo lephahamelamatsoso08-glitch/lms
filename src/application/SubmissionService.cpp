@@ -36,19 +36,25 @@ bool hasAllowedExtension(const std::string& path) {
                        [&extension](const char* a) { return extension == a; });
 }
 
+bool isBlank(const std::string& text) {
+    return text.find_first_not_of(" \t\r\n") == std::string::npos;
+}
+
 }  // namespace
 
 SubmissionService::SubmissionService(lms::domain::ISubmissionRepository& submissions,
                                      const lms::domain::IAssignmentRepository& assignments,
                                      const lms::domain::ICourseRepository& courses,
                                      const lms::domain::IPenaltyStrategy& penalty,
-                                     AuditService& audit, Clock clock)
+                                     AuditService& audit, Clock clock,
+                                     lms::domain::ITransactionRunner* transactions)
     : submissions_(submissions),
       assignments_(assignments),
       courses_(courses),
       penalty_(penalty),
       audit_(audit),
-      clock_(std::move(clock)) {
+      clock_(std::move(clock)),
+      transactions_(transactions) {
     if (!clock_) {
         clock_ = &SubmissionService::systemNow;
     }
@@ -111,6 +117,51 @@ SubmitResult SubmissionService::submit(const User& student, int assignmentId,
     const int id = submissions_.add(Submission(0, assignmentId, student.id(), status, lateDays),
                                     version);
     return SubmitResult{*submissions_.findById(id), 1, false, highestPossible};
+}
+
+double SubmissionService::mark(const User& lecturer, int submissionId, double rawMark,
+                               const std::string& feedback, const std::string& reason) {
+    if (!lecturer.canPerform(Action::MarkSubmission)) {
+        throw AccessDeniedError("Only lecturers can mark work.");
+    }
+    const std::optional<Submission> found = submissions_.findById(submissionId);
+    if (!found) {
+        throw std::invalid_argument("Submission not found.");
+    }
+    const std::optional<Assignment> assignment = assignments_.findById(found->assignmentId());
+    if (!assignment) {
+        throw std::invalid_argument("Assignment not found.");
+    }
+    if (!courses_.isLecturerAssigned(lecturer.id(), assignment->courseId())) {
+        throw AccessDeniedError("You do not teach this course.");
+    }
+    if (rawMark < 0.0 || rawMark > assignment->maxMark()) {
+        throw std::invalid_argument("The mark must be between 0 and the maximum mark.");
+    }
+
+    const std::optional<double> oldValue = found->finalMark();
+    if (oldValue && isBlank(reason)) {
+        throw std::invalid_argument("A re-mark needs a reason.");
+    }
+    const std::string auditReason = isBlank(reason) ? "Initial mark" : reason;
+
+    // The late penalty is applied here (rule C3). The raw mark is kept as well.
+    const double finalMark =
+        penalty_.finalMark(rawMark, assignment->maxMark(), found->lateDays());
+
+    Submission updated = *found;
+    updated.applyMark(rawMark, finalMark, feedback);  // checks status and feedback
+
+    const auto saveBoth = [&]() {
+        submissions_.save(updated);
+        audit_.recordMarkChange(updated.id(), lecturer.id(), oldValue, finalMark, auditReason);
+    };
+    if (transactions_ != nullptr) {
+        transactions_->runInTransaction(saveBoth);
+    } else {
+        saveBoth();
+    }
+    return finalMark;
 }
 
 }  // namespace lms::application
