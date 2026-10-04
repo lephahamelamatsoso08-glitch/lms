@@ -21,6 +21,11 @@ add_subdirectory(src/data)
 add_subdirectory(src/application)
 add_subdirectory(src/app)
 
+option(LMS_BUILD_UI "Build the Qt interface" ON)
+if(LMS_BUILD_UI)
+  add_subdirectory(src/ui)
+endif()
+
 if(LMS_BUILD_TESTS)
   enable_testing()
   add_subdirectory(tests)
