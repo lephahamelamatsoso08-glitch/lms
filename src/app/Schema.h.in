@@ -1,0 +1,8 @@
+#pragma once
+
+namespace lms::app {
+
+// The database schema, copied from db/schema.sql when the project is configured.
+inline constexpr const char* kSchemaSql = R"LMSSQL(@LMS_SCHEMA_SQL@)LMSSQL";
+
+}  // namespace lms::app

@@ -25,3 +25,7 @@ add_executable(app_tests AuthServiceTests.cpp AuditTests.cpp SubmissionServiceTe
 target_link_libraries(app_tests PRIVATE lms_application lms_data GTest::gtest_main)
 target_compile_definitions(app_tests PRIVATE LMS_SCHEMA_PATH="${CMAKE_SOURCE_DIR}/db/schema.sql")
 gtest_discover_tests(app_tests)
+
+add_executable(context_tests AppContextTests.cpp)
+target_link_libraries(context_tests PRIVATE lms_app GTest::gtest_main)
+gtest_discover_tests(context_tests)
