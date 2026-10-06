@@ -23,7 +23,7 @@ QString RoleWindow::roleLabel(Role role) {
 
 RoleWindow::RoleWindow(lms::app::AppContext& context, std::shared_ptr<lms::domain::User> user,
                        QWidget* parent)
-    : QMainWindow(parent), context_(context), user_(std::move(user)) {
+    : UserWindow(parent), context_(context), user_(std::move(user)) {
     const QString role = roleLabel(user_->getRole());
     setWindowTitle("Moderated LMS - " + role);
 
@@ -33,7 +33,7 @@ RoleWindow::RoleWindow(lms::app::AppContext& context, std::shared_ptr<lms::domai
 
     auto* logout = new QPushButton("Log out", this);
     logout->setObjectName("logoutButton");
-    connect(logout, &QPushButton::clicked, this, &RoleWindow::loggedOut);
+    connect(logout, &QPushButton::clicked, this, &UserWindow::loggedOut);
 
     auto* centre = new QWidget(this);
     auto* layout = new QVBoxLayout(centre);
