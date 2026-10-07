@@ -2,18 +2,18 @@
 
 #include <memory>
 
-#include <QMainWindow>
 #include <QString>
 
 #include "AppContext.h"
 #include "Role.h"
 #include "User.h"
+#include "UserWindow.h"
 
 namespace lms::ui {
 
 // A temporary page shown after login. The real pages for each role replace it
 // in the next steps.
-class RoleWindow : public QMainWindow {
+class RoleWindow : public UserWindow {
     Q_OBJECT
 
 public:
@@ -21,9 +21,6 @@ public:
                QWidget* parent = nullptr);
 
     static QString roleLabel(lms::domain::Role role);
-
-signals:
-    void loggedOut();
 
 private:
     lms::app::AppContext& context_;

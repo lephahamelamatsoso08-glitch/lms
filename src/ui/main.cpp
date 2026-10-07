@@ -11,9 +11,11 @@
 #include <QTimer>
 
 #include "AppContext.h"
+#include "DemoData.h"
 #include "FirstRunDialog.h"
 #include "LoginWindow.h"
-#include "RoleWindow.h"
+#include "UserWindow.h"
+#include "UserWindowFactory.h"
 
 int main(int argc, char* argv[]) {
     QApplication app(argc, argv);
@@ -22,7 +24,9 @@ int main(int argc, char* argv[]) {
     QCommandLineParser parser;
     parser.addHelpOption();
     QCommandLineOption dbOption("db", "Path of the database file.", "file");
+    QCommandLineOption demoOption("demo", "Fill a new database with demo accounts and data.");
     parser.addOption(dbOption);
+    parser.addOption(demoOption);
     parser.process(app);
 
     // The database file: --db <file>, or a folder for the user's application data.
@@ -37,28 +41,36 @@ int main(int argc, char* argv[]) {
         lms::app::AppContext context(databasePath.toStdString());
 
         if (context.needsFirstAdmin()) {
-            lms::ui::FirstRunDialog firstRun(context);
-            if (firstRun.exec() != QDialog::Accepted) {
-                return 0;
+            if (parser.isSet(demoOption)) {
+                lms::app::seedDemoData(context);
+                QMessageBox::information(
+                    nullptr, "Moderated LMS - demo data",
+                    "Demo accounts were created.\n\n"
+                    "Usernames: admin, lecturer1, hod1, student1, student2\n"
+                    "Password for all of them: Passw0rd1");
+            } else {
+                lms::ui::FirstRunDialog firstRun(context);
+                if (firstRun.exec() != QDialog::Accepted) {
+                    return 0;
+                }
             }
         }
 
         lms::ui::LoginWindow login(context);
-        std::unique_ptr<lms::ui::RoleWindow> roleWindow;
+        std::unique_ptr<lms::ui::UserWindow> userWindow;
 
-        QObject::connect(&login, &lms::ui::LoginWindow::loggedIn,
-                         [&](std::shared_ptr<lms::domain::User> user) {
-                             roleWindow =
-                                 std::make_unique<lms::ui::RoleWindow>(context, std::move(user));
-                             QObject::connect(roleWindow.get(), &lms::ui::RoleWindow::loggedOut,
-                                              [&]() {
-                                                  roleWindow->hide();
-                                                  login.show();
-                                                  QTimer::singleShot(0, [&]() { roleWindow.reset(); });
-                                              });
-                             login.hide();
-                             roleWindow->show();
-                         });
+        QObject::connect(
+            &login, &lms::ui::LoginWindow::loggedIn,
+            [&](std::shared_ptr<lms::domain::User> user) {
+                userWindow = lms::ui::makeUserWindow(context, std::move(user));
+                QObject::connect(userWindow.get(), &lms::ui::UserWindow::loggedOut, [&]() {
+                    userWindow->hide();
+                    login.show();
+                    QTimer::singleShot(0, [&]() { userWindow.reset(); });
+                });
+                login.hide();
+                userWindow->show();
+            });
 
         login.show();
         return app.exec();

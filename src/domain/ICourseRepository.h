@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "Course.h"
+#include "StudentInfo.h"
 
 namespace lms::domain {
 
@@ -31,6 +32,9 @@ public:
     // FR8: the courses a student is enrolled in, and a lecturer teaches.
     virtual std::vector<Course> findForStudent(int studentId) const = 0;
     virtual std::vector<Course> findForLecturer(int lecturerId) const = 0;
+
+    // The students enrolled in a course, ordered by student number.
+    virtual std::vector<StudentInfo> findStudents(int courseId) const = 0;
 };
 
 }  // namespace lms::domain

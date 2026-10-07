@@ -23,6 +23,7 @@ public:
     bool isLecturerAssigned(int lecturerId, int courseId) const override;
     std::vector<lms::domain::Course> findForStudent(int studentId) const override;
     std::vector<lms::domain::Course> findForLecturer(int lecturerId) const override;
+    std::vector<lms::domain::StudentInfo> findStudents(int courseId) const override;
 
 private:
     static lms::domain::Course readCourse(Statement& row);

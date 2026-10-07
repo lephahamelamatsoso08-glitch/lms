@@ -47,7 +47,8 @@ AppContext::AppContext(const std::string& databasePath)
                          &transactions_),
       moderationService_(submissionRepo_, assignmentRepo_, courses_, auditService_, transactions_),
       notificationService_(notificationRepo_, assignmentRepo_, transactions_),
-      studentViewService_(submissionRepo_, assignmentRepo_, courses_) {
+      studentViewService_(submissionRepo_, assignmentRepo_, courses_),
+      lecturerViewService_(submissionRepo_, assignmentRepo_, courses_) {
     // Observer pattern: students are notified when the head of department releases marks.
     moderationService_.attach(notificationService_);
 }

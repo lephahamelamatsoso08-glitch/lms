@@ -26,12 +26,12 @@ target_link_libraries(app_tests PRIVATE lms_application lms_data GTest::gtest_ma
 target_compile_definitions(app_tests PRIVATE LMS_SCHEMA_PATH="${CMAKE_SOURCE_DIR}/db/schema.sql")
 gtest_discover_tests(app_tests)
 
-add_executable(context_tests AppContextTests.cpp)
+add_executable(context_tests AppContextTests.cpp DemoDataTests.cpp LecturerViewTests.cpp)
 target_link_libraries(context_tests PRIVATE lms_app GTest::gtest_main)
 gtest_discover_tests(context_tests)
 
 if(LMS_BUILD_UI)
-  add_executable(ui_tests UiTests.cpp)
+  add_executable(ui_tests UiTests.cpp StudentWindowTests.cpp LecturerWindowTests.cpp)
   target_link_libraries(ui_tests PRIVATE lms_ui GTest::gtest)
   gtest_discover_tests(ui_tests)
 endif()

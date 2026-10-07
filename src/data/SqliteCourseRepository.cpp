@@ -124,4 +124,22 @@ std::vector<Course> SqliteCourseRepository::findForLecturer(int lecturerId) cons
     return readAll(s);
 }
 
+std::vector<lms::domain::StudentInfo> SqliteCourseRepository::findStudents(int courseId) const {
+    Statement s = db_.prepare(
+        "SELECT u.id, u.full_name, st.student_number FROM enrolment e "
+        "JOIN student st ON st.user_id = e.student_id "
+        "JOIN user_account u ON u.id = st.user_id "
+        "WHERE e.course_id = ? ORDER BY st.student_number");
+    s.bindInt(1, courseId);
+    std::vector<lms::domain::StudentInfo> result;
+    while (s.step()) {
+        lms::domain::StudentInfo info;
+        info.id = static_cast<int>(s.columnInt(0));
+        info.name = s.columnText(1);
+        info.number = s.columnText(2);
+        result.push_back(info);
+    }
+    return result;
+}
+
 }  // namespace lms::data
