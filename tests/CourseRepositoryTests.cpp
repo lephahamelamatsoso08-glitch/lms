@@ -211,3 +211,20 @@ TEST_F(CourseRepoTest, FindForLecturerListsOnlyTheirCourses) {
     EXPECT_EQ(list[0].code(), "CS1000");
     EXPECT_TRUE(repo.findForLecturer(99).empty());
 }
+
+TEST_F(CourseRepoTest, FindStudentsListsTheEnrolledStudentsOrderedByStudentNumber) {
+    const int course = addCourse("CS1");
+    const int other = addCourse("CS2");
+    repo.enrolStudent(course, 3);  // S002
+    repo.enrolStudent(course, 2);  // S001
+    repo.enrolStudent(other, 2);
+    auto list = repo.findStudents(course);
+    ASSERT_EQ(list.size(), 2u);
+    EXPECT_EQ(list[0].id, 2);
+    EXPECT_EQ(list[0].name, "Student One");
+    EXPECT_EQ(list[0].number, "S001");
+    EXPECT_EQ(list[1].id, 3);
+    EXPECT_EQ(list[1].number, "S002");
+    EXPECT_EQ(repo.findStudents(other).size(), 1u);
+    EXPECT_TRUE(repo.findStudents(99).empty());
+}

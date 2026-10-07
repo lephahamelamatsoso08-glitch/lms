@@ -9,6 +9,7 @@
 #include "AuditService.h"
 #include "AuthService.h"
 #include "DatabaseConnection.h"
+#include "LecturerViewService.h"
 #include "ModerationService.h"
 #include "NotificationService.h"
 #include "SqliteAssignmentRepository.h"
@@ -52,6 +53,7 @@ public:
     lms::application::ModerationService& moderation() { return moderationService_; }
     lms::application::NotificationService& notifications() { return notificationService_; }
     lms::application::StudentViewService& studentView() { return studentViewService_; }
+    lms::application::LecturerViewService& lecturerView() { return lecturerViewService_; }
     lms::application::AuditService& audit() { return auditService_; }
 
 private:
@@ -77,6 +79,7 @@ private:
     lms::application::ModerationService moderationService_;
     lms::application::NotificationService notificationService_;
     lms::application::StudentViewService studentViewService_;
+    lms::application::LecturerViewService lecturerViewService_;
 };
 
 }  // namespace lms::app
