@@ -10,6 +10,8 @@ add_library(lms_ui STATIC
   StudentWindow.cpp StudentWindow.h
   LecturerDialogs.cpp LecturerDialogs.h
   LecturerWindow.cpp LecturerWindow.h
+  HodDialogs.cpp HodDialogs.h
+  HodWindow.cpp HodWindow.h
   UserWindowFactory.cpp UserWindowFactory.h)
 target_include_directories(lms_ui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(lms_ui PUBLIC lms_app Qt6::Widgets)
