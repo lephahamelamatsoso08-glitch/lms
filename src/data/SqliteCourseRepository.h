@@ -24,6 +24,9 @@ public:
     std::vector<lms::domain::Course> findForStudent(int studentId) const override;
     std::vector<lms::domain::Course> findForLecturer(int lecturerId) const override;
     std::vector<lms::domain::StudentInfo> findStudents(int courseId) const override;
+    std::vector<lms::domain::Course> findAll() const override;
+    std::vector<lms::domain::DepartmentInfo> findDepartments() const override;
+    std::vector<lms::domain::PersonInfo> findLecturers(int courseId) const override;
 
 private:
     static lms::domain::Course readCourse(Statement& row);

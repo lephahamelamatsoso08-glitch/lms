@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <string>
+#include <vector>
 
 #include "DatabaseConnection.h"
 #include "IUserRepository.h"
@@ -18,6 +19,7 @@ public:
     std::string findPasswordHash(const std::string& username) const override;
     void setPasswordHash(int userId, const std::string& passwordHash) override;
     void setActive(int userId, bool active) override;
+    std::vector<std::unique_ptr<lms::domain::User>> findAll() const override;
 
 private:
     bool userExists(int id) const;

@@ -11,6 +11,7 @@
 #include <QTableWidget>
 
 #include "AppContext.h"
+#include "AdminWindow.h"
 #include "RoleWindow.h"
 #include "StudentWindow.h"
 #include "UiFormat.h"
@@ -237,7 +238,7 @@ TEST_F(StudentWindowTest, LogOutButtonSendsTheSignal) {
     EXPECT_EQ(count, 1);
 }
 
-TEST(UserWindowFactoryTest, StudentGetsTheStudentWindowAndOtherRolesGetTheTemporaryPage) {
+TEST(UserWindowFactoryTest, StudentAndAdministratorGetTheirOwnWindows) {
     AppContext ctx(":memory:");
     UserData d;
     d.username = "someone";
@@ -250,7 +251,7 @@ TEST(UserWindowFactoryTest, StudentGetsTheStudentWindowAndOtherRolesGetTheTempor
     auto studentWindow = makeUserWindow(ctx, student);
     auto adminWindow = makeUserWindow(ctx, admin);
     EXPECT_NE(dynamic_cast<StudentWindow*>(studentWindow.get()), nullptr);
-    EXPECT_NE(dynamic_cast<RoleWindow*>(adminWindow.get()), nullptr);
+    EXPECT_NE(dynamic_cast<AdminWindow*>(adminWindow.get()), nullptr);
 }
 
 TEST(UiFormatTest, MarksAreShownWithoutUselessZeros) {

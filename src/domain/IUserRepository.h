@@ -2,6 +2,7 @@
 
 #include <memory>
 #include <string>
+#include <vector>
 
 #include "User.h"
 
@@ -26,6 +27,9 @@ public:
 
     virtual void setPasswordHash(int userId, const std::string& passwordHash) = 0;  // FR20
     virtual void setActive(int userId, bool active) = 0;                            // FR3
+
+    // All users, ordered by username (FR3).
+    virtual std::vector<std::unique_ptr<User>> findAll() const = 0;
 };
 
 }  // namespace lms::domain

@@ -9,6 +9,7 @@
 #include "AuditService.h"
 #include "AuthService.h"
 #include "DatabaseConnection.h"
+#include "AdminViewService.h"
 #include "HodViewService.h"
 #include "LecturerViewService.h"
 #include "ModerationService.h"
@@ -56,6 +57,7 @@ public:
     lms::application::StudentViewService& studentView() { return studentViewService_; }
     lms::application::LecturerViewService& lecturerView() { return lecturerViewService_; }
     lms::application::HodViewService& hodView() { return hodViewService_; }
+    lms::application::AdminViewService& adminView() { return adminViewService_; }
     lms::application::AuditService& audit() { return auditService_; }
 
 private:
@@ -83,6 +85,7 @@ private:
     lms::application::StudentViewService studentViewService_;
     lms::application::LecturerViewService lecturerViewService_;
     lms::application::HodViewService hodViewService_;
+    lms::application::AdminViewService adminViewService_;
 };
 
 }  // namespace lms::app

@@ -5,6 +5,8 @@
 #include <vector>
 
 #include "Course.h"
+#include "DepartmentInfo.h"
+#include "PersonInfo.h"
 #include "StudentInfo.h"
 
 namespace lms::domain {
@@ -35,6 +37,11 @@ public:
 
     // The students enrolled in a course, ordered by student number.
     virtual std::vector<StudentInfo> findStudents(int courseId) const = 0;
+
+    // For the administrator's lists.
+    virtual std::vector<Course> findAll() const = 0;  // ordered by code
+    virtual std::vector<DepartmentInfo> findDepartments() const = 0;  // ordered by name
+    virtual std::vector<PersonInfo> findLecturers(int courseId) const = 0;  // ordered by name
 };
 
 }  // namespace lms::domain
