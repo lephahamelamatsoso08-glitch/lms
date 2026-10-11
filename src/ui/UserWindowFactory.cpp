@@ -2,6 +2,7 @@
 
 #include <utility>
 
+#include "AdminWindow.h"
 #include "HodWindow.h"
 #include "LecturerWindow.h"
 #include "RoleWindow.h"
@@ -18,10 +19,10 @@ std::unique_ptr<UserWindow> makeUserWindow(lms::app::AppContext& context,
             return std::make_unique<LecturerWindow>(context, std::move(user));
         case lms::domain::Role::HoD:
             return std::make_unique<HodWindow>(context, std::move(user));
-        // The administrator gets a window in the next step.
         case lms::domain::Role::Admin:
-            break;
+            return std::make_unique<AdminWindow>(context, std::move(user));
     }
+    // Not reached: every role has its own window. The simple page is only a safe fallback.
     return std::make_unique<RoleWindow>(context, std::move(user));
 }
 

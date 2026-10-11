@@ -142,4 +142,37 @@ std::vector<lms::domain::StudentInfo> SqliteCourseRepository::findStudents(int c
     return result;
 }
 
+std::vector<Course> SqliteCourseRepository::findAll() const {
+    Statement s = db_.prepare(std::string(kSelectCourse) + "ORDER BY c.code");
+    return readAll(s);
+}
+
+std::vector<lms::domain::DepartmentInfo> SqliteCourseRepository::findDepartments() const {
+    Statement s = db_.prepare("SELECT id, name FROM department ORDER BY name");
+    std::vector<lms::domain::DepartmentInfo> result;
+    while (s.step()) {
+        lms::domain::DepartmentInfo info;
+        info.id = static_cast<int>(s.columnInt(0));
+        info.name = s.columnText(1);
+        result.push_back(info);
+    }
+    return result;
+}
+
+std::vector<lms::domain::PersonInfo> SqliteCourseRepository::findLecturers(int courseId) const {
+    Statement s = db_.prepare(
+        "SELECT u.id, u.full_name FROM course_lecturer l "
+        "JOIN user_account u ON u.id = l.lecturer_id "
+        "WHERE l.course_id = ? ORDER BY u.full_name");
+    s.bindInt(1, courseId);
+    std::vector<lms::domain::PersonInfo> result;
+    while (s.step()) {
+        lms::domain::PersonInfo info;
+        info.id = static_cast<int>(s.columnInt(0));
+        info.name = s.columnText(1);
+        result.push_back(info);
+    }
+    return result;
+}
+
 }  // namespace lms::data

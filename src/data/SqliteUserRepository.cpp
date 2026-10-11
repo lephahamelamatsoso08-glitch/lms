@@ -145,4 +145,13 @@ void SqliteUserRepository::setActive(int userId, bool active) {
     s.step();
 }
 
+std::vector<std::unique_ptr<User>> SqliteUserRepository::findAll() const {
+    Statement s = db_.prepare(std::string(kSelectUser) + "ORDER BY u.username");
+    std::vector<std::unique_ptr<User>> result;
+    while (s.step()) {
+        result.push_back(readUser(s));
+    }
+    return result;
+}
+
 }  // namespace lms::data
