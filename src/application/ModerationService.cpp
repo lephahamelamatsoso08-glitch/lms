@@ -77,6 +77,7 @@ std::vector<Submission> ModerationService::listMarked(const User& hod, int assig
     requireHoDOf(hod, Action::ModerateMarks, assignment.courseId());
 
     std::vector<Submission> result;
+    // cppcheck-suppress useStlAlgorithm ; a plain loop is clearer than std::copy_if here
     for (const Submission& s : submissions_.findByAssignment(assignmentId)) {
         if (s.status() == SubmissionStatus::Marked || s.status() == SubmissionStatus::Moderated ||
             s.status() == SubmissionStatus::Released) {
@@ -130,6 +131,7 @@ ReleaseResult ModerationService::release(const User& hod, int assignmentId) {
     requireHoDOf(hod, Action::ReleaseMarks, assignment.courseId());
 
     std::vector<Submission> toRelease;
+    // cppcheck-suppress useStlAlgorithm ; a plain loop is clearer than std::copy_if here
     for (const Submission& s : submissions_.findByAssignment(assignmentId)) {
         if (s.status() == SubmissionStatus::Moderated) {
             toRelease.push_back(s);

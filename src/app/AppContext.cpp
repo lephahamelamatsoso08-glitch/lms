@@ -70,8 +70,8 @@ int AppContext::createFirstAdmin(const std::string& username, const std::string&
     UserData data;
     data.username = username;
     data.fullName = fullName;
-    const auto admin = UserFactory::create(Role::Admin, data);  // checks the user data
-    return users_.add(*admin, hasher_.hash(password));
+    const auto firstAdmin = UserFactory::create(Role::Admin, data);  // checks the user data
+    return users_.add(*firstAdmin, hasher_.hash(password));
 }
 
 }  // namespace lms::app

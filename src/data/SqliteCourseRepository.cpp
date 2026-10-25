@@ -37,12 +37,12 @@ int SqliteCourseRepository::add(const Course& course) {
     return static_cast<int>(db_.lastInsertId());
 }
 
-Course SqliteCourseRepository::readCourse(Statement& row) {
+Course SqliteCourseRepository::readCourse(const Statement& row) {
     return Course(static_cast<int>(row.columnInt(0)), row.columnText(1), row.columnText(2),
                   static_cast<int>(row.columnInt(3)));
 }
 
-std::vector<Course> SqliteCourseRepository::readAll(Statement& query) const {
+std::vector<Course> SqliteCourseRepository::readAll(Statement& query) {
     std::vector<Course> result;
     while (query.step()) {
         result.push_back(readCourse(query));

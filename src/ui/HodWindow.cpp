@@ -1,5 +1,7 @@
 #include "HodWindow.h"
 
+#include <algorithm>
+#include <algorithm>
 #include <exception>
 #include <stdexcept>
 #include <utility>
@@ -199,11 +201,9 @@ const HodSubmissionRow* HodWindow::currentRow() const {
 }
 
 int HodWindow::countWithStatus(SubmissionStatus status) const {
-    int count = 0;
-    for (const HodSubmissionRow& row : rows_) {
-        count += (row.status == status) ? 1 : 0;
-    }
-    return count;
+    return static_cast<int>(std::count_if(
+        rows_.begin(), rows_.end(),
+        [status](const HodSubmissionRow& row) { return row.status == status; }));
 }
 
 // ---- Loading the lists ----

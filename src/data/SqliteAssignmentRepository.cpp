@@ -32,7 +32,7 @@ int SqliteAssignmentRepository::add(const Assignment& assignment) {
     return static_cast<int>(db_.lastInsertId());
 }
 
-Assignment SqliteAssignmentRepository::readAssignment(Statement& row) {
+Assignment SqliteAssignmentRepository::readAssignment(const Statement& row) {
     return Assignment(static_cast<int>(row.columnInt(0)), static_cast<int>(row.columnInt(1)),
                       row.columnText(2), lms::domain::fromIso8601(row.columnText(3)),
                       row.columnDouble(4));

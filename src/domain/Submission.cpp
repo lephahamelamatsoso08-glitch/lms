@@ -57,7 +57,6 @@ bool Submission::isAllowed(SubmissionStatus from, SubmissionStatus to) {
         case SubmissionStatus::Marked:
             return to == SubmissionStatus::Marked || to == SubmissionStatus::Moderated;
         case SubmissionStatus::Moderated:
-            return to == SubmissionStatus::Released;
         case SubmissionStatus::Released:
             return to == SubmissionStatus::Released;
     }
@@ -72,30 +71,30 @@ void Submission::transitionTo(SubmissionStatus next) {
     status_ = next;
 }
 
-void Submission::applyMark(double rawMark, double finalMark, const std::string& feedback) {
-    if (rawMark < 0.0 || finalMark < 0.0) {
+void Submission::applyMark(double newRawMark, double newFinalMark, const std::string& newFeedback) {
+    if (newRawMark < 0.0 || newFinalMark < 0.0) {
         throw std::invalid_argument("marks must not be negative");
     }
-    if (finalMark > rawMark) {
+    if (newFinalMark > newRawMark) {
         throw std::invalid_argument("the final mark cannot be higher than the raw mark");
     }
-    if (isBlank(feedback)) {
+    if (isBlank(newFeedback)) {
         throw std::invalid_argument("feedback must not be empty");
     }
     transitionTo(SubmissionStatus::Marked);  // throws if marking is not allowed now
-    rawMark_ = rawMark;
-    finalMark_ = finalMark;
-    feedback_ = feedback;
+    rawMark_ = newRawMark;
+    finalMark_ = newFinalMark;
+    feedback_ = newFeedback;
 }
 
-void Submission::changeFinalMark(double finalMark) {
+void Submission::changeFinalMark(double newFinalMark) {
     if (status_ != SubmissionStatus::Marked) {
         throw std::logic_error("a mark can only be changed while the submission is Marked");
     }
-    if (finalMark < 0.0) {
+    if (newFinalMark < 0.0) {
         throw std::invalid_argument("marks must not be negative");
     }
-    finalMark_ = finalMark;
+    finalMark_ = newFinalMark;
 }
 
 void Submission::release(TimePoint when) {

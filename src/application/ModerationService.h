@@ -19,9 +19,9 @@
 namespace lms::application {
 
 struct ReleaseResult {
-    int releasedCount;
+    int releasedCount = 0;
     std::vector<int> studentIds;  // the students whose marks were released
-    int notificationFailures;     // observers that failed (the release still stands)
+    int notificationFailures = 0;     // observers that failed (the release still stands)
 };
 
 // The use case "Moderate and release marks" (FR13, FR14).

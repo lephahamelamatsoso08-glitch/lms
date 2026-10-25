@@ -29,8 +29,8 @@ public:
     std::vector<lms::domain::PersonInfo> findLecturers(int courseId) const override;
 
 private:
-    static lms::domain::Course readCourse(Statement& row);
-    std::vector<lms::domain::Course> readAll(Statement& query) const;
+    static lms::domain::Course readCourse(const Statement& row);
+    static std::vector<lms::domain::Course> readAll(Statement& query);
 
     DatabaseConnection& db_;
 };

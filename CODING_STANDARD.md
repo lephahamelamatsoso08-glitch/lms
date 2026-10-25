@@ -14,7 +14,9 @@ Language: C++17. Based on the C++ Core Guidelines.
 - SQL appears only in the data layer, and only as parameterised statements.
 
 ## Safety
-- No raw `new` or `delete`. Use `std::unique_ptr` and RAII.
+- No raw `new` or `delete` for objects you own. Use `std::unique_ptr` and RAII.
+  One exception: a Qt widget is created with `new` and a parent. The parent object
+  deletes it, so the code never calls `delete` on it.
 - Mark everything `const` that can be `const`.
 - Never put `using namespace` in a header.
 - Passwords are never stored or logged in plain text.

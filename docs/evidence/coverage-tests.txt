@@ -1,0 +1,765 @@
+Test project C:/msys64/home/USER/lms/build/cov
+        Start   1: TimeFormatTest.EpochIsFormattedCorrectly
+  1/380 Test   #1: TimeFormatTest.EpochIsFormattedCorrectly ..................................................   Passed    0.70 sec
+        Start   2: TimeFormatTest.KnownDateIsFormattedCorrectly
+  2/380 Test   #2: TimeFormatTest.KnownDateIsFormattedCorrectly ..............................................   Passed    0.13 sec
+        Start   3: TimeFormatTest.LeapDayRoundTrips
+  3/380 Test   #3: TimeFormatTest.LeapDayRoundTrips ..........................................................   Passed    0.15 sec
+        Start   4: TimeFormatTest.EveryDayUntil2100RoundTrips
+  4/380 Test   #4: TimeFormatTest.EveryDayUntil2100RoundTrips ................................................   Passed    0.26 sec
+        Start   5: TimeFormatTest.InvalidTextIsRejected
+  5/380 Test   #5: TimeFormatTest.InvalidTextIsRejected ......................................................   Passed    0.24 sec
+        Start   6: TimeFormatTest.NonDigitsAndSignsAreRejected
+  6/380 Test   #6: TimeFormatTest.NonDigitsAndSignsAreRejected ...............................................   Passed    0.14 sec
+        Start   7: SubmissionMarkTest.NewSubmissionHasNoMarkData
+  7/380 Test   #7: SubmissionMarkTest.NewSubmissionHasNoMarkData .............................................   Passed    0.15 sec
+        Start   8: SubmissionMarkTest.ApplyMarkFromSubmittedMovesToMarked
+  8/380 Test   #8: SubmissionMarkTest.ApplyMarkFromSubmittedMovesToMarked ....................................   Passed    0.54 sec
+        Start   9: SubmissionMarkTest.ApplyMarkFromLateKeepsLateDaysAndStoresPenalisedMark
+  9/380 Test   #9: SubmissionMarkTest.ApplyMarkFromLateKeepsLateDaysAndStoresPenalisedMark ...................   Passed    0.31 sec
+        Start  10: SubmissionMarkTest.ReMarkWhileMarkedReplacesTheMark
+ 10/380 Test  #10: SubmissionMarkTest.ReMarkWhileMarkedReplacesTheMark .......................................   Passed    0.30 sec
+        Start  11: SubmissionMarkTest.ApplyMarkAfterModerationThrowsAndChangesNothing
+ 11/380 Test  #11: SubmissionMarkTest.ApplyMarkAfterModerationThrowsAndChangesNothing ........................   Passed    0.32 sec
+        Start  12: SubmissionMarkTest.ApplyMarkRejectsBadValuesAndChangesNothing
+ 12/380 Test  #12: SubmissionMarkTest.ApplyMarkRejectsBadValuesAndChangesNothing .............................   Passed    0.29 sec
+        Start  13: SubmissionMarkTest.ChangeFinalMarkWhileMarked
+ 13/380 Test  #13: SubmissionMarkTest.ChangeFinalMarkWhileMarked .............................................   Passed    0.29 sec
+        Start  14: SubmissionMarkTest.ChangeFinalMarkInOtherStatusesThrows
+ 14/380 Test  #14: SubmissionMarkTest.ChangeFinalMarkInOtherStatusesThrows ...................................   Passed    0.30 sec
+        Start  15: SubmissionMarkTest.ChangeFinalMarkRejectsNegative
+ 15/380 Test  #15: SubmissionMarkTest.ChangeFinalMarkRejectsNegative .........................................   Passed    0.29 sec
+        Start  16: SubmissionMarkTest.ReleaseFromModeratedSetsStatusAndTime
+ 16/380 Test  #16: SubmissionMarkTest.ReleaseFromModeratedSetsStatusAndTime ..................................   Passed    0.25 sec
+        Start  17: SubmissionMarkTest.ReleaseFromOtherStatusesThrows
+ 17/380 Test  #17: SubmissionMarkTest.ReleaseFromOtherStatusesThrows .........................................   Passed    0.26 sec
+        Start  18: SubmissionMarkTest.FullPathFromSubmissionToRelease
+ 18/380 Test  #18: SubmissionMarkTest.FullPathFromSubmissionToRelease ........................................   Passed    0.19 sec
+        Start  19: SubmissionMarkTest.FullConstructorKeepsItsData
+ 19/380 Test  #19: SubmissionMarkTest.FullConstructorKeepsItsData ............................................   Passed    0.22 sec
+        Start  20: SubmissionMarkTest.FullConstructorRejectsNegativeMarks
+ 20/380 Test  #20: SubmissionMarkTest.FullConstructorRejectsNegativeMarks ....................................   Passed    0.18 sec
+        Start  21: AssignmentTest.NoExtensionUsesNormalDeadline
+ 21/380 Test  #21: AssignmentTest.NoExtensionUsesNormalDeadline ..............................................   Passed    0.33 sec
+        Start  22: AssignmentTest.ExtensionMovesTheStudentsDeadline
+ 22/380 Test  #22: AssignmentTest.ExtensionMovesTheStudentsDeadline ..........................................   Passed    0.24 sec
+        Start  23: AssignmentTest.GrantExtensionKeepsItsData
+ 23/380 Test  #23: AssignmentTest.GrantExtensionKeepsItsData .................................................   Passed    0.32 sec
+        Start  24: AssignmentTest.ExtensionEarlierThanDeadlineThrows
+ 24/380 Test  #24: AssignmentTest.ExtensionEarlierThanDeadlineThrows .........................................   Passed    0.15 sec
+        Start  25: AssignmentTest.ExtensionEqualToDeadlineThrows
+ 25/380 Test  #25: AssignmentTest.ExtensionEqualToDeadlineThrows .............................................   Passed    0.13 sec
+        Start  26: AssignmentTest.ExtensionWithoutReasonThrows
+ 26/380 Test  #26: AssignmentTest.ExtensionWithoutReasonThrows ...............................................   Passed    0.14 sec
+        Start  27: AssignmentTest.ExtensionWithBlankReasonThrows
+ 27/380 Test  #27: AssignmentTest.ExtensionWithBlankReasonThrows .............................................   Passed    0.14 sec
+        Start  28: AssignmentTest.ExtensionForAnotherAssignmentThrows
+ 28/380 Test  #28: AssignmentTest.ExtensionForAnotherAssignmentThrows ........................................   Passed    0.19 sec
+        Start  29: AssignmentTest.ExtensionRemovesLateDays
+ 29/380 Test  #29: AssignmentTest.ExtensionRemovesLateDays ...................................................   Passed    0.26 sec
+        Start  30: AssignmentTest.InvalidDataThrows
+ 30/380 Test  #30: AssignmentTest.InvalidDataThrows ..........................................................   Passed    0.19 sec
+        Start  31: CourseTest.KeepsItsData
+ 31/380 Test  #31: CourseTest.KeepsItsData ...................................................................   Passed    0.19 sec
+        Start  32: CourseTest.InvalidDataThrows
+ 32/380 Test  #32: CourseTest.InvalidDataThrows ..............................................................   Passed    0.19 sec
+        Start  33: LateDaysTest.BeforeDeadlineIsZero
+ 33/380 Test  #33: LateDaysTest.BeforeDeadlineIsZero .........................................................   Passed    0.18 sec
+        Start  34: LateDaysTest.ExactlyAtDeadlineIsZero
+ 34/380 Test  #34: LateDaysTest.ExactlyAtDeadlineIsZero ......................................................   Passed    0.22 sec
+        Start  35: LateDaysTest.OneSecondAfterIsOneDay
+ 35/380 Test  #35: LateDaysTest.OneSecondAfterIsOneDay .......................................................   Passed    0.21 sec
+        Start  36: LateDaysTest.HalfSecondAfterIsOneDay
+ 36/380 Test  #36: LateDaysTest.HalfSecondAfterIsOneDay ......................................................   Passed    0.19 sec
+        Start  37: LateDaysTest.Exactly24HoursAfterIsOneDay
+ 37/380 Test  #37: LateDaysTest.Exactly24HoursAfterIsOneDay ..................................................   Passed    0.18 sec
+        Start  38: LateDaysTest.Just_Over24HoursIsTwoDays
+ 38/380 Test  #38: LateDaysTest.Just_Over24HoursIsTwoDays ....................................................   Passed    0.16 sec
+        Start  39: LateDaysTest.Exactly72HoursAfterIsThreeDays
+ 39/380 Test  #39: LateDaysTest.Exactly72HoursAfterIsThreeDays ...............................................   Passed    0.28 sec
+        Start  40: LateDaysTest.Just_Over72HoursIsFourDays
+ 40/380 Test  #40: LateDaysTest.Just_Over72HoursIsFourDays ...................................................   Passed    0.33 sec
+        Start  41: LateDaysTest.TenDaysLate
+ 41/380 Test  #41: LateDaysTest.TenDaysLate ..................................................................   Passed    0.19 sec
+        Start  42: SubmissionStatusTest.TextRoundTrip
+ 42/380 Test  #42: SubmissionStatusTest.TextRoundTrip ........................................................   Passed    0.31 sec
+        Start  43: SubmissionStatusTest.UnknownTextThrows
+ 43/380 Test  #43: SubmissionStatusTest.UnknownTextThrows ....................................................   Passed    0.21 sec
+        Start  44: SubmissionTest.AllowedMovesMatchStateMachine
+ 44/380 Test  #44: SubmissionTest.AllowedMovesMatchStateMachine ..............................................   Passed    0.15 sec
+        Start  45: SubmissionTest.AllowedMoveChangesStatus
+ 45/380 Test  #45: SubmissionTest.AllowedMoveChangesStatus ...................................................   Passed    0.15 sec
+        Start  46: SubmissionTest.ForbiddenMoveThrowsAndKeepsStatus
+ 46/380 Test  #46: SubmissionTest.ForbiddenMoveThrowsAndKeepsStatus ..........................................   Passed    0.17 sec
+        Start  47: SubmissionTest.OnTimePathReachesReleased
+ 47/380 Test  #47: SubmissionTest.OnTimePathReachesReleased ..................................................   Passed    0.15 sec
+        Start  48: SubmissionTest.LatePathReachesReleased
+ 48/380 Test  #48: SubmissionTest.LatePathReachesReleased ....................................................   Passed    0.19 sec
+        Start  49: SubmissionTest.CannotSkipModeration
+ 49/380 Test  #49: SubmissionTest.CannotSkipModeration .......................................................   Passed    0.21 sec
+        Start  50: SubmissionTest.LateWorkCannotBeResubmitted
+ 50/380 Test  #50: SubmissionTest.LateWorkCannotBeResubmitted ................................................   Passed    0.14 sec
+        Start  51: SubmissionTest.KeepsItsData
+ 51/380 Test  #51: SubmissionTest.KeepsItsData ...............................................................   Passed    0.22 sec
+        Start  52: SubmissionTest.OnTimeSubmissionWithLateDaysThrows
+ 52/380 Test  #52: SubmissionTest.OnTimeSubmissionWithLateDaysThrows .........................................   Passed    0.13 sec
+        Start  53: SubmissionTest.LateSubmissionWithoutLateDaysThrows
+ 53/380 Test  #53: SubmissionTest.LateSubmissionWithoutLateDaysThrows ........................................   Passed    0.12 sec
+        Start  54: SubmissionTest.MarkedSubmissionMayKeepItsLateDays
+ 54/380 Test  #54: SubmissionTest.MarkedSubmissionMayKeepItsLateDays .........................................   Passed    0.20 sec
+        Start  55: SubmissionTest.InvalidIdsThrow
+ 55/380 Test  #55: SubmissionTest.InvalidIdsThrow ............................................................   Passed    0.21 sec
+        Start  56: SubmissionTest.NegativeLateDaysThrow
+ 56/380 Test  #56: SubmissionTest.NegativeLateDaysThrow ......................................................   Passed    0.23 sec
+        Start  57: RoleTest.TextRoundTrip
+ 57/380 Test  #57: RoleTest.TextRoundTrip ....................................................................   Passed    0.21 sec
+        Start  58: RoleTest.UnknownTextThrows
+ 58/380 Test  #58: RoleTest.UnknownTextThrows ................................................................   Passed    0.31 sec
+        Start  59: UserFactoryTest.CreatesTheRightSubclass
+ 59/380 Test  #59: UserFactoryTest.CreatesTheRightSubclass ...................................................   Passed    0.15 sec
+        Start  60: UserFactoryTest.KeepsCommonAndRoleSpecificData
+ 60/380 Test  #60: UserFactoryTest.KeepsCommonAndRoleSpecificData ............................................   Passed    0.14 sec
+        Start  61: UserFactoryTest.HoDWithoutDepartmentThrows
+ 61/380 Test  #61: UserFactoryTest.HoDWithoutDepartmentThrows ................................................   Passed    0.16 sec
+        Start  62: UserFactoryTest.StudentWithoutNumberThrows
+ 62/380 Test  #62: UserFactoryTest.StudentWithoutNumberThrows ................................................   Passed    0.20 sec
+        Start  63: UserFactoryTest.EmptyUsernameThrows
+ 63/380 Test  #63: UserFactoryTest.EmptyUsernameThrows .......................................................   Passed    0.35 sec
+        Start  64: UserFactoryTest.EmptyFullNameThrows
+ 64/380 Test  #64: UserFactoryTest.EmptyFullNameThrows .......................................................   Passed    0.22 sec
+        Start  65: UserFactoryTest.NegativeIdThrows
+ 65/380 Test  #65: UserFactoryTest.NegativeIdThrows ..........................................................   Passed    0.17 sec
+        Start  66: UserPermissionTest.EachRoleMayDoExactlyItsActions
+ 66/380 Test  #66: UserPermissionTest.EachRoleMayDoExactlyItsActions .........................................   Passed    0.17 sec
+        Start  67: UserPermissionTest.InactiveUserCanDoNothing
+ 67/380 Test  #67: UserPermissionTest.InactiveUserCanDoNothing ...............................................   Passed    0.19 sec
+        Start  68: UserPermissionTest.StudentCannotModerateOrMark
+ 68/380 Test  #68: UserPermissionTest.StudentCannotModerateOrMark ............................................   Passed    0.23 sec
+        Start  69: UserPermissionTest.LecturerCannotReleaseMarks
+ 69/380 Test  #69: UserPermissionTest.LecturerCannotReleaseMarks .............................................   Passed    0.23 sec
+        Start  70: PenaltyTest.OnTimeKeepsRawMark
+ 70/380 Test  #70: PenaltyTest.OnTimeKeepsRawMark ............................................................   Passed    0.26 sec
+        Start  71: PenaltyTest.DayOneDeductsTenPercentOfMax
+ 71/380 Test  #71: PenaltyTest.DayOneDeductsTenPercentOfMax ..................................................   Passed    0.30 sec
+        Start  72: PenaltyTest.DayTwoDeductsTwentyPercentOfMax
+ 72/380 Test  #72: PenaltyTest.DayTwoDeductsTwentyPercentOfMax ...............................................   Passed    0.27 sec
+        Start  73: PenaltyTest.DayThreeDeductsThirtyPercentOfMax
+ 73/380 Test  #73: PenaltyTest.DayThreeDeductsThirtyPercentOfMax .............................................   Passed    0.21 sec
+        Start  74: PenaltyTest.DayFourGivesZero
+ 74/380 Test  #74: PenaltyTest.DayFourGivesZero ..............................................................   Passed    0.14 sec
+        Start  75: PenaltyTest.VeryLateGivesZero
+ 75/380 Test  #75: PenaltyTest.VeryLateGivesZero .............................................................   Passed    0.15 sec
+        Start  76: PenaltyTest.DeductionUsesMaximumMarkNotRawMark
+ 76/380 Test  #76: PenaltyTest.DeductionUsesMaximumMarkNotRawMark ............................................   Passed    0.20 sec
+        Start  77: PenaltyTest.FullMarksLateDayOne
+ 77/380 Test  #77: PenaltyTest.FullMarksLateDayOne ...........................................................   Passed    0.55 sec
+        Start  78: PenaltyTest.ZeroRawMarkStaysZero
+ 78/380 Test  #78: PenaltyTest.ZeroRawMarkStaysZero ..........................................................   Passed    0.38 sec
+        Start  79: PenaltyTest.FinalMarkNeverBelowZero
+ 79/380 Test  #79: PenaltyTest.FinalMarkNeverBelowZero .......................................................   Passed    0.27 sec
+        Start  80: PenaltyTest.NegativeRawMarkThrows
+ 80/380 Test  #80: PenaltyTest.NegativeRawMarkThrows .........................................................   Passed    0.21 sec
+        Start  81: PenaltyTest.RawMarkAboveMaxThrows
+ 81/380 Test  #81: PenaltyTest.RawMarkAboveMaxThrows .........................................................   Passed    0.13 sec
+        Start  82: PenaltyTest.ZeroMaxMarkThrows
+ 82/380 Test  #82: PenaltyTest.ZeroMaxMarkThrows .............................................................   Passed    0.13 sec
+        Start  83: PenaltyTest.NegativeLateDaysThrows
+ 83/380 Test  #83: PenaltyTest.NegativeLateDaysThrows ........................................................   Passed    0.14 sec
+        Start  84: PenaltyConstructor.InvalidRateThrows
+ 84/380 Test  #84: PenaltyConstructor.InvalidRateThrows ......................................................   Passed    0.15 sec
+        Start  85: PenaltyConstructor.NegativeMaxLateDaysThrows
+ 85/380 Test  #85: PenaltyConstructor.NegativeMaxLateDaysThrows ..............................................   Passed    0.14 sec
+        Start  86: CourseRepoTest.AddDepartmentReturnsANewId
+ 86/380 Test  #86: CourseRepoTest.AddDepartmentReturnsANewId .................................................   Passed    0.63 sec
+        Start  87: CourseRepoTest.DuplicateDepartmentNameIsRejected
+ 87/380 Test  #87: CourseRepoTest.DuplicateDepartmentNameIsRejected ..........................................   Passed    0.23 sec
+        Start  88: CourseRepoTest.BlankDepartmentNameIsRejected
+ 88/380 Test  #88: CourseRepoTest.BlankDepartmentNameIsRejected ..............................................   Passed    0.27 sec
+        Start  89: CourseRepoTest.AddAndFindById
+ 89/380 Test  #89: CourseRepoTest.AddAndFindById .............................................................   Passed    0.36 sec
+        Start  90: CourseRepoTest.MissingCourseIsEmpty
+ 90/380 Test  #90: CourseRepoTest.MissingCourseIsEmpty .......................................................   Passed    0.19 sec
+        Start  91: CourseRepoTest.DuplicateCodeIsRejected
+ 91/380 Test  #91: CourseRepoTest.DuplicateCodeIsRejected ....................................................   Passed    0.21 sec
+        Start  92: CourseRepoTest.UnknownDepartmentIsRejected
+ 92/380 Test  #92: CourseRepoTest.UnknownDepartmentIsRejected ................................................   Passed    0.22 sec
+        Start  93: CourseRepoTest.SavedCourseCannotBeAddedAgain
+ 93/380 Test  #93: CourseRepoTest.SavedCourseCannotBeAddedAgain ..............................................   Passed    0.16 sec
+        Start  94: CourseRepoTest.FindByDepartmentIsOrderedByCodeAndFiltered
+ 94/380 Test  #94: CourseRepoTest.FindByDepartmentIsOrderedByCodeAndFiltered .................................   Passed    0.16 sec
+        Start  95: CourseRepoTest.CodeWithQuotesIsStoredAsData
+ 95/380 Test  #95: CourseRepoTest.CodeWithQuotesIsStoredAsData ...............................................   Passed    0.17 sec
+        Start  96: CourseRepoTest.EnrolStudentThenIsEnrolled
+ 96/380 Test  #96: CourseRepoTest.EnrolStudentThenIsEnrolled .................................................   Passed    0.15 sec
+        Start  97: CourseRepoTest.EnrolmentIsPerCourse
+ 97/380 Test  #97: CourseRepoTest.EnrolmentIsPerCourse .......................................................   Passed    0.25 sec
+        Start  98: CourseRepoTest.EnrolTwiceIsHarmless
+ 98/380 Test  #98: CourseRepoTest.EnrolTwiceIsHarmless .......................................................   Passed    0.25 sec
+        Start  99: CourseRepoTest.EnrolUnknownCourseIsRejected
+ 99/380 Test  #99: CourseRepoTest.EnrolUnknownCourseIsRejected ...............................................   Passed    0.22 sec
+        Start 100: CourseRepoTest.OnlyStudentsCanBeEnrolled
+100/380 Test #100: CourseRepoTest.OnlyStudentsCanBeEnrolled ..................................................   Passed    0.20 sec
+        Start 101: CourseRepoTest.AssignLecturerThenIsAssigned
+101/380 Test #101: CourseRepoTest.AssignLecturerThenIsAssigned ...............................................   Passed    0.15 sec
+        Start 102: CourseRepoTest.AssignTwiceIsHarmless
+102/380 Test #102: CourseRepoTest.AssignTwiceIsHarmless ......................................................   Passed    0.21 sec
+        Start 103: CourseRepoTest.OnlyLecturersCanBeAssigned
+103/380 Test #103: CourseRepoTest.OnlyLecturersCanBeAssigned .................................................   Passed    0.23 sec
+        Start 104: CourseRepoTest.AssignToUnknownCourseIsRejected
+104/380 Test #104: CourseRepoTest.AssignToUnknownCourseIsRejected ............................................   Passed    0.16 sec
+        Start 105: CourseRepoTest.TwoLecturersCanTeachTheSameCourse
+105/380 Test #105: CourseRepoTest.TwoLecturersCanTeachTheSameCourse ..........................................   Passed    0.16 sec
+        Start 106: CourseRepoTest.FindForStudentListsOnlyEnrolledCoursesOrderedByCode
+106/380 Test #106: CourseRepoTest.FindForStudentListsOnlyEnrolledCoursesOrderedByCode ........................   Passed    0.17 sec
+        Start 107: CourseRepoTest.FindForLecturerListsOnlyTheirCourses
+107/380 Test #107: CourseRepoTest.FindForLecturerListsOnlyTheirCourses .......................................   Passed    0.22 sec
+        Start 108: CourseRepoTest.FindStudentsListsTheEnrolledStudentsOrderedByStudentNumber
+108/380 Test #108: CourseRepoTest.FindStudentsListsTheEnrolledStudentsOrderedByStudentNumber .................   Passed    0.25 sec
+        Start 109: SubmissionRepoTest.AddStoresSubmissionAndFirstVersion
+109/380 Test #109: SubmissionRepoTest.AddStoresSubmissionAndFirstVersion .....................................   Passed    0.42 sec
+        Start 110: SubmissionRepoTest.LateSubmissionKeepsStatusAndLateDays
+110/380 Test #110: SubmissionRepoTest.LateSubmissionKeepsStatusAndLateDays ...................................   Passed    0.47 sec
+        Start 111: SubmissionRepoTest.FindByStudentAndAssignment
+111/380 Test #111: SubmissionRepoTest.FindByStudentAndAssignment .............................................   Passed    0.56 sec
+        Start 112: SubmissionRepoTest.MissingSubmissionIsEmpty
+112/380 Test #112: SubmissionRepoTest.MissingSubmissionIsEmpty ...............................................   Passed    0.42 sec
+        Start 113: SubmissionRepoTest.FindByAssignmentReturnsOnlyThatAssignment
+113/380 Test #113: SubmissionRepoTest.FindByAssignmentReturnsOnlyThatAssignment ..............................   Passed    0.29 sec
+        Start 114: SubmissionRepoTest.SecondSubmissionForTheSameAssignmentIsRejectedAndNothingIsLeftBehind
+114/380 Test #114: SubmissionRepoTest.SecondSubmissionForTheSameAssignmentIsRejectedAndNothingIsLeftBehind ...   Passed    0.45 sec
+        Start 115: SubmissionRepoTest.UnknownAssignmentOrStudentIsRejected
+115/380 Test #115: SubmissionRepoTest.UnknownAssignmentOrStudentIsRejected ...................................   Passed    0.43 sec
+        Start 116: SubmissionRepoTest.AddRejectsBadInput
+116/380 Test #116: SubmissionRepoTest.AddRejectsBadInput .....................................................   Passed    0.73 sec
+        Start 117: SubmissionRepoTest.AddVersionNumbersVersionsAndKeepsTheOldOnes
+117/380 Test #117: SubmissionRepoTest.AddVersionNumbersVersionsAndKeepsTheOldOnes ............................   Passed    0.37 sec
+        Start 118: SubmissionRepoTest.AddVersionToUnknownSubmissionIsRejected
+118/380 Test #118: SubmissionRepoTest.AddVersionToUnknownSubmissionIsRejected ................................   Passed    0.49 sec
+        Start 119: SubmissionRepoTest.AddVersionRejectsBadInput
+119/380 Test #119: SubmissionRepoTest.AddVersionRejectsBadInput ..............................................   Passed    0.50 sec
+        Start 120: SubmissionRepoTest.FilePathWithQuotesIsStoredAsData
+120/380 Test #120: SubmissionRepoTest.FilePathWithQuotesIsStoredAsData .......................................   Passed    0.46 sec
+        Start 121: SubmissionRepoTest.SaveStoresMarkAndFeedback
+121/380 Test #121: SubmissionRepoTest.SaveStoresMarkAndFeedback ..............................................   Passed    0.29 sec
+        Start 122: SubmissionRepoTest.SaveStoresModerationAndRelease
+122/380 Test #122: SubmissionRepoTest.SaveStoresModerationAndRelease .........................................   Passed    0.41 sec
+        Start 123: SubmissionRepoTest.SaveRejectsUnknownOrUnsavedSubmission
+123/380 Test #123: SubmissionRepoTest.SaveRejectsUnknownOrUnsavedSubmission ..................................   Passed    0.34 sec
+        Start 124: SubmissionRepoTest.MarkIsStoredSeparatelyPerStudent
+124/380 Test #124: SubmissionRepoTest.MarkIsStoredSeparatelyPerStudent .......................................   Passed    0.32 sec
+        Start 125: AssignmentRepoTest.AddAndFindById
+125/380 Test #125: AssignmentRepoTest.AddAndFindById .........................................................   Passed    0.49 sec
+        Start 126: AssignmentRepoTest.MissingAssignmentIsEmpty
+126/380 Test #126: AssignmentRepoTest.MissingAssignmentIsEmpty ...............................................   Passed    0.36 sec
+        Start 127: AssignmentRepoTest.FindByCourseIsOrderedByDeadlineAndFiltersByCourse
+127/380 Test #127: AssignmentRepoTest.FindByCourseIsOrderedByDeadlineAndFiltersByCourse ......................   Passed    0.48 sec
+        Start 128: AssignmentRepoTest.SavedAssignmentCannotBeAddedAgain
+128/380 Test #128: AssignmentRepoTest.SavedAssignmentCannotBeAddedAgain ......................................   Passed    0.29 sec
+        Start 129: AssignmentRepoTest.UnknownCourseIsRejected
+129/380 Test #129: AssignmentRepoTest.UnknownCourseIsRejected ................................................   Passed    0.34 sec
+        Start 130: AssignmentRepoTest.TitleWithQuotesIsStoredAsData
+130/380 Test #130: AssignmentRepoTest.TitleWithQuotesIsStoredAsData ..........................................   Passed    0.30 sec
+        Start 131: AssignmentRepoTest.ExtensionRoundTrip
+131/380 Test #131: AssignmentRepoTest.ExtensionRoundTrip .....................................................   Passed    0.19 sec
+        Start 132: AssignmentRepoTest.NoExtensionIsEmpty
+132/380 Test #132: AssignmentRepoTest.NoExtensionIsEmpty .....................................................   Passed    0.18 sec
+        Start 133: AssignmentRepoTest.DeadlineForWithoutExtensionIsTheNormalDeadline
+133/380 Test #133: AssignmentRepoTest.DeadlineForWithoutExtensionIsTheNormalDeadline .........................   Passed    0.25 sec
+        Start 134: AssignmentRepoTest.DeadlineForWithExtensionIsTheNewDeadline
+134/380 Test #134: AssignmentRepoTest.DeadlineForWithExtensionIsTheNewDeadline ...............................   Passed    0.22 sec
+        Start 135: AssignmentRepoTest.ExtensionOnlyAffectsThatStudent
+135/380 Test #135: AssignmentRepoTest.ExtensionOnlyAffectsThatStudent ........................................   Passed    0.47 sec
+        Start 136: AssignmentRepoTest.SecondExtensionReplacesTheFirst
+136/380 Test #136: AssignmentRepoTest.SecondExtensionReplacesTheFirst ........................................   Passed    0.69 sec
+        Start 137: AssignmentRepoTest.ExtensionForUnknownStudentIsRejected
+137/380 Test #137: AssignmentRepoTest.ExtensionForUnknownStudentIsRejected ...................................   Passed    0.35 sec
+        Start 138: AssignmentRepoTest.SavedExtensionCannotBeSavedAgain
+138/380 Test #138: AssignmentRepoTest.SavedExtensionCannotBeSavedAgain .......................................   Passed    0.34 sec
+        Start 139: AssignmentRepoTest.DeadlineForUnknownAssignmentThrows
+139/380 Test #139: AssignmentRepoTest.DeadlineForUnknownAssignmentThrows .....................................   Passed    0.29 sec
+        Start 140: AssignmentRepoTest.ExtensionRemovesLateDaysThroughTheRepository
+140/380 Test #140: AssignmentRepoTest.ExtensionRemovesLateDaysThroughTheRepository ...........................   Passed    0.39 sec
+        Start 141: UserRepositoryTest.AddAdminThenFindByUsername
+141/380 Test #141: UserRepositoryTest.AddAdminThenFindByUsername .............................................   Passed    0.32 sec
+        Start 142: UserRepositoryTest.FindByIdWorks
+142/380 Test #142: UserRepositoryTest.FindByIdWorks ..........................................................   Passed    0.20 sec
+        Start 143: UserRepositoryTest.StudentKeepsStudentNumber
+143/380 Test #143: UserRepositoryTest.StudentKeepsStudentNumber ..............................................   Passed    0.17 sec
+        Start 144: UserRepositoryTest.HoDIsLinkedToTheirDepartment
+144/380 Test #144: UserRepositoryTest.HoDIsLinkedToTheirDepartment ...........................................   Passed    0.15 sec
+        Start 145: UserRepositoryTest.MissingUserIsNull
+145/380 Test #145: UserRepositoryTest.MissingUserIsNull ......................................................   Passed    0.27 sec
+        Start 146: UserRepositoryTest.DuplicateUsernameIsRejected
+146/380 Test #146: UserRepositoryTest.DuplicateUsernameIsRejected ............................................   Passed    0.22 sec
+        Start 147: UserRepositoryTest.DuplicateStudentNumberRollsBackTheWholeUser
+147/380 Test #147: UserRepositoryTest.DuplicateStudentNumberRollsBackTheWholeUser ............................   Passed    0.39 sec
+        Start 148: UserRepositoryTest.HoDWithUnknownDepartmentRollsBack
+148/380 Test #148: UserRepositoryTest.HoDWithUnknownDepartmentRollsBack ......................................   Passed    0.21 sec
+        Start 149: UserRepositoryTest.SecondHoDForTheSameDepartmentIsRejected
+149/380 Test #149: UserRepositoryTest.SecondHoDForTheSameDepartmentIsRejected ................................   Passed    0.16 sec
+        Start 150: UserRepositoryTest.AlreadySavedUserCannotBeAddedAgain
+150/380 Test #150: UserRepositoryTest.AlreadySavedUserCannotBeAddedAgain .....................................   Passed    0.20 sec
+        Start 151: UserRepositoryTest.EmptyPasswordHashIsRejected
+151/380 Test #151: UserRepositoryTest.EmptyPasswordHashIsRejected ............................................   Passed    0.19 sec
+        Start 152: UserRepositoryTest.StoredPasswordIsAHashAndNeverPlainText
+152/380 Test #152: UserRepositoryTest.StoredPasswordIsAHashAndNeverPlainText .................................   Passed    1.44 sec
+        Start 153: UserRepositoryTest.UnknownUserHasNoPasswordHash
+153/380 Test #153: UserRepositoryTest.UnknownUserHasNoPasswordHash ...........................................   Passed    0.38 sec
+        Start 154: UserRepositoryTest.SetPasswordHashChangesTheHash
+154/380 Test #154: UserRepositoryTest.SetPasswordHashChangesTheHash ..........................................   Passed    0.33 sec
+        Start 155: UserRepositoryTest.SetPasswordHashRejectsBadInput
+155/380 Test #155: UserRepositoryTest.SetPasswordHashRejectsBadInput .........................................   Passed    0.22 sec
+        Start 156: UserRepositoryTest.SetActiveDeactivatesAndReactivates
+156/380 Test #156: UserRepositoryTest.SetActiveDeactivatesAndReactivates .....................................   Passed    0.18 sec
+        Start 157: UserRepositoryTest.SetActiveOnUnknownUserThrows
+157/380 Test #157: UserRepositoryTest.SetActiveOnUnknownUserThrows ...........................................   Passed    0.30 sec
+        Start 158: DatabaseTest.SchemaCreatesAllTwelveTables
+158/380 Test #158: DatabaseTest.SchemaCreatesAllTwelveTables .................................................   Passed    0.36 sec
+        Start 159: DatabaseTest.ParameterisedQueryTreatsInputAsData
+159/380 Test #159: DatabaseTest.ParameterisedQueryTreatsInputAsData ..........................................   Passed    0.46 sec
+        Start 160: DatabaseTest.DuplicateUsernameIsRejected
+160/380 Test #160: DatabaseTest.DuplicateUsernameIsRejected ..................................................   Passed    0.19 sec
+        Start 161: DatabaseTest.InvalidRoleIsRejected
+161/380 Test #161: DatabaseTest.InvalidRoleIsRejected ........................................................   Passed    0.28 sec
+        Start 162: DatabaseTest.ForeignKeyIsEnforced
+162/380 Test #162: DatabaseTest.ForeignKeyIsEnforced .........................................................   Passed    0.26 sec
+        Start 163: DatabaseTest.InvalidSubmissionStatusIsRejected
+163/380 Test #163: DatabaseTest.InvalidSubmissionStatusIsRejected ............................................   Passed    0.17 sec
+        Start 164: DatabaseTest.OnlyOneSubmissionPerStudentPerAssignment
+164/380 Test #164: DatabaseTest.OnlyOneSubmissionPerStudentPerAssignment .....................................   Passed    0.20 sec
+        Start 165: DatabaseTest.MaxMarkMustBePositive
+165/380 Test #165: DatabaseTest.MaxMarkMustBePositive ........................................................   Passed    0.19 sec
+        Start 166: DatabaseTest.AuditEntryNeedsAReason
+166/380 Test #166: DatabaseTest.AuditEntryNeedsAReason .......................................................   Passed    0.20 sec
+        Start 167: DatabaseTest.FirstMarkHasNullOldValue
+167/380 Test #167: DatabaseTest.FirstMarkHasNullOldValue .....................................................   Passed    0.22 sec
+        Start 168: DatabaseTest.RollbackUndoesChanges
+168/380 Test #168: DatabaseTest.RollbackUndoesChanges ........................................................   Passed    0.16 sec
+        Start 169: DatabaseTest.CommitKeepsChanges
+169/380 Test #169: DatabaseTest.CommitKeepsChanges ...........................................................   Passed    0.16 sec
+        Start 170: DatabaseTest.BadSqlThrowsDatabaseError
+170/380 Test #170: DatabaseTest.BadSqlThrowsDatabaseError ....................................................   Passed    0.16 sec
+        Start 171: DatabaseTest.BindingOutOfRangeThrowsDatabaseError
+171/380 Test #171: DatabaseTest.BindingOutOfRangeThrowsDatabaseError .........................................   Passed    0.17 sec
+        Start 172: DatabaseTest.LastInsertIdReturnsTheNewId
+172/380 Test #172: DatabaseTest.LastInsertIdReturnsTheNewId ..................................................   Passed    0.35 sec
+        Start 173: DatabaseOpenTest.CannotOpenInMissingFolder
+173/380 Test #173: DatabaseOpenTest.CannotOpenInMissingFolder ................................................   Passed    0.19 sec
+        Start 174: Argon2HasherTest.HashUsesArgon2id
+174/380 Test #174: Argon2HasherTest.HashUsesArgon2id .........................................................   Passed    0.36 sec
+        Start 175: Argon2HasherTest.HashDoesNotContainThePassword
+175/380 Test #175: Argon2HasherTest.HashDoesNotContainThePassword ............................................   Passed    0.35 sec
+        Start 176: Argon2HasherTest.SamePasswordGivesDifferentHashes
+176/380 Test #176: Argon2HasherTest.SamePasswordGivesDifferentHashes .........................................   Passed    0.57 sec
+        Start 177: Argon2HasherTest.CorrectPasswordVerifies
+177/380 Test #177: Argon2HasherTest.CorrectPasswordVerifies ..................................................   Passed    0.51 sec
+        Start 178: Argon2HasherTest.WrongPasswordFails
+178/380 Test #178: Argon2HasherTest.WrongPasswordFails .......................................................   Passed    0.81 sec
+        Start 179: Argon2HasherTest.EmptyPasswordCannotBeHashed
+179/380 Test #179: Argon2HasherTest.EmptyPasswordCannotBeHashed ..............................................   Passed    0.24 sec
+        Start 180: Argon2HasherTest.EmptyPasswordNeverVerifies
+180/380 Test #180: Argon2HasherTest.EmptyPasswordNeverVerifies ...............................................   Passed    0.46 sec
+        Start 181: Argon2HasherTest.GarbageStoredHashFails
+181/380 Test #181: Argon2HasherTest.GarbageStoredHashFails ...................................................   Passed    0.31 sec
+        Start 182: Argon2HasherTest.EmptyStoredHashFails
+182/380 Test #182: Argon2HasherTest.EmptyStoredHashFails .....................................................   Passed    0.28 sec
+        Start 183: LecturerTest.CreateAssignmentStoresAllTheData
+183/380 Test #183: LecturerTest.CreateAssignmentStoresAllTheData .............................................   Passed    0.34 sec
+        Start 184: LecturerTest.DeadlineMustBeInTheFuture
+184/380 Test #184: LecturerTest.DeadlineMustBeInTheFuture ....................................................   Passed    0.27 sec
+        Start 185: LecturerTest.BadTitleOrMaximumMarkIsRefusedAndNothingIsSaved
+185/380 Test #185: LecturerTest.BadTitleOrMaximumMarkIsRefusedAndNothingIsSaved ..............................   Passed    0.39 sec
+        Start 186: LecturerTest.OnlyALecturerWhoTeachesTheCourseCanCreateAssignments
+186/380 Test #186: LecturerTest.OnlyALecturerWhoTeachesTheCourseCanCreateAssignments .........................   Passed    0.34 sec
+        Start 187: LecturerTest.UnknownCourseIsRefused
+187/380 Test #187: LecturerTest.UnknownCourseIsRefused .......................................................   Passed    0.29 sec
+        Start 188: LecturerTest.ExtensionMovesOnlyThatStudentsDeadline
+188/380 Test #188: LecturerTest.ExtensionMovesOnlyThatStudentsDeadline .......................................   Passed    0.24 sec
+        Start 189: LecturerTest.ExtensionMustBeLaterThanTheDeadlineAndNeedsAReason
+189/380 Test #189: LecturerTest.ExtensionMustBeLaterThanTheDeadlineAndNeedsAReason ...........................   Passed    0.26 sec
+        Start 190: LecturerTest.SecondExtensionReplacesTheFirst
+190/380 Test #190: LecturerTest.SecondExtensionReplacesTheFirst ..............................................   Passed    0.31 sec
+        Start 191: LecturerTest.StudentMustBeEnrolledInTheCourse
+191/380 Test #191: LecturerTest.StudentMustBeEnrolledInTheCourse .............................................   Passed    0.31 sec
+        Start 192: LecturerTest.UnknownAssignmentIsRefused
+192/380 Test #192: LecturerTest.UnknownAssignmentIsRefused ...................................................   Passed    0.20 sec
+        Start 193: LecturerTest.OnlyALecturerWhoTeachesTheCourseCanGrantExtensions
+193/380 Test #193: LecturerTest.OnlyALecturerWhoTeachesTheCourseCanGrantExtensions ...........................   Passed    0.33 sec
+        Start 194: LecturerTest.ExtensionIsAllowedAfterAnOnTimeSubmission
+194/380 Test #194: LecturerTest.ExtensionIsAllowedAfterAnOnTimeSubmission ....................................   Passed    0.26 sec
+        Start 195: LecturerTest.ExtensionIsRefusedAfterLateOrMarkedWork
+195/380 Test #195: LecturerTest.ExtensionIsRefusedAfterLateOrMarkedWork ......................................   Passed    0.32 sec
+        Start 196: LecturerTest.MyCoursesListsOnlyTheirCourses
+196/380 Test #196: LecturerTest.MyCoursesListsOnlyTheirCourses ...............................................   Passed    0.26 sec
+        Start 197: LecturerTest.ListAssignmentsOnlyForACourseTheyTeach
+197/380 Test #197: LecturerTest.ListAssignmentsOnlyForACourseTheyTeach .......................................   Passed    0.23 sec
+        Start 198: LecturerTest.ListSubmissionsShowsTheMarksToTheLecturer
+198/380 Test #198: LecturerTest.ListSubmissionsShowsTheMarksToTheLecturer ....................................   Passed    0.33 sec
+        Start 199: LecturerTest.ListSubmissionsOnlyForACourseTheyTeach
+199/380 Test #199: LecturerTest.ListSubmissionsOnlyForACourseTheyTeach .......................................   Passed    0.43 sec
+        Start 200: LecturerTest.ExtensionDecidesWhoIsOnTimeWhenBothSubmitTwoHoursLate
+200/380 Test #200: LecturerTest.ExtensionDecidesWhoIsOnTimeWhenBothSubmitTwoHoursLate ........................   Passed    0.23 sec
+        Start 201: AdminTest.CreateUserOfEveryRole
+201/380 Test #201: AdminTest.CreateUserOfEveryRole ...........................................................   Passed    0.59 sec
+        Start 202: AdminTest.CreateUserReturnsTheNewIdAndStoresOnlyAHash
+202/380 Test #202: AdminTest.CreateUserReturnsTheNewIdAndStoresOnlyAHash .....................................   Passed    0.42 sec
+        Start 203: AdminTest.NewUserCanLogIn
+203/380 Test #203: AdminTest.NewUserCanLogIn .................................................................   Passed    0.33 sec
+        Start 204: AdminTest.WeakPasswordsAreRefusedAndNothingIsSaved
+204/380 Test #204: AdminTest.WeakPasswordsAreRefusedAndNothingIsSaved ........................................   Passed    0.27 sec
+        Start 205: AdminTest.PasswordRuleBoundaryIsEightCharacters
+205/380 Test #205: AdminTest.PasswordRuleBoundaryIsEightCharacters ...........................................   Passed    0.24 sec
+        Start 206: AdminTest.BadUserDataIsRefused
+206/380 Test #206: AdminTest.BadUserDataIsRefused ............................................................   Passed    0.28 sec
+        Start 207: AdminTest.DuplicateUsernameIsRefused
+207/380 Test #207: AdminTest.DuplicateUsernameIsRefused ......................................................   Passed    0.36 sec
+        Start 208: AdminTest.SecondHoDForTheSameDepartmentIsRefused
+208/380 Test #208: AdminTest.SecondHoDForTheSameDepartmentIsRefused ..........................................   Passed    0.17 sec
+        Start 209: AdminTest.DeactivatedUserCannotLogInUntilReactivated
+209/380 Test #209: AdminTest.DeactivatedUserCannotLogInUntilReactivated ......................................   Passed    0.47 sec
+        Start 210: AdminTest.AdminCannotDeactivateTheirOwnAccount
+210/380 Test #210: AdminTest.AdminCannotDeactivateTheirOwnAccount ............................................   Passed    0.26 sec
+        Start 211: AdminTest.DeactivateUnknownUserIsRefused
+211/380 Test #211: AdminTest.DeactivateUnknownUserIsRefused ..................................................   Passed    0.30 sec
+        Start 212: AdminTest.ResetPasswordReplacesTheOldPassword
+212/380 Test #212: AdminTest.ResetPasswordReplacesTheOldPassword .............................................   Passed    0.48 sec
+        Start 213: AdminTest.ResetPasswordRefusesWeakPasswordsAndKeepsTheOldOne
+213/380 Test #213: AdminTest.ResetPasswordRefusesWeakPasswordsAndKeepsTheOldOne ..............................   Passed    0.36 sec
+        Start 214: AdminTest.ResetPasswordForUnknownUserIsRefused
+214/380 Test #214: AdminTest.ResetPasswordForUnknownUserIsRefused ............................................   Passed    0.29 sec
+        Start 215: AdminTest.CreateDepartmentAndCourse
+215/380 Test #215: AdminTest.CreateDepartmentAndCourse .......................................................   Passed    0.39 sec
+        Start 216: AdminTest.DuplicateOrInvalidDepartmentsAndCoursesAreRefused
+216/380 Test #216: AdminTest.DuplicateOrInvalidDepartmentsAndCoursesAreRefused ...............................   Passed    0.28 sec
+        Start 217: AdminTest.AssignLecturerAndEnrolStudent
+217/380 Test #217: AdminTest.AssignLecturerAndEnrolStudent ...................................................   Passed    0.31 sec
+        Start 218: AdminTest.WrongKindOfUserCannotBeAssignedOrEnrolled
+218/380 Test #218: AdminTest.WrongKindOfUserCannotBeAssignedOrEnrolled .......................................   Passed    0.30 sec
+        Start 219: AdminTest.AssignAndEnrolTwiceIsHarmless
+219/380 Test #219: AdminTest.AssignAndEnrolTwiceIsHarmless ...................................................   Passed    0.24 sec
+        Start 220: AdminTest.EveryAdminActionIsRefusedForEveryoneElse
+220/380 Test #220: AdminTest.EveryAdminActionIsRefusedForEveryoneElse ........................................   Passed    0.32 sec
+        Start 221: StudentViewTest.MyCoursesListsOnlyEnrolledCourses
+221/380 Test #221: StudentViewTest.MyCoursesListsOnlyEnrolledCourses .........................................   Passed    0.37 sec
+        Start 222: StudentViewTest.MyAssignmentsListsTheCourseAssignmentsInDeadlineOrder
+222/380 Test #222: StudentViewTest.MyAssignmentsListsTheCourseAssignmentsInDeadlineOrder .....................   Passed    0.49 sec
+        Start 223: StudentViewTest.MyAssignmentsShowsTheStudentsOwnDeadline
+223/380 Test #223: StudentViewTest.MyAssignmentsShowsTheStudentsOwnDeadline ..................................   Passed    0.25 sec
+        Start 224: StudentViewTest.AssignmentListShowsNotSubmittedThenTheStatus
+224/380 Test #224: StudentViewTest.AssignmentListShowsNotSubmittedThenTheStatus ..............................   Passed    0.37 sec
+        Start 225: StudentViewTest.CourseTheStudentIsNotEnrolledInIsRefused
+225/380 Test #225: StudentViewTest.CourseTheStudentIsNotEnrolledInIsRefused ..................................   Passed    0.29 sec
+        Start 226: StudentViewTest.NotSubmittedWorkShowsNoMarkData
+226/380 Test #226: StudentViewTest.NotSubmittedWorkShowsNoMarkData ...........................................   Passed    0.34 sec
+        Start 227: StudentViewTest.SubmittedWorkShowsStatusAndVersionCount
+227/380 Test #227: StudentViewTest.SubmittedWorkShowsStatusAndVersionCount ...................................   Passed    0.33 sec
+        Start 228: StudentViewTest.LateWorkShowsTheLateDays
+228/380 Test #228: StudentViewTest.LateWorkShowsTheLateDays ..................................................   Passed    0.28 sec
+        Start 229: StudentViewTest.MarkedWorkHidesTheMarkAndTheFeedback
+229/380 Test #229: StudentViewTest.MarkedWorkHidesTheMarkAndTheFeedback ......................................   Passed    0.25 sec
+        Start 230: StudentViewTest.ModeratedWorkStillHidesTheMarkAndTheFeedback
+230/380 Test #230: StudentViewTest.ModeratedWorkStillHidesTheMarkAndTheFeedback ..............................   Passed    0.38 sec
+        Start 231: StudentViewTest.ReleasedWorkShowsMarkPenaltyAndFeedback
+231/380 Test #231: StudentViewTest.ReleasedWorkShowsMarkPenaltyAndFeedback ...................................   Passed    0.25 sec
+        Start 232: StudentViewTest.AStudentOnlySeesTheirOwnSubmission
+232/380 Test #232: StudentViewTest.AStudentOnlySeesTheirOwnSubmission ........................................   Passed    0.26 sec
+        Start 233: StudentViewTest.SubmissionViewShowsTheOwnDeadline
+233/380 Test #233: StudentViewTest.SubmissionViewShowsTheOwnDeadline .........................................   Passed    0.41 sec
+        Start 234: StudentViewTest.StudentNotEnrolledCannotViewTheSubmission
+234/380 Test #234: StudentViewTest.StudentNotEnrolledCannotViewTheSubmission .................................   Passed    0.19 sec
+        Start 235: StudentViewTest.OnlyStudentsCanUseTheStudentPages
+235/380 Test #235: StudentViewTest.OnlyStudentsCanUseTheStudentPages .........................................   Passed    0.24 sec
+        Start 236: StudentViewTest.InactiveStudentIsRefused
+236/380 Test #236: StudentViewTest.InactiveStudentIsRefused ..................................................   Passed    0.23 sec
+        Start 237: StudentViewTest.UnknownAssignmentIsRefused
+237/380 Test #237: StudentViewTest.UnknownAssignmentIsRefused ................................................   Passed    0.41 sec
+        Start 238: StudentViewTest.WholeJourneyShowsTheMarkOnlyAfterRelease
+238/380 Test #238: StudentViewTest.WholeJourneyShowsTheMarkOnlyAfterRelease ..................................   Passed    0.31 sec
+        Start 239: NotificationClassTest.KeepsItsData
+239/380 Test #239: NotificationClassTest.KeepsItsData ........................................................   Passed    0.36 sec
+        Start 240: NotificationClassTest.InvalidDataThrows
+240/380 Test #240: NotificationClassTest.InvalidDataThrows ...................................................   Passed    0.32 sec
+        Start 241: NotificationTest.AddAndReadBack
+241/380 Test #241: NotificationTest.AddAndReadBack ...........................................................   Passed    0.31 sec
+        Start 242: NotificationTest.ListIsNewestFirstAndOnlyForThatUser
+242/380 Test #242: NotificationTest.ListIsNewestFirstAndOnlyForThatUser ......................................   Passed    0.44 sec
+        Start 243: NotificationTest.MessageWithQuotesIsStoredAsData
+243/380 Test #243: NotificationTest.MessageWithQuotesIsStoredAsData ..........................................   Passed    0.32 sec
+        Start 244: NotificationTest.SavedNotificationCannotBeAddedAgain
+244/380 Test #244: NotificationTest.SavedNotificationCannotBeAddedAgain ......................................   Passed    0.28 sec
+        Start 245: NotificationTest.UnknownUserIsRejected
+245/380 Test #245: NotificationTest.UnknownUserIsRejected ....................................................   Passed    0.49 sec
+        Start 246: NotificationTest.RepositoryMarkReadOnlyWorksForTheOwner
+246/380 Test #246: NotificationTest.RepositoryMarkReadOnlyWorksForTheOwner ...................................   Passed    0.25 sec
+        Start 247: NotificationTest.ReleaseCreatesOneUnreadNoticePerReleasedStudent
+247/380 Test #247: NotificationTest.ReleaseCreatesOneUnreadNoticePerReleasedStudent ..........................   Passed    0.33 sec
+        Start 248: NotificationTest.TheMessageNamesTheAssignment
+248/380 Test #248: NotificationTest.TheMessageNamesTheAssignment .............................................   Passed    0.32 sec
+        Start 249: NotificationTest.NewestNoticeComesFirst
+249/380 Test #249: NotificationTest.NewestNoticeComesFirst ...................................................   Passed    0.51 sec
+        Start 250: NotificationTest.EmptyStudentListCreatesNothing
+250/380 Test #250: NotificationTest.EmptyStudentListCreatesNothing ...........................................   Passed    0.50 sec
+        Start 251: NotificationTest.UnknownAssignmentIsRefused
+251/380 Test #251: NotificationTest.UnknownAssignmentIsRefused ...............................................   Passed    0.34 sec
+        Start 252: NotificationTest.AllNoticesAreSavedTogetherOrNotAtAll
+252/380 Test #252: NotificationTest.AllNoticesAreSavedTogetherOrNotAtAll .....................................   Passed    0.20 sec
+        Start 253: NotificationTest.MarkReadChangesTheUnreadCount
+253/380 Test #253: NotificationTest.MarkReadChangesTheUnreadCount ............................................   Passed    0.24 sec
+        Start 254: NotificationTest.CannotMarkAnotherStudentsNoticeAsRead
+254/380 Test #254: NotificationTest.CannotMarkAnotherStudentsNoticeAsRead ....................................   Passed    0.40 sec
+        Start 255: NotificationTest.MarkReadOfUnknownNoticeIsRefused
+255/380 Test #255: NotificationTest.MarkReadOfUnknownNoticeIsRefused .........................................   Passed    0.41 sec
+        Start 256: NotificationTest.AUserSeesOnlyTheirOwnNotices
+256/380 Test #256: NotificationTest.AUserSeesOnlyTheirOwnNotices .............................................   Passed    0.41 sec
+        Start 257: NotificationTest.InactiveUserIsRefused
+257/380 Test #257: NotificationTest.InactiveUserIsRefused ....................................................   Passed    0.29 sec
+        Start 258: ModerationTest.ListShowsOnlyWorkThatHasAMark
+258/380 Test #258: ModerationTest.ListShowsOnlyWorkThatHasAMark ..............................................   Passed    0.34 sec
+        Start 259: ModerationTest.ListForUnknownAssignmentIsRefused
+259/380 Test #259: ModerationTest.ListForUnknownAssignmentIsRefused ..........................................   Passed    0.28 sec
+        Start 260: ModerationTest.OnlyTheHoDCanModerate
+260/380 Test #260: ModerationTest.OnlyTheHoDCanModerate ......................................................   Passed    0.25 sec
+        Start 261: ModerationTest.InactiveHoDCannotModerate
+261/380 Test #261: ModerationTest.InactiveHoDCannotModerate ..................................................   Passed    0.28 sec
+        Start 262: ModerationTest.HoDOfAnotherDepartmentIsRefusedEverywhere
+262/380 Test #262: ModerationTest.HoDOfAnotherDepartmentIsRefusedEverywhere ..................................   Passed    0.28 sec
+        Start 263: ModerationTest.ApproveMovesMarkedToModeratedAndKeepsTheMark
+263/380 Test #263: ModerationTest.ApproveMovesMarkedToModeratedAndKeepsTheMark ...............................   Passed    0.36 sec
+        Start 264: ModerationTest.ApproveRefusesWorkThatIsNotMarked
+264/380 Test #264: ModerationTest.ApproveRefusesWorkThatIsNotMarked ..........................................   Passed    0.43 sec
+        Start 265: ModerationTest.ApproveTwiceIsRefused
+265/380 Test #265: ModerationTest.ApproveTwiceIsRefused ......................................................   Passed    0.28 sec
+        Start 266: ModerationTest.ApproveUnknownSubmissionIsRefused
+266/380 Test #266: ModerationTest.ApproveUnknownSubmissionIsRefused ..........................................   Passed    0.28 sec
+        Start 267: ModerationTest.ChangeMarkSavesTheNewMarkAndAnAuditEntry
+267/380 Test #267: ModerationTest.ChangeMarkSavesTheNewMarkAndAnAuditEntry ...................................   Passed    0.45 sec
+        Start 268: ModerationTest.ChangeMarkWithoutAReasonIsRefusedAndNothingChanges
+268/380 Test #268: ModerationTest.ChangeMarkWithoutAReasonIsRefusedAndNothingChanges .........................   Passed    0.41 sec
+        Start 269: ModerationTest.ChangeMarkOutsideZeroToMaximumIsRefused
+269/380 Test #269: ModerationTest.ChangeMarkOutsideZeroToMaximumIsRefused ....................................   Passed    0.27 sec
+        Start 270: ModerationTest.ChangeMarkAcceptsZeroAndTheMaximum
+270/380 Test #270: ModerationTest.ChangeMarkAcceptsZeroAndTheMaximum .........................................   Passed    0.49 sec
+        Start 271: ModerationTest.ChangeMarkOnlyWhileMarked
+271/380 Test #271: ModerationTest.ChangeMarkOnlyWhileMarked ..................................................   Passed    0.20 sec
+        Start 272: ModerationTest.ChangeMarkUnknownSubmissionIsRefused
+272/380 Test #272: ModerationTest.ChangeMarkUnknownSubmissionIsRefused .......................................   Passed    0.26 sec
+        Start 273: ModerationTest.FailedAuditEntryUndoesTheMarkChange
+273/380 Test #273: ModerationTest.FailedAuditEntryUndoesTheMarkChange ........................................   Passed    0.26 sec
+        Start 274: ModerationTest.ReleaseSetsStatusAndTimeForAllModeratedWork
+274/380 Test #274: ModerationTest.ReleaseSetsStatusAndTimeForAllModeratedWork ................................   Passed    0.26 sec
+        Start 275: ModerationTest.PartialApprovalOnlyReleasesTheApprovedWork
+275/380 Test #275: ModerationTest.PartialApprovalOnlyReleasesTheApprovedWork .................................   Passed    0.32 sec
+        Start 276: ModerationTest.ReleaseWithNothingModeratedIsRefusedAndObserversAreNotCalled
+276/380 Test #276: ModerationTest.ReleaseWithNothingModeratedIsRefusedAndObserversAreNotCalled ...............   Passed    0.39 sec
+        Start 277: ModerationTest.ReleaseTwiceTheSecondTimeHasNothingToRelease
+277/380 Test #277: ModerationTest.ReleaseTwiceTheSecondTimeHasNothingToRelease ...............................   Passed    0.46 sec
+        Start 278: ModerationTest.ReleaseUnknownAssignmentIsRefused
+278/380 Test #278: ModerationTest.ReleaseUnknownAssignmentIsRefused ..........................................   Passed    0.48 sec
+        Start 279: ModerationTest.ObserverIsToldWhichStudentsWereReleased
+279/380 Test #279: ModerationTest.ObserverIsToldWhichStudentsWereReleased ....................................   Passed    0.90 sec
+        Start 280: ModerationTest.AllObserversAreTold
+280/380 Test #280: ModerationTest.AllObserversAreTold ........................................................   Passed    0.31 sec
+        Start 281: ModerationTest.AttachingTheSameObserverTwiceTellsItOnce
+281/380 Test #281: ModerationTest.AttachingTheSameObserverTwiceTellsItOnce ...................................   Passed    0.18 sec
+        Start 282: ModerationTest.FailingObserverDoesNotUndoTheReleaseOrStopTheOthers
+282/380 Test #282: ModerationTest.FailingObserverDoesNotUndoTheReleaseOrStopTheOthers ........................   Passed    0.30 sec
+        Start 283: MarkTest.FirstMarkStoresMarkAndFeedbackAndMovesToMarked
+283/380 Test #283: MarkTest.FirstMarkStoresMarkAndFeedbackAndMovesToMarked ...................................   Passed    0.39 sec
+        Start 284: MarkTest.FirstMarkWritesAnAuditEntryWithNoOldValue
+284/380 Test #284: MarkTest.FirstMarkWritesAnAuditEntryWithNoOldValue ........................................   Passed    0.74 sec
+        Start 285: MarkTest.LatePenaltyIsAppliedAndTheRawMarkIsKept
+285/380 Test #285: MarkTest.LatePenaltyIsAppliedAndTheRawMarkIsKept ..........................................   Passed    0.30 sec
+        Start 286: MarkTest.FourDaysLateGivesAFinalMarkOfZero
+286/380 Test #286: MarkTest.FourDaysLateGivesAFinalMarkOfZero ................................................   Passed    0.25 sec
+        Start 287: MarkTest.MarkOfZeroAndMarkOfMaximumAreBothAccepted
+287/380 Test #287: MarkTest.MarkOfZeroAndMarkOfMaximumAreBothAccepted ........................................   Passed    0.31 sec
+        Start 288: MarkTest.ReMarkWithAReasonRecordsOldAndNewValue
+288/380 Test #288: MarkTest.ReMarkWithAReasonRecordsOldAndNewValue ...........................................   Passed    0.23 sec
+        Start 289: MarkTest.ReMarkWithoutAReasonIsRefusedAndNothingChanges
+289/380 Test #289: MarkTest.ReMarkWithoutAReasonIsRefusedAndNothingChanges ...................................   Passed    0.41 sec
+        Start 290: MarkTest.MarkOutsideZeroToMaximumIsRefusedAndNothingIsSaved
+290/380 Test #290: MarkTest.MarkOutsideZeroToMaximumIsRefusedAndNothingIsSaved ...............................   Passed    0.14 sec
+        Start 291: MarkTest.BlankFeedbackIsRefusedAndNothingIsSaved
+291/380 Test #291: MarkTest.BlankFeedbackIsRefusedAndNothingIsSaved ..........................................   Passed    0.39 sec
+        Start 292: MarkTest.UnknownSubmissionIsRefused
+292/380 Test #292: MarkTest.UnknownSubmissionIsRefused .......................................................   Passed    0.31 sec
+        Start 293: MarkTest.ModeratedWorkCannotBeReMarked
+293/380 Test #293: MarkTest.ModeratedWorkCannotBeReMarked ....................................................   Passed    0.32 sec
+        Start 294: MarkTest.OnlyLecturersCanMark
+294/380 Test #294: MarkTest.OnlyLecturersCanMark .............................................................   Passed    0.40 sec
+        Start 295: MarkTest.InactiveLecturerCannotMark
+295/380 Test #295: MarkTest.InactiveLecturerCannotMark .......................................................   Passed    0.37 sec
+        Start 296: MarkTest.LecturerWhoDoesNotTeachTheCourseIsRefused
+296/380 Test #296: MarkTest.LecturerWhoDoesNotTeachTheCourseIsRefused ........................................   Passed    0.16 sec
+        Start 297: MarkTest.FailedAuditEntryUndoesTheMark
+297/380 Test #297: MarkTest.FailedAuditEntryUndoesTheMark ....................................................   Passed    0.30 sec
+        Start 298: SubmitTest.OnTimeSubmissionIsSubmittedWithVersionOne
+298/380 Test #298: SubmitTest.OnTimeSubmissionIsSubmittedWithVersionOne ......................................   Passed    0.42 sec
+        Start 299: SubmitTest.SubmissionAndFileAreStored
+299/380 Test #299: SubmitTest.SubmissionAndFileAreStored .....................................................   Passed    0.35 sec
+        Start 300: SubmitTest.ExactlyAtTheDeadlineIsOnTime
+300/380 Test #300: SubmitTest.ExactlyAtTheDeadlineIsOnTime ...................................................   Passed    0.41 sec
+        Start 301: SubmitTest.OneSecondLateIsLateDayOneWithTenPercentOff
+301/380 Test #301: SubmitTest.OneSecondLateIsLateDayOneWithTenPercentOff .....................................   Passed    0.20 sec
+        Start 302: SubmitTest.ThreeDaysLateIsAcceptedWithThirtyPercentOff
+302/380 Test #302: SubmitTest.ThreeDaysLateIsAcceptedWithThirtyPercentOff ....................................   Passed    0.29 sec
+        Start 303: SubmitTest.FourDaysLateIsStillAcceptedButWorthZero
+303/380 Test #303: SubmitTest.FourDaysLateIsStillAcceptedButWorthZero ........................................   Passed    0.42 sec
+        Start 304: SubmitTest.ExtensionMakesALateSubmissionOnTimeForThatStudentOnly
+304/380 Test #304: SubmitTest.ExtensionMakesALateSubmissionOnTimeForThatStudentOnly ..........................   Passed    0.22 sec
+        Start 305: SubmitTest.LateDaysAreCountedFromTheExtendedDeadline
+305/380 Test #305: SubmitTest.LateDaysAreCountedFromTheExtendedDeadline ......................................   Passed    0.18 sec
+        Start 306: SubmitTest.ResubmitBeforeTheDeadlineAddsAVersionAndKeepsTheStatus
+306/380 Test #306: SubmitTest.ResubmitBeforeTheDeadlineAddsAVersionAndKeepsTheStatus .........................   Passed    0.35 sec
+        Start 307: SubmitTest.ResubmitAfterTheDeadlineIsRefused
+307/380 Test #307: SubmitTest.ResubmitAfterTheDeadlineIsRefused ..............................................   Passed    0.32 sec
+        Start 308: SubmitTest.LateWorkCannotBeResubmitted
+308/380 Test #308: SubmitTest.LateWorkCannotBeResubmitted ....................................................   Passed    0.23 sec
+        Start 309: SubmitTest.MarkedWorkCannotBeResubmittedEvenBeforeTheDeadline
+309/380 Test #309: SubmitTest.MarkedWorkCannotBeResubmittedEvenBeforeTheDeadline .............................   Passed    0.35 sec
+        Start 310: SubmitTest.StudentNotEnrolledInTheCourseIsRefused
+310/380 Test #310: SubmitTest.StudentNotEnrolledInTheCourseIsRefused .........................................   Passed    0.47 sec
+        Start 311: SubmitTest.OnlyStudentsCanSubmit
+311/380 Test #311: SubmitTest.OnlyStudentsCanSubmit ..........................................................   Passed    0.35 sec
+        Start 312: SubmitTest.InactiveStudentIsRefused
+312/380 Test #312: SubmitTest.InactiveStudentIsRefused .......................................................   Passed    0.28 sec
+        Start 313: SubmitTest.UnknownAssignmentIsRejected
+313/380 Test #313: SubmitTest.UnknownAssignmentIsRejected ....................................................   Passed    0.27 sec
+        Start 314: SubmitTest.UnsuitableFilesAreRejectedAndNothingIsSaved
+314/380 Test #314: SubmitTest.UnsuitableFilesAreRejectedAndNothingIsSaved ....................................   Passed    0.35 sec
+        Start 315: SubmitTest.AllowedFileTypesAreAccepted
+315/380 Test #315: SubmitTest.AllowedFileTypesAreAccepted ....................................................   Passed    0.29 sec
+        Start 316: SubmitTest.EachStudentHasTheirOwnSubmission
+316/380 Test #316: SubmitTest.EachStudentHasTheirOwnSubmission ...............................................   Passed    0.58 sec
+        Start 317: AuditTest.AddAndReadBack
+317/380 Test #317: AuditTest.AddAndReadBack ..................................................................   Passed    0.50 sec
+        Start 318: AuditTest.FirstMarkHasNoOldValue
+318/380 Test #318: AuditTest.FirstMarkHasNoOldValue ..........................................................   Passed    0.78 sec
+        Start 319: AuditTest.EntriesComeBackOldestFirst
+319/380 Test #319: AuditTest.EntriesComeBackOldestFirst ......................................................   Passed    0.45 sec
+        Start 320: AuditTest.TimeIsStoredAndReadBack
+320/380 Test #320: AuditTest.TimeIsStoredAndReadBack .........................................................   Passed    0.32 sec
+        Start 321: AuditTest.UnknownSubmissionIsRejected
+321/380 Test #321: AuditTest.UnknownSubmissionIsRejected .....................................................   Passed    0.37 sec
+        Start 322: AuditTest.UnknownUserIsRejected
+322/380 Test #322: AuditTest.UnknownUserIsRejected ...........................................................   Passed    0.78 sec
+        Start 323: AuditTest.SavedEntryCannotBeAddedAgain
+323/380 Test #323: AuditTest.SavedEntryCannotBeAddedAgain ....................................................   Passed    0.50 sec
+        Start 324: AuditTest.FindAllReturnsEntriesOfAllSubmissions
+324/380 Test #324: AuditTest.FindAllReturnsEntriesOfAllSubmissions ...........................................   Passed    0.38 sec
+        Start 325: AuditTest.ServiceUsesTheClockForTheTime
+325/380 Test #325: AuditTest.ServiceUsesTheClockForTheTime ...................................................   Passed    0.37 sec
+        Start 326: AuditTest.ServiceRecordsOldAndNewValue
+326/380 Test #326: AuditTest.ServiceRecordsOldAndNewValue ....................................................   Passed    0.25 sec
+        Start 327: AuditTest.InvalidChangeIsNotSaved
+327/380 Test #327: AuditTest.InvalidChangeIsNotSaved .........................................................   Passed    0.36 sec
+        Start 328: AuditTest.HoDCanViewTheAuditLog
+328/380 Test #328: AuditTest.HoDCanViewTheAuditLog ...........................................................   Passed    0.25 sec
+        Start 329: AuditTest.AdminCanViewTheAuditLog
+329/380 Test #329: AuditTest.AdminCanViewTheAuditLog .........................................................   Passed    0.29 sec
+        Start 330: AuditTest.LecturerCannotViewTheAuditLog
+330/380 Test #330: AuditTest.LecturerCannotViewTheAuditLog ...................................................   Passed    0.26 sec
+        Start 331: AuditTest.StudentCannotViewTheAuditLog
+331/380 Test #331: AuditTest.StudentCannotViewTheAuditLog ....................................................   Passed    0.37 sec
+        Start 332: AuditTest.InactiveHoDCannotViewTheAuditLog
+332/380 Test #332: AuditTest.InactiveHoDCannotViewTheAuditLog ................................................   Passed    0.27 sec
+        Start 333: AuditTest.HistoryShowsOnlyThatSubmission
+333/380 Test #333: AuditTest.HistoryShowsOnlyThatSubmission ..................................................   Passed    0.27 sec
+        Start 334: MarkAuditEntryTest.EntryNeedsAReason
+334/380 Test #334: MarkAuditEntryTest.EntryNeedsAReason ......................................................   Passed    0.36 sec
+        Start 335: MarkAuditEntryTest.EntryRejectsNegativeMarks
+335/380 Test #335: MarkAuditEntryTest.EntryRejectsNegativeMarks ..............................................   Passed    0.20 sec
+        Start 336: MarkAuditEntryTest.EntryNeedsASubmissionAndAUser
+336/380 Test #336: MarkAuditEntryTest.EntryNeedsASubmissionAndAUser ..........................................   Passed    0.35 sec
+        Start 337: AuthTest.ValidLoginReturnsTheUser
+337/380 Test #337: AuthTest.ValidLoginReturnsTheUser .........................................................   Passed    0.83 sec
+        Start 338: AuthTest.EveryRoleCanLogIn
+338/380 Test #338: AuthTest.EveryRoleCanLogIn ................................................................   Passed    2.71 sec
+        Start 339: AuthTest.WrongPasswordFails
+339/380 Test #339: AuthTest.WrongPasswordFails ...............................................................   Passed    0.83 sec
+        Start 340: AuthTest.PasswordIsCaseSensitive
+340/380 Test #340: AuthTest.PasswordIsCaseSensitive ..........................................................   Passed    1.45 sec
+        Start 341: AuthTest.UnknownUserFails
+341/380 Test #341: AuthTest.UnknownUserFails .................................................................   Passed    1.11 sec
+        Start 342: AuthTest.WrongPasswordAndUnknownUserGiveTheSameMessage
+342/380 Test #342: AuthTest.WrongPasswordAndUnknownUserGiveTheSameMessage ....................................   Passed    1.77 sec
+        Start 343: AuthTest.EmptyUsernameFails
+343/380 Test #343: AuthTest.EmptyUsernameFails ...............................................................   Passed    0.66 sec
+        Start 344: AuthTest.EmptyPasswordFails
+344/380 Test #344: AuthTest.EmptyPasswordFails ...............................................................   Passed    1.03 sec
+        Start 345: AuthTest.DeactivatedUserCannotLogInEvenWithCorrectPassword
+345/380 Test #345: AuthTest.DeactivatedUserCannotLogInEvenWithCorrectPassword ................................   Passed    0.93 sec
+        Start 346: AuthTest.DeactivatedUserWithWrongPasswordGetsTheGenericMessage
+346/380 Test #346: AuthTest.DeactivatedUserWithWrongPasswordGetsTheGenericMessage ............................   Passed    1.11 sec
+        Start 347: AuthTest.ReactivatedUserCanLogInAgain
+347/380 Test #347: AuthTest.ReactivatedUserCanLogInAgain .....................................................   Passed    1.00 sec
+        Start 348: AuthTest.Nfr1LoginWithEightHundredStudentsIsUnderTwoSeconds
+348/380 Test #348: AuthTest.Nfr1LoginWithEightHundredStudentsIsUnderTwoSeconds ...............................   Passed    0.83 sec
+        Start 349: AuthSpyTest.UnknownUserStillRunsOneHashCheck
+349/380 Test #349: AuthSpyTest.UnknownUserStillRunsOneHashCheck ..............................................   Passed    0.45 sec
+        Start 350: AdminViewTest.UsersAreListedByUsernameWithTheirDetails
+350/380 Test #350: AdminViewTest.UsersAreListedByUsernameWithTheirDetails ....................................   Passed    2.20 sec
+        Start 351: AdminViewTest.DeactivatedUsersAreShownAsInactive
+351/380 Test #351: AdminViewTest.DeactivatedUsersAreShownAsInactive ..........................................   Passed    1.97 sec
+        Start 352: AdminViewTest.DepartmentsAreListed
+352/380 Test #352: AdminViewTest.DepartmentsAreListed ........................................................   Passed    3.20 sec
+        Start 353: AdminViewTest.CoursesShowDepartmentLecturersAndStudentCount
+353/380 Test #353: AdminViewTest.CoursesShowDepartmentLecturersAndStudentCount ...............................   Passed    3.08 sec
+        Start 354: AdminViewTest.AuditLogListsEveryMarkChangeWithNames
+354/380 Test #354: AdminViewTest.AuditLogListsEveryMarkChangeWithNames .......................................   Passed    3.49 sec
+        Start 355: AdminViewTest.OnlyAnActiveAdministratorMaySeeTheLists
+355/380 Test #355: AdminViewTest.OnlyAnActiveAdministratorMaySeeTheLists .....................................   Passed    5.83 sec
+        Start 356: HodViewTest.CoursesAreOnlyThoseOfTheHoDsDepartment
+356/380 Test #356: HodViewTest.CoursesAreOnlyThoseOfTheHoDsDepartment ........................................   Passed    5.48 sec
+        Start 357: HodViewTest.AssignmentsOfAnOwnCourseButNotOfAnotherDepartment
+357/380 Test #357: HodViewTest.AssignmentsOfAnOwnCourseButNotOfAnotherDepartment .............................   Passed    5.01 sec
+        Start 358: HodViewTest.RowsShowOnlyWorkThatHasAMark
+358/380 Test #358: HodViewTest.RowsShowOnlyWorkThatHasAMark ..................................................   Passed    8.67 sec
+        Start 359: HodViewTest.RowsAreOrderedByStudentNumberAndKeepTheirStatusAfterModerationAndRelease
+359/380 Test #359: HodViewTest.RowsAreOrderedByStudentNumberAndKeepTheirStatusAfterModerationAndRelease ......   Passed    5.15 sec
+        Start 360: HodViewTest.RowsAreRefusedForOtherDepartmentsAndOtherRoles
+360/380 Test #360: HodViewTest.RowsAreRefusedForOtherDepartmentsAndOtherRoles ................................   Passed    5.69 sec
+        Start 361: HodViewTest.UnknownAssignmentOrSubmissionIsRefused
+361/380 Test #361: HodViewTest.UnknownAssignmentOrSubmissionIsRefused ........................................   Passed    5.49 sec
+        Start 362: HodViewTest.HistoryShowsWhoChangedTheMarkAndWhy
+362/380 Test #362: HodViewTest.HistoryShowsWhoChangedTheMarkAndWhy ...........................................   Passed    7.02 sec
+        Start 363: HodViewTest.HistoryIsRefusedForOtherDepartmentsAndOtherRoles
+363/380 Test #363: HodViewTest.HistoryIsRefusedForOtherDepartmentsAndOtherRoles ..............................   Passed    8.43 sec
+        Start 364: LecturerViewTest.ListsEveryEnrolledStudentOrderedByStudentNumber
+364/380 Test #364: LecturerViewTest.ListsEveryEnrolledStudentOrderedByStudentNumber ..........................   Passed    6.43 sec
+        Start 365: LecturerViewTest.StudentsWhoHaveNotSubmittedHaveNoSubmissionData
+365/380 Test #365: LecturerViewTest.StudentsWhoHaveNotSubmittedHaveNoSubmissionData ..........................   Passed    5.69 sec
+        Start 366: LecturerViewTest.SubmittedWorkShowsStatusVersionsAndTheLatestFile
+366/380 Test #366: LecturerViewTest.SubmittedWorkShowsStatusVersionsAndTheLatestFile .........................   Passed    4.43 sec
+        Start 367: LecturerViewTest.TheLecturerSeesTheMarkAndFeedbackBeforeRelease
+367/380 Test #367: LecturerViewTest.TheLecturerSeesTheMarkAndFeedbackBeforeRelease ...........................   Passed    6.61 sec
+        Start 368: LecturerViewTest.OnlyTheLecturerWhoTeachesTheCourseMayLook
+368/380 Test #368: LecturerViewTest.OnlyTheLecturerWhoTeachesTheCourseMayLook ................................   Passed    6.24 sec
+        Start 369: LecturerViewTest.UnknownAssignmentIsRefused
+369/380 Test #369: LecturerViewTest.UnknownAssignmentIsRefused ...............................................   Passed    5.60 sec
+        Start 370: DemoDataTest.AllFourRolesCanLogIn
+370/380 Test #370: DemoDataTest.AllFourRolesCanLogIn .........................................................   Passed    5.69 sec
+        Start 371: DemoDataTest.StudentsSeeTheirOwnCoursesAndAssignments
+371/380 Test #371: DemoDataTest.StudentsSeeTheirOwnCoursesAndAssignments .....................................   Passed    7.39 sec
+        Start 372: DemoDataTest.TheLecturerTeachesBothCourses
+372/380 Test #372: DemoDataTest.TheLecturerTeachesBothCourses ................................................   Passed   16.33 sec
+        Start 373: DemoDataTest.SeedingAnAlreadyUsedSystemIsRefused
+373/380 Test #373: DemoDataTest.SeedingAnAlreadyUsedSystemIsRefused ..........................................   Passed    4.22 sec
+        Start 374: AppContextTest.NewDatabaseHasTablesAndNeedsAFirstAdmin
+374/380 Test #374: AppContextTest.NewDatabaseHasTablesAndNeedsAFirstAdmin ....................................   Passed    1.08 sec
+        Start 375: AppContextTest.FirstAdminCanLogIn
+375/380 Test #375: AppContextTest.FirstAdminCanLogIn .........................................................   Passed    2.37 sec
+        Start 376: AppContextTest.SecondFirstAdminIsRefused
+376/380 Test #376: AppContextTest.SecondFirstAdminIsRefused ..................................................   Passed    4.56 sec
+        Start 377: AppContextTest.WeakPasswordOrBadNameIsRefusedAndTheSystemStillNeedsAnAdmin
+377/380 Test #377: AppContextTest.WeakPasswordOrBadNameIsRefusedAndTheSystemStillNeedsAnAdmin ................   Passed    2.13 sec
+        Start 378: AppContextTest.DataSurvivesClosingAndReopeningTheDatabaseFile
+378/380 Test #378: AppContextTest.DataSurvivesClosingAndReopeningTheDatabaseFile .............................   Passed    2.98 sec
+        Start 379: AppContextTest.CannotOpenADatabaseInAMissingFolder
+379/380 Test #379: AppContextTest.CannotOpenADatabaseInAMissingFolder ........................................   Passed    0.98 sec
+        Start 380: AppContextTest.WholeJourneyFromFirstAdminToReleasedMark
+380/380 Test #380: AppContextTest.WholeJourneyFromFirstAdminToReleasedMark ...................................   Passed    4.00 sec
+
+100% tests passed out of 380
+
+Total Test time (real) = 276.42 sec

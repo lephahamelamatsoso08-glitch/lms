@@ -26,9 +26,9 @@ public:
 // What the student is told after submitting.
 struct SubmitResult {
     lms::domain::Submission submission;
-    int versionNo;               // 1 for the first file, 2 for the first resubmission ...
-    bool isResubmission;
-    double highestPossibleMark;  // after the late penalty (the student sees this, FR11)
+    int versionNo = 0;               // 1 for the first file, 2 for the first resubmission ...
+    bool isResubmission = false;
+    double highestPossibleMark = 0.0;  // after the late penalty (the student sees this, FR11)
 };
 
 // The use case "Submit assignment" (FR9, FR10, FR11).

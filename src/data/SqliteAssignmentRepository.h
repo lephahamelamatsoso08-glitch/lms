@@ -21,7 +21,7 @@ public:
     lms::domain::TimePoint getDeadlineFor(int studentId, int assignmentId) const override;
 
 private:
-    static lms::domain::Assignment readAssignment(Statement& row);
+    static lms::domain::Assignment readAssignment(const Statement& row);
 
     DatabaseConnection& db_;
 };
