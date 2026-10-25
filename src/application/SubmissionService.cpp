@@ -149,7 +149,7 @@ double SubmissionService::mark(const User& lecturer, int submissionId, double ra
     const double finalMark =
         penalty_.finalMark(rawMark, assignment->maxMark(), found->lateDays());
 
-    Submission updated = *found;
+    Submission updated = found.value();  // found was checked above
     updated.applyMark(rawMark, finalMark, feedback);  // checks status and feedback
 
     const auto saveBoth = [&]() {

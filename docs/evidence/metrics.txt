@@ -1,0 +1,12 @@
+Lines of code (all lines, including comments and blank lines)
+src/domain           1333 lines in 43 files
+src/data             1275 lines in 21 files
+src/application      1779 lines in 23 files
+src/app               245 lines in 4 files
+src/ui               3198 lines in 25 files
+tests                6339 lines in 32 files
+
+Cyclomatic complexity (lizard). Functions with complexity above 8 are listed.
+./tools/collect_evidence.sh: line 46: lizard: command not found
+
+./tools/collect_evidence.sh: line 48: lizard: command not found

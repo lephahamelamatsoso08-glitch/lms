@@ -41,10 +41,10 @@ public:
     // The final mark is the raw mark after the late penalty, so it cannot be higher.
     // Throws std::invalid_argument for bad values, std::logic_error if the
     // submission is already Moderated or Released. Nothing changes on error.
-    void applyMark(double rawMark, double finalMark, const std::string& feedback);
+    void applyMark(double newRawMark, double newFinalMark, const std::string& newFeedback);
 
     // FR13: the HoD changes the final mark. Only while the status is Marked.
-    void changeFinalMark(double finalMark);
+    void changeFinalMark(double newFinalMark);
 
     // FR14: Moderated -> Released, and records the time.
     void release(TimePoint when);

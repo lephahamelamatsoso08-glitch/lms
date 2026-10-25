@@ -23,7 +23,7 @@ public:
 
 private:
     bool userExists(int id) const;
-    static std::unique_ptr<lms::domain::User> readUser(Statement& row);
+    static std::unique_ptr<lms::domain::User> readUser(const Statement& row);
 
     DatabaseConnection& db_;
 };

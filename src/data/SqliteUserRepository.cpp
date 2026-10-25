@@ -85,7 +85,7 @@ int SqliteUserRepository::add(const User& user, const std::string& passwordHash)
     }
 }
 
-std::unique_ptr<User> SqliteUserRepository::readUser(Statement& row) {
+std::unique_ptr<User> SqliteUserRepository::readUser(const Statement& row) {
     UserData data;
     data.id = static_cast<int>(row.columnInt(0));
     data.username = row.columnText(1);

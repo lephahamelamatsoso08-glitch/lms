@@ -41,3 +41,10 @@ TEST(TimeFormatTest, InvalidTextIsRejected) {
     EXPECT_THROW(fromIso8601("2027-02-29T00:00:00Z"), std::invalid_argument);
     EXPECT_THROW(fromIso8601("2026-11-07T24:00:00Z"), std::invalid_argument);
 }
+
+TEST(TimeFormatTest, NonDigitsAndSignsAreRejected) {
+    EXPECT_THROW(fromIso8601("20x6-11-07T10:30:15Z"), std::invalid_argument);
+    EXPECT_THROW(fromIso8601("+026-11-07T10:30:15Z"), std::invalid_argument);
+    EXPECT_THROW(fromIso8601("2026-11-07T10:3a:15Z"), std::invalid_argument);
+    EXPECT_THROW(fromIso8601("2026-11-07T10:30:15z"), std::invalid_argument);
+}

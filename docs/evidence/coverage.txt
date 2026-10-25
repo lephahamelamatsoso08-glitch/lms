@@ -1,0 +1,1 @@
+./tools/collect_evidence.sh: line 15: gcovr: command not found
