@@ -1,1 +1,57 @@
-./tools/collect_evidence.sh: line 15: gcovr: command not found
+------------------------------------------------------------------------------
+                           GCC Code Coverage Report
+Directory: .
+------------------------------------------------------------------------------
+File                                       Lines     Exec  Cover   Missing
+------------------------------------------------------------------------------
+src/application/AdminService.cpp              51       51   100%
+src/application/AdminViewService.cpp          70       70   100%
+src/application/AssignmentService.cpp         48       47    97%   30
+src/application/AssignmentService.h            1        1   100%
+src/application/AuditService.cpp              20       19    95%   19
+src/application/AuditService.h                 1        1   100%
+src/application/AuthService.cpp               18       17    94%   32
+src/application/HodViewService.cpp            78       77    98%   108
+src/application/LecturerViewService.cpp       35       35   100%
+src/application/ModerationService.cpp         95       94    98%   44
+src/application/ModerationService.h            1        1   100%
+src/application/NotificationService.cpp       36       35    97%   28
+src/application/NotificationService.h          1        1   100%
+src/application/StudentViewService.cpp        65       63    96%   30,76
+src/application/SubmissionService.cpp         89       87    97%   133,162
+src/application/SubmissionService.h            1        1   100%
+src/domain/Assignment.cpp                     25       25   100%
+src/domain/Assignment.h                        5        5   100%
+src/domain/Course.cpp                          9        8    88%   11
+src/domain/Course.h                            4        4   100%
+src/domain/Extension.cpp                      13       11    84%   16,19
+src/domain/Extension.h                         5        5   100%
+src/domain/IAssignmentRepository.h             1        1   100%
+src/domain/IAuditRepository.h                  1        1   100%
+src/domain/ICourseRepository.h                 1        1   100%
+src/domain/INotificationRepository.h           1        1   100%
+src/domain/IPasswordHasher.h                   1        1   100%
+src/domain/IPenaltyStrategy.h                  1        1   100%
+src/domain/IReleaseObserver.h                  1        1   100%
+src/domain/ISubmissionRepository.h             1        1   100%
+src/domain/ITransactionRunner.h                1        1   100%
+src/domain/IUserRepository.h                   1        1   100%
+src/domain/LateDays.cpp                        6        6   100%
+src/domain/MarkAuditEntry.cpp                 17       16    94%   19
+src/domain/MarkAuditEntry.h                    7        7   100%
+src/domain/Notification.cpp                   10       10   100%
+src/domain/Notification.h                      5        5   100%
+src/domain/Role.cpp                           13       12    92%   14
+src/domain/Submission.cpp                     70       69    98%   63
+src/domain/Submission.h                        9        9   100%
+src/domain/SubmissionStatus.cpp               15       14    93%   15
+src/domain/TenPercentPerDayPenalty.cpp        20       20   100%
+src/domain/TimeFormat.cpp                     63       61    96%   96-97
+src/domain/User.cpp                           12       12   100%
+src/domain/User.h                              5        5   100%
+src/domain/UserFactory.cpp                    13       12    92%   22
+src/domain/UserRoles.cpp                      32       32   100%
+src/domain/UserRoles.h                         2        2   100%
+------------------------------------------------------------------------------
+TOTAL                                        980      960    98%
+------------------------------------------------------------------------------
