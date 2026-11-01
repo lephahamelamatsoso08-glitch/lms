@@ -117,11 +117,14 @@ LecturerWindow::LecturerWindow(lms::app::AppContext& context,
     markButton_->setObjectName("markButton");
     extensionButton_ = new QPushButton("Grant &extension...", this);
     extensionButton_->setObjectName("extensionButton");
+    classExtensionButton_ = new QPushButton("Extend whole &class...", this);
+    classExtensionButton_->setObjectName("classExtensionButton");
     auto* hint = new QLabel("Double-click a student to open the latest file.", this);
 
     auto* actions = new QHBoxLayout();
     actions->addWidget(markButton_);
     actions->addWidget(extensionButton_);
+    actions->addWidget(classExtensionButton_);
     actions->addWidget(hint, 1);
 
     messageLabel_ = new QLabel(this);
@@ -154,6 +157,7 @@ LecturerWindow::LecturerWindow(lms::app::AppContext& context,
     connect(newAssignmentButton_, &QPushButton::clicked, this, &LecturerWindow::newAssignment);
     connect(markButton_, &QPushButton::clicked, this, &LecturerWindow::chooseMark);
     connect(extensionButton_, &QPushButton::clicked, this, &LecturerWindow::chooseExtension);
+    connect(classExtensionButton_, &QPushButton::clicked, this, &LecturerWindow::chooseClassExtension);
     connect(refreshButton, &QPushButton::clicked, this, &LecturerWindow::refresh);
     connect(logoutButton, &QPushButton::clicked, this, &UserWindow::loggedOut);
 
@@ -305,6 +309,7 @@ void LecturerWindow::updateButtons() {
     newAssignmentButton_->setEnabled(currentCourseId() != 0);
     const LecturerSubmissionRow* row = currentRow();
     extensionButton_->setEnabled(row != nullptr);
+    classExtensionButton_->setEnabled(currentAssignment() != nullptr);
     bool canMark = false;
     if (row != nullptr && row->submitted && row->status) {
         canMark = *row->status == SubmissionStatus::Submitted ||
@@ -368,6 +373,18 @@ void LecturerWindow::chooseExtension() {
     }
 }
 
+void LecturerWindow::chooseClassExtension() {
+    const Assignment* assignment = currentAssignment();
+    if (assignment == nullptr) {
+        showMessage("Select an assignment first.", true);
+        return;
+    }
+    ExtensionDialog dialog("Entire class", assignment->deadline(), this);
+    if (dialog.exec() == QDialog::Accepted) {
+        grantClassExtension(dialog.newDeadline(), dialog.reason());
+    }
+}
+
 void LecturerWindow::openLatestFile() {
     const LecturerSubmissionRow* row = currentRow();
     if (row == nullptr) {
@@ -426,6 +443,23 @@ void LecturerWindow::grantExtension(int studentId, lms::domain::TimePoint newDea
                                               reason.toStdString());
         loadSubmissions();
         showMessage("Extension granted until " + formatTime(newDeadline) + ".", false);
+    });
+}
+
+void LecturerWindow::grantClassExtension(lms::domain::TimePoint newDeadline,
+                                         const QString& reason) {
+    const Assignment* assignment = currentAssignment();
+    if (assignment == nullptr) {
+        showMessage("Select an assignment first.", true);
+        return;
+    }
+    const int assignmentId = assignment->id();
+    guarded([&]() {
+        const int changed = context_.assignments().grantClassExtension(
+            *user_, assignmentId, newDeadline, reason.toStdString());
+        loadSubmissions();
+        showMessage(QString::number(changed) + " student deadlines extended until " +
+                    formatTime(newDeadline) + ".", false);
     });
 }
 

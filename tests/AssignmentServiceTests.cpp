@@ -122,6 +122,40 @@ INSERT INTO course_lecturer(course_id, lecturer_id) VALUES (1, 1), (2, 5);
 
 }  // namespace
 
+// CR1: class-wide extension tests using real SQLite transactions.
+TEST_F(LecturerTest, ClassExtensionUpdatesBothEnrolledStudents) {
+    AssignmentService bulk(assignments, courses, submissions, [this] { return now; }, &runner);
+    const auto newDeadline = kDeadline + hours(48);
+    EXPECT_EQ(bulk.grantClassExtension(*lecturer, 1, newDeadline, "School event"), 2);
+    EXPECT_EQ(assignments.getDeadlineFor(2, 1), newDeadline);
+    EXPECT_EQ(assignments.getDeadlineFor(3, 1), newDeadline);
+    EXPECT_FALSE(assignments.findExtension(1, 4).has_value());
+}
+
+TEST_F(LecturerTest, ClassExtensionRejectsUnauthorizedLecturer) {
+    AssignmentService bulk(assignments, courses, submissions, [this] { return now; }, &runner);
+    EXPECT_THROW(bulk.grantClassExtension(*otherLecturer, 1, kDeadline + hours(24), "Event"),
+                 AccessDeniedError);
+    EXPECT_FALSE(assignments.findExtension(1, 2).has_value());
+}
+
+TEST_F(LecturerTest, ClassExtensionCannotPartiallyApplyToMarkedClass) {
+    AssignmentService bulk(assignments, courses, submissions, [this] { return now; }, &runner);
+    addSubmission(3, S::Marked);
+    EXPECT_THROW(bulk.grantClassExtension(*lecturer, 1, kDeadline + hours(24), "Event"),
+                 std::logic_error);
+    EXPECT_FALSE(assignments.findExtension(1, 2).has_value());
+    EXPECT_FALSE(assignments.findExtension(1, 3).has_value());
+}
+
+TEST_F(LecturerTest, ClassExtensionPreservesLaterIndividualDeadline) {
+    AssignmentService bulk(assignments, courses, submissions, [this] { return now; }, &runner);
+    service.grantExtension(*lecturer, 1, 2, kDeadline + hours(72), "Special circumstances");
+    EXPECT_EQ(bulk.grantClassExtension(*lecturer, 1, kDeadline + hours(24), "Event"), 1);
+    EXPECT_EQ(assignments.getDeadlineFor(2, 1), kDeadline + hours(72));
+    EXPECT_EQ(assignments.getDeadlineFor(3, 1), kDeadline + hours(24));
+}
+
 // ---- FR6: create assignments ----
 TEST_F(LecturerTest, CreateAssignmentStoresAllTheData) {
     const int id = service.createAssignment(*lecturer, 1, "Assignment 2", kDeadline + hours(24), 50.0);
