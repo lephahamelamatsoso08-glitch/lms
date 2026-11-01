@@ -11,6 +11,7 @@
 #include "IAssignmentRepository.h"
 #include "ICourseRepository.h"
 #include "ISubmissionRepository.h"
+#include "ITransactionRunner.h"
 #include "LateDays.h"
 #include "Submission.h"
 #include "User.h"
@@ -26,7 +27,8 @@ public:
     AssignmentService(lms::domain::IAssignmentRepository& assignments,
                       const lms::domain::ICourseRepository& courses,
                       const lms::domain::ISubmissionRepository& submissions,
-                      Clock clock = &systemNow);
+                      Clock clock = &systemNow,
+                      lms::domain::ITransactionRunner* transactions = nullptr);
 
     std::vector<lms::domain::Course> myCourses(const lms::domain::User& lecturer) const;
     std::vector<lms::domain::Assignment> listAssignments(const lms::domain::User& lecturer,
@@ -52,6 +54,12 @@ public:
     int grantExtension(const lms::domain::User& lecturer, int assignmentId, int studentId,
                        lms::domain::TimePoint newDeadline, const std::string& reason);
 
+    // CR1: extend an entire enrolled class as one atomic change.
+    // Any ineligible submission rejects the whole operation.
+    // Existing later individual deadlines are preserved.
+    int grantClassExtension(const lms::domain::User& lecturer, int assignmentId,
+                            lms::domain::TimePoint newDeadline, const std::string& reason);
+
 private:
     static lms::domain::TimePoint systemNow();
     void requireTeaches(const lms::domain::User& lecturer, lms::domain::Action action,
@@ -61,6 +69,7 @@ private:
     const lms::domain::ICourseRepository& courses_;
     const lms::domain::ISubmissionRepository& submissions_;
     Clock clock_;
+    lms::domain::ITransactionRunner* transactions_;
 };
 
 }  // namespace lms::application

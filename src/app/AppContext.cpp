@@ -42,7 +42,7 @@ AppContext::AppContext(const std::string& databasePath)
       auditService_(auditRepo_),
       authService_(users_, hasher_),
       adminService_(users_, courses_, hasher_),
-      assignmentService_(assignmentRepo_, courses_, submissionRepo_),
+      assignmentService_(assignmentRepo_, courses_, submissionRepo_, {}, &transactions_),
       submissionService_(submissionRepo_, assignmentRepo_, courses_, penalty_, auditService_, {},
                          &transactions_),
       moderationService_(submissionRepo_, assignmentRepo_, courses_, auditService_, transactions_),

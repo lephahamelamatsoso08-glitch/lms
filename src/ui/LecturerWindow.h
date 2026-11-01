@@ -33,6 +33,7 @@ public:
     void markSubmission(int submissionId, double rawMark, const QString& feedback,
                         const QString& reason);
     void grantExtension(int studentId, lms::domain::TimePoint newDeadline, const QString& reason);
+    void grantClassExtension(lms::domain::TimePoint newDeadline, const QString& reason);
 
 public slots:
     void refresh();
@@ -44,6 +45,7 @@ private slots:
     void newAssignment();
     void chooseMark();
     void chooseExtension();
+    void chooseClassExtension();
     void openLatestFile();
 
 private:
@@ -71,6 +73,7 @@ private:
     QPushButton* newAssignmentButton_;
     QPushButton* markButton_;
     QPushButton* extensionButton_;
+    QPushButton* classExtensionButton_;
 };
 
 }  // namespace lms::ui

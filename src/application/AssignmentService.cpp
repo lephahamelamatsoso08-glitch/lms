@@ -21,11 +21,12 @@ using lms::domain::User;
 AssignmentService::AssignmentService(lms::domain::IAssignmentRepository& assignments,
                                      const lms::domain::ICourseRepository& courses,
                                      const lms::domain::ISubmissionRepository& submissions,
-                                     Clock clock)
+                                     Clock clock, lms::domain::ITransactionRunner* transactions)
     : assignments_(assignments),
       courses_(courses),
       submissions_(submissions),
-      clock_(std::move(clock)) {
+      clock_(std::move(clock)),
+      transactions_(transactions) {
     if (!clock_) {
         clock_ = &AssignmentService::systemNow;
     }
@@ -95,6 +96,44 @@ int AssignmentService::grantExtension(const User& lecturer, int assignmentId, in
 
     // The assignment checks that the new deadline is later and that there is a reason.
     return assignments_.saveExtension(assignment->grantExtension(studentId, newDeadline, reason));
+}
+
+int AssignmentService::grantClassExtension(const User& lecturer, int assignmentId,
+                                           TimePoint newDeadline, const std::string& reason) {
+    const auto assignment = assignments_.findById(assignmentId);
+    if (!assignment) {
+        throw std::invalid_argument("Assignment not found.");
+    }
+    requireTeaches(lecturer, Action::GrantExtension, assignment->courseId());
+    if (newDeadline <= assignment->deadline() || reason.find_first_not_of(" \t\r\n") == std::string::npos) {
+        throw std::invalid_argument("A later deadline and a reason are required.");
+    }
+    if (transactions_ == nullptr) {
+        throw std::logic_error("Class-wide extensions require a transaction runner.");
+    }
+    const auto students = courses_.findStudents(assignment->courseId());
+    if (students.empty()) {
+        throw std::invalid_argument("No students are enrolled in this course.");
+    }
+    // Validate the entire class before writing anything. No partial extension.
+    for (const auto& student : students) {
+        const auto existing = submissions_.findByStudentAndAssignment(student.id, assignmentId);
+        if (existing && existing->status() != SubmissionStatus::Submitted) {
+            throw std::logic_error("A student has late or marked work; class extension cancelled.");
+        }
+    }
+    int count = 0;
+    transactions_->runInTransaction([&] {
+        for (const auto& student : students) {
+            // Do not shorten a student's existing individual extension.
+            if (assignments_.getDeadlineFor(student.id, assignmentId) >= newDeadline) {
+                continue;
+            }
+            assignments_.saveExtension(assignment->grantExtension(student.id, newDeadline, reason));
+            ++count;
+        }
+    });
+    return count;
 }
 
 }  // namespace lms::application
