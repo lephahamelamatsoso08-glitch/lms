@@ -78,7 +78,7 @@ Test project C:/msys64/home/USER/lms/build
         Start  39: LateDaysTest.Exactly72HoursAfterIsThreeDays
  39/485 Test  #39: LateDaysTest.Exactly72HoursAfterIsThreeDays ...............................................   Passed    0.02 sec
         Start  40: LateDaysTest.Just_Over72HoursIsFourDays
- 40/485 Test  #40: LateDaysTest.Just_Over72HoursIsFourDays ...................................................   Passed    0.02 sec
+ 40/485 Test  #40: LateDaysTest.Just_Over72HoursIsFourDays ...................................................   Passed    0.01 sec
         Start  41: LateDaysTest.TenDaysLate
  41/485 Test  #41: LateDaysTest.TenDaysLate ..................................................................   Passed    0.02 sec
         Start  42: SubmissionStatusTest.TextRoundTrip
@@ -94,73 +94,73 @@ Test project C:/msys64/home/USER/lms/build
         Start  47: SubmissionTest.OnTimePathReachesReleased
  47/485 Test  #47: SubmissionTest.OnTimePathReachesReleased ..................................................   Passed    0.02 sec
         Start  48: SubmissionTest.LatePathReachesReleased
- 48/485 Test  #48: SubmissionTest.LatePathReachesReleased ....................................................   Passed    0.03 sec
+ 48/485 Test  #48: SubmissionTest.LatePathReachesReleased ....................................................   Passed    0.02 sec
         Start  49: SubmissionTest.CannotSkipModeration
- 49/485 Test  #49: SubmissionTest.CannotSkipModeration .......................................................   Passed    0.05 sec
+ 49/485 Test  #49: SubmissionTest.CannotSkipModeration .......................................................   Passed    0.02 sec
         Start  50: SubmissionTest.LateWorkCannotBeResubmitted
- 50/485 Test  #50: SubmissionTest.LateWorkCannotBeResubmitted ................................................   Passed    0.04 sec
+ 50/485 Test  #50: SubmissionTest.LateWorkCannotBeResubmitted ................................................   Passed    0.02 sec
         Start  51: SubmissionTest.KeepsItsData
- 51/485 Test  #51: SubmissionTest.KeepsItsData ...............................................................   Passed    0.03 sec
+ 51/485 Test  #51: SubmissionTest.KeepsItsData ...............................................................   Passed    0.02 sec
         Start  52: SubmissionTest.OnTimeSubmissionWithLateDaysThrows
- 52/485 Test  #52: SubmissionTest.OnTimeSubmissionWithLateDaysThrows .........................................   Passed    0.04 sec
+ 52/485 Test  #52: SubmissionTest.OnTimeSubmissionWithLateDaysThrows .........................................   Passed    0.02 sec
         Start  53: SubmissionTest.LateSubmissionWithoutLateDaysThrows
- 53/485 Test  #53: SubmissionTest.LateSubmissionWithoutLateDaysThrows ........................................   Passed    0.03 sec
+ 53/485 Test  #53: SubmissionTest.LateSubmissionWithoutLateDaysThrows ........................................   Passed    0.02 sec
         Start  54: SubmissionTest.MarkedSubmissionMayKeepItsLateDays
- 54/485 Test  #54: SubmissionTest.MarkedSubmissionMayKeepItsLateDays .........................................   Passed    0.03 sec
+ 54/485 Test  #54: SubmissionTest.MarkedSubmissionMayKeepItsLateDays .........................................   Passed    0.02 sec
         Start  55: SubmissionTest.InvalidIdsThrow
- 55/485 Test  #55: SubmissionTest.InvalidIdsThrow ............................................................   Passed    0.05 sec
+ 55/485 Test  #55: SubmissionTest.InvalidIdsThrow ............................................................   Passed    0.02 sec
         Start  56: SubmissionTest.NegativeLateDaysThrow
- 56/485 Test  #56: SubmissionTest.NegativeLateDaysThrow ......................................................   Passed    0.04 sec
+ 56/485 Test  #56: SubmissionTest.NegativeLateDaysThrow ......................................................   Passed    0.02 sec
         Start  57: RoleTest.TextRoundTrip
- 57/485 Test  #57: RoleTest.TextRoundTrip ....................................................................   Passed    0.04 sec
+ 57/485 Test  #57: RoleTest.TextRoundTrip ....................................................................   Passed    0.02 sec
         Start  58: RoleTest.UnknownTextThrows
- 58/485 Test  #58: RoleTest.UnknownTextThrows ................................................................   Passed    0.04 sec
+ 58/485 Test  #58: RoleTest.UnknownTextThrows ................................................................   Passed    0.03 sec
         Start  59: UserFactoryTest.CreatesTheRightSubclass
- 59/485 Test  #59: UserFactoryTest.CreatesTheRightSubclass ...................................................   Passed    0.04 sec
+ 59/485 Test  #59: UserFactoryTest.CreatesTheRightSubclass ...................................................   Passed    0.03 sec
         Start  60: UserFactoryTest.KeepsCommonAndRoleSpecificData
- 60/485 Test  #60: UserFactoryTest.KeepsCommonAndRoleSpecificData ............................................   Passed    0.04 sec
+ 60/485 Test  #60: UserFactoryTest.KeepsCommonAndRoleSpecificData ............................................   Passed    0.02 sec
         Start  61: UserFactoryTest.HoDWithoutDepartmentThrows
- 61/485 Test  #61: UserFactoryTest.HoDWithoutDepartmentThrows ................................................   Passed    0.03 sec
+ 61/485 Test  #61: UserFactoryTest.HoDWithoutDepartmentThrows ................................................   Passed    0.02 sec
         Start  62: UserFactoryTest.StudentWithoutNumberThrows
- 62/485 Test  #62: UserFactoryTest.StudentWithoutNumberThrows ................................................   Passed    0.03 sec
+ 62/485 Test  #62: UserFactoryTest.StudentWithoutNumberThrows ................................................   Passed    0.02 sec
         Start  63: UserFactoryTest.EmptyUsernameThrows
- 63/485 Test  #63: UserFactoryTest.EmptyUsernameThrows .......................................................   Passed    0.03 sec
+ 63/485 Test  #63: UserFactoryTest.EmptyUsernameThrows .......................................................   Passed    0.02 sec
         Start  64: UserFactoryTest.EmptyFullNameThrows
- 64/485 Test  #64: UserFactoryTest.EmptyFullNameThrows .......................................................   Passed    0.03 sec
+ 64/485 Test  #64: UserFactoryTest.EmptyFullNameThrows .......................................................   Passed    0.02 sec
         Start  65: UserFactoryTest.NegativeIdThrows
- 65/485 Test  #65: UserFactoryTest.NegativeIdThrows ..........................................................   Passed    0.03 sec
+ 65/485 Test  #65: UserFactoryTest.NegativeIdThrows ..........................................................   Passed    0.02 sec
         Start  66: UserPermissionTest.EachRoleMayDoExactlyItsActions
  66/485 Test  #66: UserPermissionTest.EachRoleMayDoExactlyItsActions .........................................   Passed    0.02 sec
         Start  67: UserPermissionTest.InactiveUserCanDoNothing
- 67/485 Test  #67: UserPermissionTest.InactiveUserCanDoNothing ...............................................   Passed    0.06 sec
+ 67/485 Test  #67: UserPermissionTest.InactiveUserCanDoNothing ...............................................   Passed    0.02 sec
         Start  68: UserPermissionTest.StudentCannotModerateOrMark
- 68/485 Test  #68: UserPermissionTest.StudentCannotModerateOrMark ............................................   Passed    0.08 sec
+ 68/485 Test  #68: UserPermissionTest.StudentCannotModerateOrMark ............................................   Passed    0.02 sec
         Start  69: UserPermissionTest.LecturerCannotReleaseMarks
- 69/485 Test  #69: UserPermissionTest.LecturerCannotReleaseMarks .............................................   Passed    0.07 sec
+ 69/485 Test  #69: UserPermissionTest.LecturerCannotReleaseMarks .............................................   Passed    0.02 sec
         Start  70: PenaltyTest.OnTimeKeepsRawMark
- 70/485 Test  #70: PenaltyTest.OnTimeKeepsRawMark ............................................................   Passed    0.04 sec
+ 70/485 Test  #70: PenaltyTest.OnTimeKeepsRawMark ............................................................   Passed    0.02 sec
         Start  71: PenaltyTest.DayOneDeductsTenPercentOfMax
- 71/485 Test  #71: PenaltyTest.DayOneDeductsTenPercentOfMax ..................................................   Passed    0.03 sec
+ 71/485 Test  #71: PenaltyTest.DayOneDeductsTenPercentOfMax ..................................................   Passed    0.02 sec
         Start  72: PenaltyTest.DayTwoDeductsTwentyPercentOfMax
- 72/485 Test  #72: PenaltyTest.DayTwoDeductsTwentyPercentOfMax ...............................................   Passed    0.04 sec
+ 72/485 Test  #72: PenaltyTest.DayTwoDeductsTwentyPercentOfMax ...............................................   Passed    0.02 sec
         Start  73: PenaltyTest.DayThreeDeductsThirtyPercentOfMax
- 73/485 Test  #73: PenaltyTest.DayThreeDeductsThirtyPercentOfMax .............................................   Passed    0.03 sec
+ 73/485 Test  #73: PenaltyTest.DayThreeDeductsThirtyPercentOfMax .............................................   Passed    0.02 sec
         Start  74: PenaltyTest.DayFourGivesZero
- 74/485 Test  #74: PenaltyTest.DayFourGivesZero ..............................................................   Passed    0.05 sec
+ 74/485 Test  #74: PenaltyTest.DayFourGivesZero ..............................................................   Passed    0.02 sec
         Start  75: PenaltyTest.VeryLateGivesZero
- 75/485 Test  #75: PenaltyTest.VeryLateGivesZero .............................................................   Passed    0.03 sec
+ 75/485 Test  #75: PenaltyTest.VeryLateGivesZero .............................................................   Passed    0.02 sec
         Start  76: PenaltyTest.DeductionUsesMaximumMarkNotRawMark
- 76/485 Test  #76: PenaltyTest.DeductionUsesMaximumMarkNotRawMark ............................................   Passed    0.03 sec
+ 76/485 Test  #76: PenaltyTest.DeductionUsesMaximumMarkNotRawMark ............................................   Passed    0.02 sec
         Start  77: PenaltyTest.FullMarksLateDayOne
  77/485 Test  #77: PenaltyTest.FullMarksLateDayOne ...........................................................   Passed    0.02 sec
         Start  78: PenaltyTest.ZeroRawMarkStaysZero
- 78/485 Test  #78: PenaltyTest.ZeroRawMarkStaysZero ..........................................................   Passed    0.03 sec
+ 78/485 Test  #78: PenaltyTest.ZeroRawMarkStaysZero ..........................................................   Passed    0.02 sec
         Start  79: PenaltyTest.FinalMarkNeverBelowZero
- 79/485 Test  #79: PenaltyTest.FinalMarkNeverBelowZero .......................................................   Passed    0.03 sec
+ 79/485 Test  #79: PenaltyTest.FinalMarkNeverBelowZero .......................................................   Passed    0.02 sec
         Start  80: PenaltyTest.NegativeRawMarkThrows
- 80/485 Test  #80: PenaltyTest.NegativeRawMarkThrows .........................................................   Passed    0.03 sec
+ 80/485 Test  #80: PenaltyTest.NegativeRawMarkThrows .........................................................   Passed    0.02 sec
         Start  81: PenaltyTest.RawMarkAboveMaxThrows
- 81/485 Test  #81: PenaltyTest.RawMarkAboveMaxThrows .........................................................   Passed    0.03 sec
+ 81/485 Test  #81: PenaltyTest.RawMarkAboveMaxThrows .........................................................   Passed    0.02 sec
         Start  82: PenaltyTest.ZeroMaxMarkThrows
  82/485 Test  #82: PenaltyTest.ZeroMaxMarkThrows .............................................................   Passed    0.02 sec
         Start  83: PenaltyTest.NegativeLateDaysThrows
@@ -170,7 +170,7 @@ Test project C:/msys64/home/USER/lms/build
         Start  85: PenaltyConstructor.NegativeMaxLateDaysThrows
  85/485 Test  #85: PenaltyConstructor.NegativeMaxLateDaysThrows ..............................................   Passed    0.02 sec
         Start  86: CourseRepoTest.AddDepartmentReturnsANewId
- 86/485 Test  #86: CourseRepoTest.AddDepartmentReturnsANewId .................................................   Passed    0.03 sec
+ 86/485 Test  #86: CourseRepoTest.AddDepartmentReturnsANewId .................................................   Passed    0.02 sec
         Start  87: CourseRepoTest.DuplicateDepartmentNameIsRejected
  87/485 Test  #87: CourseRepoTest.DuplicateDepartmentNameIsRejected ..........................................   Passed    0.02 sec
         Start  88: CourseRepoTest.BlankDepartmentNameIsRejected
@@ -188,9 +188,9 @@ Test project C:/msys64/home/USER/lms/build
         Start  94: CourseRepoTest.FindByDepartmentIsOrderedByCodeAndFiltered
  94/485 Test  #94: CourseRepoTest.FindByDepartmentIsOrderedByCodeAndFiltered .................................   Passed    0.02 sec
         Start  95: CourseRepoTest.CodeWithQuotesIsStoredAsData
- 95/485 Test  #95: CourseRepoTest.CodeWithQuotesIsStoredAsData ...............................................   Passed    0.03 sec
+ 95/485 Test  #95: CourseRepoTest.CodeWithQuotesIsStoredAsData ...............................................   Passed    0.02 sec
         Start  96: CourseRepoTest.EnrolStudentThenIsEnrolled
- 96/485 Test  #96: CourseRepoTest.EnrolStudentThenIsEnrolled .................................................   Passed    0.03 sec
+ 96/485 Test  #96: CourseRepoTest.EnrolStudentThenIsEnrolled .................................................   Passed    0.02 sec
         Start  97: CourseRepoTest.EnrolmentIsPerCourse
  97/485 Test  #97: CourseRepoTest.EnrolmentIsPerCourse .......................................................   Passed    0.02 sec
         Start  98: CourseRepoTest.EnrolTwiceIsHarmless
@@ -238,7 +238,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 119: SubmissionRepoTest.AddVersionRejectsBadInput
 119/485 Test #119: SubmissionRepoTest.AddVersionRejectsBadInput ..............................................   Passed    0.02 sec
         Start 120: SubmissionRepoTest.FilePathWithQuotesIsStoredAsData
-120/485 Test #120: SubmissionRepoTest.FilePathWithQuotesIsStoredAsData .......................................   Passed    0.03 sec
+120/485 Test #120: SubmissionRepoTest.FilePathWithQuotesIsStoredAsData .......................................   Passed    0.02 sec
         Start 121: SubmissionRepoTest.SaveStoresMarkAndFeedback
 121/485 Test #121: SubmissionRepoTest.SaveStoresMarkAndFeedback ..............................................   Passed    0.02 sec
         Start 122: SubmissionRepoTest.SaveStoresModerationAndRelease
@@ -258,7 +258,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 129: AssignmentRepoTest.UnknownCourseIsRejected
 129/485 Test #129: AssignmentRepoTest.UnknownCourseIsRejected ................................................   Passed    0.02 sec
         Start 130: AssignmentRepoTest.TitleWithQuotesIsStoredAsData
-130/485 Test #130: AssignmentRepoTest.TitleWithQuotesIsStoredAsData ..........................................   Passed    0.02 sec
+130/485 Test #130: AssignmentRepoTest.TitleWithQuotesIsStoredAsData ..........................................   Passed    0.03 sec
         Start 131: AssignmentRepoTest.ExtensionRoundTrip
 131/485 Test #131: AssignmentRepoTest.ExtensionRoundTrip .....................................................   Passed    0.02 sec
         Start 132: AssignmentRepoTest.NoExtensionIsEmpty
@@ -282,7 +282,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 141: UserRepositoryTest.AddAdminThenFindByUsername
 141/485 Test #141: UserRepositoryTest.AddAdminThenFindByUsername .............................................   Passed    0.02 sec
         Start 142: UserRepositoryTest.FindByIdWorks
-142/485 Test #142: UserRepositoryTest.FindByIdWorks ..........................................................   Passed    0.03 sec
+142/485 Test #142: UserRepositoryTest.FindByIdWorks ..........................................................   Passed    0.02 sec
         Start 143: UserRepositoryTest.StudentKeepsStudentNumber
 143/485 Test #143: UserRepositoryTest.StudentKeepsStudentNumber ..............................................   Passed    0.02 sec
         Start 144: UserRepositoryTest.HoDIsLinkedToTheirDepartment
@@ -302,9 +302,9 @@ Test project C:/msys64/home/USER/lms/build
         Start 151: UserRepositoryTest.EmptyPasswordHashIsRejected
 151/485 Test #151: UserRepositoryTest.EmptyPasswordHashIsRejected ............................................   Passed    0.02 sec
         Start 152: UserRepositoryTest.StoredPasswordIsAHashAndNeverPlainText
-152/485 Test #152: UserRepositoryTest.StoredPasswordIsAHashAndNeverPlainText .................................   Passed    0.40 sec
+152/485 Test #152: UserRepositoryTest.StoredPasswordIsAHashAndNeverPlainText .................................   Passed    0.35 sec
         Start 153: UserRepositoryTest.UnknownUserHasNoPasswordHash
-153/485 Test #153: UserRepositoryTest.UnknownUserHasNoPasswordHash ...........................................   Passed    0.03 sec
+153/485 Test #153: UserRepositoryTest.UnknownUserHasNoPasswordHash ...........................................   Passed    0.02 sec
         Start 154: UserRepositoryTest.SetPasswordHashChangesTheHash
 154/485 Test #154: UserRepositoryTest.SetPasswordHashChangesTheHash ..........................................   Passed    0.02 sec
         Start 155: UserRepositoryTest.SetPasswordHashRejectsBadInput
@@ -318,9 +318,9 @@ Test project C:/msys64/home/USER/lms/build
         Start 159: DatabaseTest.ParameterisedQueryTreatsInputAsData
 159/485 Test #159: DatabaseTest.ParameterisedQueryTreatsInputAsData ..........................................   Passed    0.02 sec
         Start 160: DatabaseTest.DuplicateUsernameIsRejected
-160/485 Test #160: DatabaseTest.DuplicateUsernameIsRejected ..................................................   Passed    0.02 sec
+160/485 Test #160: DatabaseTest.DuplicateUsernameIsRejected ..................................................   Passed    0.03 sec
         Start 161: DatabaseTest.InvalidRoleIsRejected
-161/485 Test #161: DatabaseTest.InvalidRoleIsRejected ........................................................   Passed    0.02 sec
+161/485 Test #161: DatabaseTest.InvalidRoleIsRejected ........................................................   Passed    0.03 sec
         Start 162: DatabaseTest.ForeignKeyIsEnforced
 162/485 Test #162: DatabaseTest.ForeignKeyIsEnforced .........................................................   Passed    0.02 sec
         Start 163: DatabaseTest.InvalidSubmissionStatusIsRejected
@@ -350,15 +350,15 @@ Test project C:/msys64/home/USER/lms/build
         Start 175: Argon2HasherTest.HashDoesNotContainThePassword
 175/485 Test #175: Argon2HasherTest.HashDoesNotContainThePassword ............................................   Passed    0.12 sec
         Start 176: Argon2HasherTest.SamePasswordGivesDifferentHashes
-176/485 Test #176: Argon2HasherTest.SamePasswordGivesDifferentHashes .........................................   Passed    0.23 sec
+176/485 Test #176: Argon2HasherTest.SamePasswordGivesDifferentHashes .........................................   Passed    0.22 sec
         Start 177: Argon2HasherTest.CorrectPasswordVerifies
-177/485 Test #177: Argon2HasherTest.CorrectPasswordVerifies ..................................................   Passed    0.23 sec
+177/485 Test #177: Argon2HasherTest.CorrectPasswordVerifies ..................................................   Passed    0.22 sec
         Start 178: Argon2HasherTest.WrongPasswordFails
 178/485 Test #178: Argon2HasherTest.WrongPasswordFails .......................................................   Passed    0.32 sec
         Start 179: Argon2HasherTest.EmptyPasswordCannotBeHashed
-179/485 Test #179: Argon2HasherTest.EmptyPasswordCannotBeHashed ..............................................   Passed    0.02 sec
+179/485 Test #179: Argon2HasherTest.EmptyPasswordCannotBeHashed ..............................................   Passed    0.03 sec
         Start 180: Argon2HasherTest.EmptyPasswordNeverVerifies
-180/485 Test #180: Argon2HasherTest.EmptyPasswordNeverVerifies ...............................................   Passed    0.12 sec
+180/485 Test #180: Argon2HasherTest.EmptyPasswordNeverVerifies ...............................................   Passed    0.11 sec
         Start 181: Argon2HasherTest.GarbageStoredHashFails
 181/485 Test #181: Argon2HasherTest.GarbageStoredHashFails ...................................................   Passed    0.02 sec
         Start 182: Argon2HasherTest.EmptyStoredHashFails
@@ -382,11 +382,11 @@ Test project C:/msys64/home/USER/lms/build
         Start 191: LecturerTest.StudentMustBeEnrolledInTheCourse
 191/485 Test #191: LecturerTest.StudentMustBeEnrolledInTheCourse .............................................   Passed    0.02 sec
         Start 192: LecturerTest.UnknownAssignmentIsRefused
-192/485 Test #192: LecturerTest.UnknownAssignmentIsRefused ...................................................   Passed    0.03 sec
+192/485 Test #192: LecturerTest.UnknownAssignmentIsRefused ...................................................   Passed    0.02 sec
         Start 193: LecturerTest.OnlyALecturerWhoTeachesTheCourseCanGrantExtensions
 193/485 Test #193: LecturerTest.OnlyALecturerWhoTeachesTheCourseCanGrantExtensions ...........................   Passed    0.02 sec
         Start 194: LecturerTest.ExtensionIsAllowedAfterAnOnTimeSubmission
-194/485 Test #194: LecturerTest.ExtensionIsAllowedAfterAnOnTimeSubmission ....................................   Passed    0.03 sec
+194/485 Test #194: LecturerTest.ExtensionIsAllowedAfterAnOnTimeSubmission ....................................   Passed    0.02 sec
         Start 195: LecturerTest.ExtensionIsRefusedAfterLateOrMarkedWork
 195/485 Test #195: LecturerTest.ExtensionIsRefusedAfterLateOrMarkedWork ......................................   Passed    0.02 sec
         Start 196: LecturerTest.MyCoursesListsOnlyTheirCourses
@@ -402,79 +402,79 @@ Test project C:/msys64/home/USER/lms/build
         Start 201: AdminTest.CreateUserOfEveryRole
 201/485 Test #201: AdminTest.CreateUserOfEveryRole ...........................................................   Passed    0.02 sec
         Start 202: AdminTest.CreateUserReturnsTheNewIdAndStoresOnlyAHash
-202/485 Test #202: AdminTest.CreateUserReturnsTheNewIdAndStoresOnlyAHash .....................................   Passed    0.04 sec
+202/485 Test #202: AdminTest.CreateUserReturnsTheNewIdAndStoresOnlyAHash .....................................   Passed    0.02 sec
         Start 203: AdminTest.NewUserCanLogIn
-203/485 Test #203: AdminTest.NewUserCanLogIn .................................................................   Passed    0.04 sec
+203/485 Test #203: AdminTest.NewUserCanLogIn .................................................................   Passed    0.02 sec
         Start 204: AdminTest.WeakPasswordsAreRefusedAndNothingIsSaved
-204/485 Test #204: AdminTest.WeakPasswordsAreRefusedAndNothingIsSaved ........................................   Passed    0.07 sec
+204/485 Test #204: AdminTest.WeakPasswordsAreRefusedAndNothingIsSaved ........................................   Passed    0.02 sec
         Start 205: AdminTest.PasswordRuleBoundaryIsEightCharacters
-205/485 Test #205: AdminTest.PasswordRuleBoundaryIsEightCharacters ...........................................   Passed    0.03 sec
+205/485 Test #205: AdminTest.PasswordRuleBoundaryIsEightCharacters ...........................................   Passed    0.02 sec
         Start 206: AdminTest.BadUserDataIsRefused
-206/485 Test #206: AdminTest.BadUserDataIsRefused ............................................................   Passed    0.04 sec
+206/485 Test #206: AdminTest.BadUserDataIsRefused ............................................................   Passed    0.02 sec
         Start 207: AdminTest.DuplicateUsernameIsRefused
-207/485 Test #207: AdminTest.DuplicateUsernameIsRefused ......................................................   Passed    0.04 sec
+207/485 Test #207: AdminTest.DuplicateUsernameIsRefused ......................................................   Passed    0.02 sec
         Start 208: AdminTest.SecondHoDForTheSameDepartmentIsRefused
-208/485 Test #208: AdminTest.SecondHoDForTheSameDepartmentIsRefused ..........................................   Passed    0.04 sec
+208/485 Test #208: AdminTest.SecondHoDForTheSameDepartmentIsRefused ..........................................   Passed    0.03 sec
         Start 209: AdminTest.DeactivatedUserCannotLogInUntilReactivated
-209/485 Test #209: AdminTest.DeactivatedUserCannotLogInUntilReactivated ......................................   Passed    0.05 sec
+209/485 Test #209: AdminTest.DeactivatedUserCannotLogInUntilReactivated ......................................   Passed    0.02 sec
         Start 210: AdminTest.AdminCannotDeactivateTheirOwnAccount
-210/485 Test #210: AdminTest.AdminCannotDeactivateTheirOwnAccount ............................................   Passed    0.04 sec
+210/485 Test #210: AdminTest.AdminCannotDeactivateTheirOwnAccount ............................................   Passed    0.02 sec
         Start 211: AdminTest.DeactivateUnknownUserIsRefused
-211/485 Test #211: AdminTest.DeactivateUnknownUserIsRefused ..................................................   Passed    0.05 sec
+211/485 Test #211: AdminTest.DeactivateUnknownUserIsRefused ..................................................   Passed    0.02 sec
         Start 212: AdminTest.ResetPasswordReplacesTheOldPassword
-212/485 Test #212: AdminTest.ResetPasswordReplacesTheOldPassword .............................................   Passed    0.05 sec
+212/485 Test #212: AdminTest.ResetPasswordReplacesTheOldPassword .............................................   Passed    0.02 sec
         Start 213: AdminTest.ResetPasswordRefusesWeakPasswordsAndKeepsTheOldOne
-213/485 Test #213: AdminTest.ResetPasswordRefusesWeakPasswordsAndKeepsTheOldOne ..............................   Passed    0.05 sec
+213/485 Test #213: AdminTest.ResetPasswordRefusesWeakPasswordsAndKeepsTheOldOne ..............................   Passed    0.02 sec
         Start 214: AdminTest.ResetPasswordForUnknownUserIsRefused
-214/485 Test #214: AdminTest.ResetPasswordForUnknownUserIsRefused ............................................   Passed    0.04 sec
+214/485 Test #214: AdminTest.ResetPasswordForUnknownUserIsRefused ............................................   Passed    0.02 sec
         Start 215: AdminTest.CreateDepartmentAndCourse
-215/485 Test #215: AdminTest.CreateDepartmentAndCourse .......................................................   Passed    0.04 sec
+215/485 Test #215: AdminTest.CreateDepartmentAndCourse .......................................................   Passed    0.02 sec
         Start 216: AdminTest.DuplicateOrInvalidDepartmentsAndCoursesAreRefused
-216/485 Test #216: AdminTest.DuplicateOrInvalidDepartmentsAndCoursesAreRefused ...............................   Passed    0.04 sec
+216/485 Test #216: AdminTest.DuplicateOrInvalidDepartmentsAndCoursesAreRefused ...............................   Passed    0.02 sec
         Start 217: AdminTest.AssignLecturerAndEnrolStudent
-217/485 Test #217: AdminTest.AssignLecturerAndEnrolStudent ...................................................   Passed    0.05 sec
+217/485 Test #217: AdminTest.AssignLecturerAndEnrolStudent ...................................................   Passed    0.02 sec
         Start 218: AdminTest.WrongKindOfUserCannotBeAssignedOrEnrolled
-218/485 Test #218: AdminTest.WrongKindOfUserCannotBeAssignedOrEnrolled .......................................   Passed    0.04 sec
+218/485 Test #218: AdminTest.WrongKindOfUserCannotBeAssignedOrEnrolled .......................................   Passed    0.02 sec
         Start 219: AdminTest.AssignAndEnrolTwiceIsHarmless
-219/485 Test #219: AdminTest.AssignAndEnrolTwiceIsHarmless ...................................................   Passed    0.06 sec
+219/485 Test #219: AdminTest.AssignAndEnrolTwiceIsHarmless ...................................................   Passed    0.02 sec
         Start 220: AdminTest.EveryAdminActionIsRefusedForEveryoneElse
-220/485 Test #220: AdminTest.EveryAdminActionIsRefusedForEveryoneElse ........................................   Passed    0.03 sec
+220/485 Test #220: AdminTest.EveryAdminActionIsRefusedForEveryoneElse ........................................   Passed    0.02 sec
         Start 221: StudentViewTest.MyCoursesListsOnlyEnrolledCourses
-221/485 Test #221: StudentViewTest.MyCoursesListsOnlyEnrolledCourses .........................................   Passed    0.03 sec
+221/485 Test #221: StudentViewTest.MyCoursesListsOnlyEnrolledCourses .........................................   Passed    0.02 sec
         Start 222: StudentViewTest.MyAssignmentsListsTheCourseAssignmentsInDeadlineOrder
-222/485 Test #222: StudentViewTest.MyAssignmentsListsTheCourseAssignmentsInDeadlineOrder .....................   Passed    0.04 sec
+222/485 Test #222: StudentViewTest.MyAssignmentsListsTheCourseAssignmentsInDeadlineOrder .....................   Passed    0.02 sec
         Start 223: StudentViewTest.MyAssignmentsShowsTheStudentsOwnDeadline
-223/485 Test #223: StudentViewTest.MyAssignmentsShowsTheStudentsOwnDeadline ..................................   Passed    0.06 sec
+223/485 Test #223: StudentViewTest.MyAssignmentsShowsTheStudentsOwnDeadline ..................................   Passed    0.02 sec
         Start 224: StudentViewTest.AssignmentListShowsNotSubmittedThenTheStatus
-224/485 Test #224: StudentViewTest.AssignmentListShowsNotSubmittedThenTheStatus ..............................   Passed    0.06 sec
+224/485 Test #224: StudentViewTest.AssignmentListShowsNotSubmittedThenTheStatus ..............................   Passed    0.02 sec
         Start 225: StudentViewTest.CourseTheStudentIsNotEnrolledInIsRefused
-225/485 Test #225: StudentViewTest.CourseTheStudentIsNotEnrolledInIsRefused ..................................   Passed    0.05 sec
+225/485 Test #225: StudentViewTest.CourseTheStudentIsNotEnrolledInIsRefused ..................................   Passed    0.02 sec
         Start 226: StudentViewTest.NotSubmittedWorkShowsNoMarkData
-226/485 Test #226: StudentViewTest.NotSubmittedWorkShowsNoMarkData ...........................................   Passed    0.06 sec
+226/485 Test #226: StudentViewTest.NotSubmittedWorkShowsNoMarkData ...........................................   Passed    0.02 sec
         Start 227: StudentViewTest.SubmittedWorkShowsStatusAndVersionCount
-227/485 Test #227: StudentViewTest.SubmittedWorkShowsStatusAndVersionCount ...................................   Passed    0.08 sec
+227/485 Test #227: StudentViewTest.SubmittedWorkShowsStatusAndVersionCount ...................................   Passed    0.02 sec
         Start 228: StudentViewTest.LateWorkShowsTheLateDays
-228/485 Test #228: StudentViewTest.LateWorkShowsTheLateDays ..................................................   Passed    0.09 sec
+228/485 Test #228: StudentViewTest.LateWorkShowsTheLateDays ..................................................   Passed    0.02 sec
         Start 229: StudentViewTest.MarkedWorkHidesTheMarkAndTheFeedback
-229/485 Test #229: StudentViewTest.MarkedWorkHidesTheMarkAndTheFeedback ......................................   Passed    0.06 sec
+229/485 Test #229: StudentViewTest.MarkedWorkHidesTheMarkAndTheFeedback ......................................   Passed    0.02 sec
         Start 230: StudentViewTest.ModeratedWorkStillHidesTheMarkAndTheFeedback
-230/485 Test #230: StudentViewTest.ModeratedWorkStillHidesTheMarkAndTheFeedback ..............................   Passed    0.08 sec
+230/485 Test #230: StudentViewTest.ModeratedWorkStillHidesTheMarkAndTheFeedback ..............................   Passed    0.02 sec
         Start 231: StudentViewTest.ReleasedWorkShowsMarkPenaltyAndFeedback
-231/485 Test #231: StudentViewTest.ReleasedWorkShowsMarkPenaltyAndFeedback ...................................   Passed    0.06 sec
+231/485 Test #231: StudentViewTest.ReleasedWorkShowsMarkPenaltyAndFeedback ...................................   Passed    0.02 sec
         Start 232: StudentViewTest.AStudentOnlySeesTheirOwnSubmission
-232/485 Test #232: StudentViewTest.AStudentOnlySeesTheirOwnSubmission ........................................   Passed    0.08 sec
+232/485 Test #232: StudentViewTest.AStudentOnlySeesTheirOwnSubmission ........................................   Passed    0.02 sec
         Start 233: StudentViewTest.SubmissionViewShowsTheOwnDeadline
-233/485 Test #233: StudentViewTest.SubmissionViewShowsTheOwnDeadline .........................................   Passed    0.05 sec
+233/485 Test #233: StudentViewTest.SubmissionViewShowsTheOwnDeadline .........................................   Passed    0.02 sec
         Start 234: StudentViewTest.StudentNotEnrolledCannotViewTheSubmission
-234/485 Test #234: StudentViewTest.StudentNotEnrolledCannotViewTheSubmission .................................   Passed    0.05 sec
+234/485 Test #234: StudentViewTest.StudentNotEnrolledCannotViewTheSubmission .................................   Passed    0.02 sec
         Start 235: StudentViewTest.OnlyStudentsCanUseTheStudentPages
-235/485 Test #235: StudentViewTest.OnlyStudentsCanUseTheStudentPages .........................................   Passed    0.06 sec
+235/485 Test #235: StudentViewTest.OnlyStudentsCanUseTheStudentPages .........................................   Passed    0.02 sec
         Start 236: StudentViewTest.InactiveStudentIsRefused
-236/485 Test #236: StudentViewTest.InactiveStudentIsRefused ..................................................   Passed    0.09 sec
+236/485 Test #236: StudentViewTest.InactiveStudentIsRefused ..................................................   Passed    0.02 sec
         Start 237: StudentViewTest.UnknownAssignmentIsRefused
-237/485 Test #237: StudentViewTest.UnknownAssignmentIsRefused ................................................   Passed    0.06 sec
+237/485 Test #237: StudentViewTest.UnknownAssignmentIsRefused ................................................   Passed    0.02 sec
         Start 238: StudentViewTest.WholeJourneyShowsTheMarkOnlyAfterRelease
-238/485 Test #238: StudentViewTest.WholeJourneyShowsTheMarkOnlyAfterRelease ..................................   Passed    0.04 sec
+238/485 Test #238: StudentViewTest.WholeJourneyShowsTheMarkOnlyAfterRelease ..................................   Passed    0.02 sec
         Start 239: NotificationClassTest.KeepsItsData
 239/485 Test #239: NotificationClassTest.KeepsItsData ........................................................   Passed    0.02 sec
         Start 240: NotificationClassTest.InvalidDataThrows
@@ -482,7 +482,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 241: NotificationTest.AddAndReadBack
 241/485 Test #241: NotificationTest.AddAndReadBack ...........................................................   Passed    0.02 sec
         Start 242: NotificationTest.ListIsNewestFirstAndOnlyForThatUser
-242/485 Test #242: NotificationTest.ListIsNewestFirstAndOnlyForThatUser ......................................   Passed    0.03 sec
+242/485 Test #242: NotificationTest.ListIsNewestFirstAndOnlyForThatUser ......................................   Passed    0.02 sec
         Start 243: NotificationTest.MessageWithQuotesIsStoredAsData
 243/485 Test #243: NotificationTest.MessageWithQuotesIsStoredAsData ..........................................   Passed    0.02 sec
         Start 244: NotificationTest.SavedNotificationCannotBeAddedAgain
@@ -492,13 +492,13 @@ Test project C:/msys64/home/USER/lms/build
         Start 246: NotificationTest.RepositoryMarkReadOnlyWorksForTheOwner
 246/485 Test #246: NotificationTest.RepositoryMarkReadOnlyWorksForTheOwner ...................................   Passed    0.02 sec
         Start 247: NotificationTest.ReleaseCreatesOneUnreadNoticePerReleasedStudent
-247/485 Test #247: NotificationTest.ReleaseCreatesOneUnreadNoticePerReleasedStudent ..........................   Passed    0.03 sec
+247/485 Test #247: NotificationTest.ReleaseCreatesOneUnreadNoticePerReleasedStudent ..........................   Passed    0.02 sec
         Start 248: NotificationTest.TheMessageNamesTheAssignment
 248/485 Test #248: NotificationTest.TheMessageNamesTheAssignment .............................................   Passed    0.02 sec
         Start 249: NotificationTest.NewestNoticeComesFirst
-249/485 Test #249: NotificationTest.NewestNoticeComesFirst ...................................................   Passed    0.03 sec
+249/485 Test #249: NotificationTest.NewestNoticeComesFirst ...................................................   Passed    0.02 sec
         Start 250: NotificationTest.EmptyStudentListCreatesNothing
-250/485 Test #250: NotificationTest.EmptyStudentListCreatesNothing ...........................................   Passed    0.03 sec
+250/485 Test #250: NotificationTest.EmptyStudentListCreatesNothing ...........................................   Passed    0.02 sec
         Start 251: NotificationTest.UnknownAssignmentIsRefused
 251/485 Test #251: NotificationTest.UnknownAssignmentIsRefused ...............................................   Passed    0.02 sec
         Start 252: NotificationTest.AllNoticesAreSavedTogetherOrNotAtAll
@@ -510,11 +510,11 @@ Test project C:/msys64/home/USER/lms/build
         Start 255: NotificationTest.MarkReadOfUnknownNoticeIsRefused
 255/485 Test #255: NotificationTest.MarkReadOfUnknownNoticeIsRefused .........................................   Passed    0.02 sec
         Start 256: NotificationTest.AUserSeesOnlyTheirOwnNotices
-256/485 Test #256: NotificationTest.AUserSeesOnlyTheirOwnNotices .............................................   Passed    0.03 sec
+256/485 Test #256: NotificationTest.AUserSeesOnlyTheirOwnNotices .............................................   Passed    0.02 sec
         Start 257: NotificationTest.InactiveUserIsRefused
 257/485 Test #257: NotificationTest.InactiveUserIsRefused ....................................................   Passed    0.02 sec
         Start 258: ModerationTest.ListShowsOnlyWorkThatHasAMark
-258/485 Test #258: ModerationTest.ListShowsOnlyWorkThatHasAMark ..............................................   Passed    0.02 sec
+258/485 Test #258: ModerationTest.ListShowsOnlyWorkThatHasAMark ..............................................   Passed    0.03 sec
         Start 259: ModerationTest.ListForUnknownAssignmentIsRefused
 259/485 Test #259: ModerationTest.ListForUnknownAssignmentIsRefused ..........................................   Passed    0.02 sec
         Start 260: ModerationTest.OnlyTheHoDCanModerate
@@ -564,7 +564,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 282: ModerationTest.FailingObserverDoesNotUndoTheReleaseOrStopTheOthers
 282/485 Test #282: ModerationTest.FailingObserverDoesNotUndoTheReleaseOrStopTheOthers ........................   Passed    0.02 sec
         Start 283: MarkTest.FirstMarkStoresMarkAndFeedbackAndMovesToMarked
-283/485 Test #283: MarkTest.FirstMarkStoresMarkAndFeedbackAndMovesToMarked ...................................   Passed    0.03 sec
+283/485 Test #283: MarkTest.FirstMarkStoresMarkAndFeedbackAndMovesToMarked ...................................   Passed    0.02 sec
         Start 284: MarkTest.FirstMarkWritesAnAuditEntryWithNoOldValue
 284/485 Test #284: MarkTest.FirstMarkWritesAnAuditEntryWithNoOldValue ........................................   Passed    0.02 sec
         Start 285: MarkTest.LatePenaltyIsAppliedAndTheRawMarkIsKept
@@ -574,7 +574,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 287: MarkTest.MarkOfZeroAndMarkOfMaximumAreBothAccepted
 287/485 Test #287: MarkTest.MarkOfZeroAndMarkOfMaximumAreBothAccepted ........................................   Passed    0.02 sec
         Start 288: MarkTest.ReMarkWithAReasonRecordsOldAndNewValue
-288/485 Test #288: MarkTest.ReMarkWithAReasonRecordsOldAndNewValue ...........................................   Passed    0.03 sec
+288/485 Test #288: MarkTest.ReMarkWithAReasonRecordsOldAndNewValue ...........................................   Passed    0.02 sec
         Start 289: MarkTest.ReMarkWithoutAReasonIsRefusedAndNothingChanges
 289/485 Test #289: MarkTest.ReMarkWithoutAReasonIsRefusedAndNothingChanges ...................................   Passed    0.02 sec
         Start 290: MarkTest.MarkOutsideZeroToMaximumIsRefusedAndNothingIsSaved
@@ -594,7 +594,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 297: MarkTest.FailedAuditEntryUndoesTheMark
 297/485 Test #297: MarkTest.FailedAuditEntryUndoesTheMark ....................................................   Passed    0.02 sec
         Start 298: SubmitTest.OnTimeSubmissionIsSubmittedWithVersionOne
-298/485 Test #298: SubmitTest.OnTimeSubmissionIsSubmittedWithVersionOne ......................................   Passed    0.02 sec
+298/485 Test #298: SubmitTest.OnTimeSubmissionIsSubmittedWithVersionOne ......................................   Passed    0.03 sec
         Start 299: SubmitTest.SubmissionAndFileAreStored
 299/485 Test #299: SubmitTest.SubmissionAndFileAreStored .....................................................   Passed    0.02 sec
         Start 300: SubmitTest.ExactlyAtTheDeadlineIsOnTime
@@ -610,7 +610,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 305: SubmitTest.LateDaysAreCountedFromTheExtendedDeadline
 305/485 Test #305: SubmitTest.LateDaysAreCountedFromTheExtendedDeadline ......................................   Passed    0.02 sec
         Start 306: SubmitTest.ResubmitBeforeTheDeadlineAddsAVersionAndKeepsTheStatus
-306/485 Test #306: SubmitTest.ResubmitBeforeTheDeadlineAddsAVersionAndKeepsTheStatus .........................   Passed    0.03 sec
+306/485 Test #306: SubmitTest.ResubmitBeforeTheDeadlineAddsAVersionAndKeepsTheStatus .........................   Passed    0.02 sec
         Start 307: SubmitTest.ResubmitAfterTheDeadlineIsRefused
 307/485 Test #307: SubmitTest.ResubmitAfterTheDeadlineIsRefused ..............................................   Passed    0.02 sec
         Start 308: SubmitTest.LateWorkCannotBeResubmitted
@@ -638,7 +638,7 @@ Test project C:/msys64/home/USER/lms/build
         Start 319: AuditTest.EntriesComeBackOldestFirst
 319/485 Test #319: AuditTest.EntriesComeBackOldestFirst ......................................................   Passed    0.02 sec
         Start 320: AuditTest.TimeIsStoredAndReadBack
-320/485 Test #320: AuditTest.TimeIsStoredAndReadBack .........................................................   Passed    0.03 sec
+320/485 Test #320: AuditTest.TimeIsStoredAndReadBack .........................................................   Passed    0.02 sec
         Start 321: AuditTest.UnknownSubmissionIsRejected
 321/485 Test #321: AuditTest.UnknownSubmissionIsRejected .....................................................   Passed    0.02 sec
         Start 322: AuditTest.UnknownUserIsRejected
@@ -646,17 +646,17 @@ Test project C:/msys64/home/USER/lms/build
         Start 323: AuditTest.SavedEntryCannotBeAddedAgain
 323/485 Test #323: AuditTest.SavedEntryCannotBeAddedAgain ....................................................   Passed    0.02 sec
         Start 324: AuditTest.FindAllReturnsEntriesOfAllSubmissions
-324/485 Test #324: AuditTest.FindAllReturnsEntriesOfAllSubmissions ...........................................   Passed    0.03 sec
+324/485 Test #324: AuditTest.FindAllReturnsEntriesOfAllSubmissions ...........................................   Passed    0.02 sec
         Start 325: AuditTest.ServiceUsesTheClockForTheTime
 325/485 Test #325: AuditTest.ServiceUsesTheClockForTheTime ...................................................   Passed    0.02 sec
         Start 326: AuditTest.ServiceRecordsOldAndNewValue
 326/485 Test #326: AuditTest.ServiceRecordsOldAndNewValue ....................................................   Passed    0.02 sec
         Start 327: AuditTest.InvalidChangeIsNotSaved
-327/485 Test #327: AuditTest.InvalidChangeIsNotSaved .........................................................   Passed    0.03 sec
+327/485 Test #327: AuditTest.InvalidChangeIsNotSaved .........................................................   Passed    0.02 sec
         Start 328: AuditTest.HoDCanViewTheAuditLog
-328/485 Test #328: AuditTest.HoDCanViewTheAuditLog ...........................................................   Passed    0.03 sec
+328/485 Test #328: AuditTest.HoDCanViewTheAuditLog ...........................................................   Passed    0.02 sec
         Start 329: AuditTest.AdminCanViewTheAuditLog
-329/485 Test #329: AuditTest.AdminCanViewTheAuditLog .........................................................   Passed    0.03 sec
+329/485 Test #329: AuditTest.AdminCanViewTheAuditLog .........................................................   Passed    0.02 sec
         Start 330: AuditTest.LecturerCannotViewTheAuditLog
 330/485 Test #330: AuditTest.LecturerCannotViewTheAuditLog ...................................................   Passed    0.02 sec
         Start 331: AuditTest.StudentCannotViewTheAuditLog
@@ -672,25 +672,25 @@ Test project C:/msys64/home/USER/lms/build
         Start 336: MarkAuditEntryTest.EntryNeedsASubmissionAndAUser
 336/485 Test #336: MarkAuditEntryTest.EntryNeedsASubmissionAndAUser ..........................................   Passed    0.02 sec
         Start 337: AuthTest.ValidLoginReturnsTheUser
-337/485 Test #337: AuthTest.ValidLoginReturnsTheUser .........................................................   Passed    0.40 sec
+337/485 Test #337: AuthTest.ValidLoginReturnsTheUser .........................................................   Passed    0.32 sec
         Start 338: AuthTest.EveryRoleCanLogIn
-338/485 Test #338: AuthTest.EveryRoleCanLogIn ................................................................   Passed    1.08 sec
+338/485 Test #338: AuthTest.EveryRoleCanLogIn ................................................................   Passed    0.92 sec
         Start 339: AuthTest.WrongPasswordFails
-339/485 Test #339: AuthTest.WrongPasswordFails ...............................................................   Passed    0.39 sec
+339/485 Test #339: AuthTest.WrongPasswordFails ...............................................................   Passed    0.32 sec
         Start 340: AuthTest.PasswordIsCaseSensitive
-340/485 Test #340: AuthTest.PasswordIsCaseSensitive ..........................................................   Passed    0.37 sec
+340/485 Test #340: AuthTest.PasswordIsCaseSensitive ..........................................................   Passed    0.32 sec
         Start 341: AuthTest.UnknownUserFails
-341/485 Test #341: AuthTest.UnknownUserFails .................................................................   Passed    0.25 sec
+341/485 Test #341: AuthTest.UnknownUserFails .................................................................   Passed    0.22 sec
         Start 342: AuthTest.WrongPasswordAndUnknownUserGiveTheSameMessage
-342/485 Test #342: AuthTest.WrongPasswordAndUnknownUserGiveTheSameMessage ....................................   Passed    0.50 sec
+342/485 Test #342: AuthTest.WrongPasswordAndUnknownUserGiveTheSameMessage ....................................   Passed    0.42 sec
         Start 343: AuthTest.EmptyUsernameFails
 343/485 Test #343: AuthTest.EmptyUsernameFails ...............................................................   Passed    0.12 sec
         Start 344: AuthTest.EmptyPasswordFails
-344/485 Test #344: AuthTest.EmptyPasswordFails ...............................................................   Passed    0.23 sec
+344/485 Test #344: AuthTest.EmptyPasswordFails ...............................................................   Passed    0.22 sec
         Start 345: AuthTest.DeactivatedUserCannotLogInEvenWithCorrectPassword
-345/485 Test #345: AuthTest.DeactivatedUserCannotLogInEvenWithCorrectPassword ................................   Passed    0.34 sec
+345/485 Test #345: AuthTest.DeactivatedUserCannotLogInEvenWithCorrectPassword ................................   Passed    0.32 sec
         Start 346: AuthTest.DeactivatedUserWithWrongPasswordGetsTheGenericMessage
-346/485 Test #346: AuthTest.DeactivatedUserWithWrongPasswordGetsTheGenericMessage ............................   Passed    0.45 sec
+346/485 Test #346: AuthTest.DeactivatedUserWithWrongPasswordGetsTheGenericMessage ............................   Passed    0.44 sec
         Start 347: AuthTest.ReactivatedUserCanLogInAgain
 347/485 Test #347: AuthTest.ReactivatedUserCanLogInAgain .....................................................   Passed    0.33 sec
         Start 348: AuthTest.Nfr1LoginWithEightHundredStudentsIsUnderTwoSeconds
@@ -698,278 +698,278 @@ Test project C:/msys64/home/USER/lms/build
         Start 349: AuthSpyTest.UnknownUserStillRunsOneHashCheck
 349/485 Test #349: AuthSpyTest.UnknownUserStillRunsOneHashCheck ..............................................   Passed    0.02 sec
         Start 350: AdminViewTest.UsersAreListedByUsernameWithTheirDetails
-350/485 Test #350: AdminViewTest.UsersAreListedByUsernameWithTheirDetails ....................................   Passed    0.97 sec
+350/485 Test #350: AdminViewTest.UsersAreListedByUsernameWithTheirDetails ....................................   Passed    0.95 sec
         Start 351: AdminViewTest.DeactivatedUsersAreShownAsInactive
-351/485 Test #351: AdminViewTest.DeactivatedUsersAreShownAsInactive ..........................................   Passed    1.08 sec
+351/485 Test #351: AdminViewTest.DeactivatedUsersAreShownAsInactive ..........................................   Passed    1.03 sec
         Start 352: AdminViewTest.DepartmentsAreListed
-352/485 Test #352: AdminViewTest.DepartmentsAreListed ........................................................   Passed    0.95 sec
+352/485 Test #352: AdminViewTest.DepartmentsAreListed ........................................................   Passed    0.92 sec
         Start 353: AdminViewTest.CoursesShowDepartmentLecturersAndStudentCount
-353/485 Test #353: AdminViewTest.CoursesShowDepartmentLecturersAndStudentCount ...............................   Passed    0.96 sec
+353/485 Test #353: AdminViewTest.CoursesShowDepartmentLecturersAndStudentCount ...............................   Passed    0.92 sec
         Start 354: AdminViewTest.AuditLogListsEveryMarkChangeWithNames
-354/485 Test #354: AdminViewTest.AuditLogListsEveryMarkChangeWithNames .......................................   Passed    1.30 sec
+354/485 Test #354: AdminViewTest.AuditLogListsEveryMarkChangeWithNames .......................................   Passed    1.23 sec
         Start 355: AdminViewTest.OnlyAnActiveAdministratorMaySeeTheLists
-355/485 Test #355: AdminViewTest.OnlyAnActiveAdministratorMaySeeTheLists .....................................   Passed    1.28 sec
+355/485 Test #355: AdminViewTest.OnlyAnActiveAdministratorMaySeeTheLists .....................................   Passed    1.22 sec
         Start 356: HodViewTest.CoursesAreOnlyThoseOfTheHoDsDepartment
-356/485 Test #356: HodViewTest.CoursesAreOnlyThoseOfTheHoDsDepartment ........................................   Passed    1.80 sec
+356/485 Test #356: HodViewTest.CoursesAreOnlyThoseOfTheHoDsDepartment ........................................   Passed    1.72 sec
         Start 357: HodViewTest.AssignmentsOfAnOwnCourseButNotOfAnotherDepartment
-357/485 Test #357: HodViewTest.AssignmentsOfAnOwnCourseButNotOfAnotherDepartment .............................   Passed    1.78 sec
+357/485 Test #357: HodViewTest.AssignmentsOfAnOwnCourseButNotOfAnotherDepartment .............................   Passed    1.74 sec
         Start 358: HodViewTest.RowsShowOnlyWorkThatHasAMark
 358/485 Test #358: HodViewTest.RowsShowOnlyWorkThatHasAMark ..................................................   Passed    1.81 sec
         Start 359: HodViewTest.RowsAreOrderedByStudentNumberAndKeepTheirStatusAfterModerationAndRelease
-359/485 Test #359: HodViewTest.RowsAreOrderedByStudentNumberAndKeepTheirStatusAfterModerationAndRelease ......   Passed    1.78 sec
+359/485 Test #359: HodViewTest.RowsAreOrderedByStudentNumberAndKeepTheirStatusAfterModerationAndRelease ......   Passed    1.76 sec
         Start 360: HodViewTest.RowsAreRefusedForOtherDepartmentsAndOtherRoles
-360/485 Test #360: HodViewTest.RowsAreRefusedForOtherDepartmentsAndOtherRoles ................................   Passed    1.78 sec
+360/485 Test #360: HodViewTest.RowsAreRefusedForOtherDepartmentsAndOtherRoles ................................   Passed    1.74 sec
         Start 361: HodViewTest.UnknownAssignmentOrSubmissionIsRefused
-361/485 Test #361: HodViewTest.UnknownAssignmentOrSubmissionIsRefused ........................................   Passed    1.85 sec
+361/485 Test #361: HodViewTest.UnknownAssignmentOrSubmissionIsRefused ........................................   Passed    1.92 sec
         Start 362: HodViewTest.HistoryShowsWhoChangedTheMarkAndWhy
-362/485 Test #362: HodViewTest.HistoryShowsWhoChangedTheMarkAndWhy ...........................................   Passed    1.79 sec
+362/485 Test #362: HodViewTest.HistoryShowsWhoChangedTheMarkAndWhy ...........................................   Passed    1.72 sec
         Start 363: HodViewTest.HistoryIsRefusedForOtherDepartmentsAndOtherRoles
 363/485 Test #363: HodViewTest.HistoryIsRefusedForOtherDepartmentsAndOtherRoles ..............................   Passed    1.80 sec
         Start 364: LecturerViewTest.ListsEveryEnrolledStudentOrderedByStudentNumber
-364/485 Test #364: LecturerViewTest.ListsEveryEnrolledStudentOrderedByStudentNumber ..........................   Passed    1.32 sec
+364/485 Test #364: LecturerViewTest.ListsEveryEnrolledStudentOrderedByStudentNumber ..........................   Passed    1.23 sec
         Start 365: LecturerViewTest.StudentsWhoHaveNotSubmittedHaveNoSubmissionData
-365/485 Test #365: LecturerViewTest.StudentsWhoHaveNotSubmittedHaveNoSubmissionData ..........................   Passed    1.27 sec
+365/485 Test #365: LecturerViewTest.StudentsWhoHaveNotSubmittedHaveNoSubmissionData ..........................   Passed    1.28 sec
         Start 366: LecturerViewTest.SubmittedWorkShowsStatusVersionsAndTheLatestFile
-366/485 Test #366: LecturerViewTest.SubmittedWorkShowsStatusVersionsAndTheLatestFile .........................   Passed    1.27 sec
+366/485 Test #366: LecturerViewTest.SubmittedWorkShowsStatusVersionsAndTheLatestFile .........................   Passed    1.22 sec
         Start 367: LecturerViewTest.TheLecturerSeesTheMarkAndFeedbackBeforeRelease
-367/485 Test #367: LecturerViewTest.TheLecturerSeesTheMarkAndFeedbackBeforeRelease ...........................   Passed    1.30 sec
+367/485 Test #367: LecturerViewTest.TheLecturerSeesTheMarkAndFeedbackBeforeRelease ...........................   Passed    1.23 sec
         Start 368: LecturerViewTest.OnlyTheLecturerWhoTeachesTheCourseMayLook
-368/485 Test #368: LecturerViewTest.OnlyTheLecturerWhoTeachesTheCourseMayLook ................................   Passed    1.26 sec
+368/485 Test #368: LecturerViewTest.OnlyTheLecturerWhoTeachesTheCourseMayLook ................................   Passed    1.21 sec
         Start 369: LecturerViewTest.UnknownAssignmentIsRefused
-369/485 Test #369: LecturerViewTest.UnknownAssignmentIsRefused ...............................................   Passed    1.26 sec
+369/485 Test #369: LecturerViewTest.UnknownAssignmentIsRefused ...............................................   Passed    1.21 sec
         Start 370: DemoDataTest.AllFourRolesCanLogIn
-370/485 Test #370: DemoDataTest.AllFourRolesCanLogIn .........................................................   Passed    1.52 sec
+370/485 Test #370: DemoDataTest.AllFourRolesCanLogIn .........................................................   Passed    1.32 sec
         Start 371: DemoDataTest.StudentsSeeTheirOwnCoursesAndAssignments
-371/485 Test #371: DemoDataTest.StudentsSeeTheirOwnCoursesAndAssignments .....................................   Passed    1.09 sec
+371/485 Test #371: DemoDataTest.StudentsSeeTheirOwnCoursesAndAssignments .....................................   Passed    1.02 sec
         Start 372: DemoDataTest.TheLecturerTeachesBothCourses
-372/485 Test #372: DemoDataTest.TheLecturerTeachesBothCourses ................................................   Passed    1.01 sec
+372/485 Test #372: DemoDataTest.TheLecturerTeachesBothCourses ................................................   Passed    0.92 sec
         Start 373: DemoDataTest.SeedingAnAlreadyUsedSystemIsRefused
-373/485 Test #373: DemoDataTest.SeedingAnAlreadyUsedSystemIsRefused ..........................................   Passed    1.10 sec
+373/485 Test #373: DemoDataTest.SeedingAnAlreadyUsedSystemIsRefused ..........................................   Passed    1.01 sec
         Start 374: AppContextTest.NewDatabaseHasTablesAndNeedsAFirstAdmin
 374/485 Test #374: AppContextTest.NewDatabaseHasTablesAndNeedsAFirstAdmin ....................................   Passed    0.12 sec
         Start 375: AppContextTest.FirstAdminCanLogIn
-375/485 Test #375: AppContextTest.FirstAdminCanLogIn .........................................................   Passed    0.35 sec
+375/485 Test #375: AppContextTest.FirstAdminCanLogIn .........................................................   Passed    0.32 sec
         Start 376: AppContextTest.SecondFirstAdminIsRefused
-376/485 Test #376: AppContextTest.SecondFirstAdminIsRefused ..................................................   Passed    0.23 sec
+376/485 Test #376: AppContextTest.SecondFirstAdminIsRefused ..................................................   Passed    0.22 sec
         Start 377: AppContextTest.WeakPasswordOrBadNameIsRefusedAndTheSystemStillNeedsAnAdmin
-377/485 Test #377: AppContextTest.WeakPasswordOrBadNameIsRefusedAndTheSystemStillNeedsAnAdmin ................   Passed    0.13 sec
+377/485 Test #377: AppContextTest.WeakPasswordOrBadNameIsRefusedAndTheSystemStillNeedsAnAdmin ................   Passed    0.12 sec
         Start 378: AppContextTest.DataSurvivesClosingAndReopeningTheDatabaseFile
-378/485 Test #378: AppContextTest.DataSurvivesClosingAndReopeningTheDatabaseFile .............................   Passed    0.61 sec
+378/485 Test #378: AppContextTest.DataSurvivesClosingAndReopeningTheDatabaseFile .............................   Passed    0.57 sec
         Start 379: AppContextTest.CannotOpenADatabaseInAMissingFolder
-379/485 Test #379: AppContextTest.CannotOpenADatabaseInAMissingFolder ........................................   Passed    0.03 sec
+379/485 Test #379: AppContextTest.CannotOpenADatabaseInAMissingFolder ........................................   Passed    0.02 sec
         Start 380: AppContextTest.WholeJourneyFromFirstAdminToReleasedMark
-380/485 Test #380: AppContextTest.WholeJourneyFromFirstAdminToReleasedMark ...................................   Passed    0.99 sec
+380/485 Test #380: AppContextTest.WholeJourneyFromFirstAdminToReleasedMark ...................................   Passed    0.92 sec
         Start 381: AdminWindowTest.UsersTabListsEveryoneWithRoleDetailAndStatus
-381/485 Test #381: AdminWindowTest.UsersTabListsEveryoneWithRoleDetailAndStatus ..............................   Passed    1.10 sec
+381/485 Test #381: AdminWindowTest.UsersTabListsEveryoneWithRoleDetailAndStatus ..............................   Passed    1.05 sec
         Start 382: AdminWindowTest.CreateUserAddsARowAndTheUserCanLogIn
-382/485 Test #382: AdminWindowTest.CreateUserAddsARowAndTheUserCanLogIn ......................................   Passed    1.30 sec
+382/485 Test #382: AdminWindowTest.CreateUserAddsARowAndTheUserCanLogIn ......................................   Passed    1.33 sec
         Start 383: AdminWindowTest.WeakPasswordIsRefusedWithTheRule
-383/485 Test #383: AdminWindowTest.WeakPasswordIsRefusedWithTheRule ..........................................   Passed    1.09 sec
+383/485 Test #383: AdminWindowTest.WeakPasswordIsRefusedWithTheRule ..........................................   Passed    1.22 sec
         Start 384: AdminWindowTest.DuplicateUsernameShowsAFriendlyMessage
-384/485 Test #384: AdminWindowTest.DuplicateUsernameShowsAFriendlyMessage ....................................   Passed    1.13 sec
+384/485 Test #384: AdminWindowTest.DuplicateUsernameShowsAFriendlyMessage ....................................   Passed    1.28 sec
         Start 385: AdminWindowTest.DeactivateAndReactivateChangeTheStatusAndTheLogin
-385/485 Test #385: AdminWindowTest.DeactivateAndReactivateChangeTheStatusAndTheLogin .........................   Passed    1.37 sec
+385/485 Test #385: AdminWindowTest.DeactivateAndReactivateChangeTheStatusAndTheLogin .........................   Passed    1.46 sec
         Start 386: AdminWindowTest.AdministratorCannotDeactivateTheirOwnAccount
-386/485 Test #386: AdminWindowTest.AdministratorCannotDeactivateTheirOwnAccount ..............................   Passed    1.17 sec
+386/485 Test #386: AdminWindowTest.AdministratorCannotDeactivateTheirOwnAccount ..............................   Passed    1.10 sec
         Start 387: AdminWindowTest.ResetPasswordReplacesTheOldPassword
-387/485 Test #387: AdminWindowTest.ResetPasswordReplacesTheOldPassword .......................................   Passed    1.85 sec
+387/485 Test #387: AdminWindowTest.ResetPasswordReplacesTheOldPassword .......................................   Passed    1.62 sec
         Start 388: AdminWindowTest.ResetPasswordRefusesAWeakPasswordAndKeepsTheOldOne
-388/485 Test #388: AdminWindowTest.ResetPasswordRefusesAWeakPasswordAndKeepsTheOldOne ........................   Passed    1.34 sec
+388/485 Test #388: AdminWindowTest.ResetPasswordRefusesAWeakPasswordAndKeepsTheOldOne ........................   Passed    1.46 sec
         Start 389: AdminWindowTest.CoursesTabShowsDepartmentLecturersAndStudentCount
-389/485 Test #389: AdminWindowTest.CoursesTabShowsDepartmentLecturersAndStudentCount .........................   Passed    1.15 sec
+389/485 Test #389: AdminWindowTest.CoursesTabShowsDepartmentLecturersAndStudentCount .........................   Passed    1.04 sec
         Start 390: AdminWindowTest.CreateDepartmentAndCourse
-390/485 Test #390: AdminWindowTest.CreateDepartmentAndCourse .................................................   Passed    1.09 sec
+390/485 Test #390: AdminWindowTest.CreateDepartmentAndCourse .................................................   Passed    1.00 sec
         Start 391: AdminWindowTest.DuplicatesAndUnknownDepartmentsShowAFriendlyMessage
-391/485 Test #391: AdminWindowTest.DuplicatesAndUnknownDepartmentsShowAFriendlyMessage .......................   Passed    1.07 sec
+391/485 Test #391: AdminWindowTest.DuplicatesAndUnknownDepartmentsShowAFriendlyMessage .......................   Passed    1.00 sec
         Start 392: AdminWindowTest.BlankCourseDataIsRefused
-392/485 Test #392: AdminWindowTest.BlankCourseDataIsRefused ..................................................   Passed    1.08 sec
+392/485 Test #392: AdminWindowTest.BlankCourseDataIsRefused ..................................................   Passed    1.01 sec
         Start 393: AdminWindowTest.AssignALecturerAndEnrolAStudent
-393/485 Test #393: AdminWindowTest.AssignALecturerAndEnrolAStudent ...........................................   Passed    1.38 sec
+393/485 Test #393: AdminWindowTest.AssignALecturerAndEnrolAStudent ...........................................   Passed    1.29 sec
         Start 394: AdminWindowTest.TheWrongKindOfUserCannotBeAssignedOrEnrolled
-394/485 Test #394: AdminWindowTest.TheWrongKindOfUserCannotBeAssignedOrEnrolled ..............................   Passed    1.28 sec
+394/485 Test #394: AdminWindowTest.TheWrongKindOfUserCannotBeAssignedOrEnrolled ..............................   Passed    1.22 sec
         Start 395: AdminWindowTest.AuditTabShowsMarkChangesWithNames
-395/485 Test #395: AdminWindowTest.AuditTabShowsMarkChangesWithNames .........................................   Passed    1.27 sec
+395/485 Test #395: AdminWindowTest.AuditTabShowsMarkChangesWithNames .........................................   Passed    1.33 sec
         Start 396: AdminWindowTest.UserButtonsFollowTheSelection
-396/485 Test #396: AdminWindowTest.UserButtonsFollowTheSelection .............................................   Passed    1.18 sec
+396/485 Test #396: AdminWindowTest.UserButtonsFollowTheSelection .............................................   Passed    1.19 sec
         Start 397: AdminWindowTest.CourseButtonsNeedASelectedCourse
-397/485 Test #397: AdminWindowTest.CourseButtonsNeedASelectedCourse ..........................................   Passed    1.04 sec
+397/485 Test #397: AdminWindowTest.CourseButtonsNeedASelectedCourse ..........................................   Passed    1.07 sec
         Start 398: AdminWindowTest.LogOutButtonSendsTheSignal
-398/485 Test #398: AdminWindowTest.LogOutButtonSendsTheSignal ................................................   Passed    1.04 sec
+398/485 Test #398: AdminWindowTest.LogOutButtonSendsTheSignal ................................................   Passed    1.00 sec
         Start 399: AdminDialogsTest.NewUserFormChecksTheFieldsOfEachRole
-399/485 Test #399: AdminDialogsTest.NewUserFormChecksTheFieldsOfEachRole .....................................   Passed    0.10 sec
+399/485 Test #399: AdminDialogsTest.NewUserFormChecksTheFieldsOfEachRole .....................................   Passed    0.12 sec
         Start 400: AdminDialogsTest.NewUserFormRefusesDifferentPasswordsAndMissingNames
-400/485 Test #400: AdminDialogsTest.NewUserFormRefusesDifferentPasswordsAndMissingNames ......................   Passed    0.10 sec
+400/485 Test #400: AdminDialogsTest.NewUserFormRefusesDifferentPasswordsAndMissingNames ......................   Passed    0.11 sec
         Start 401: AdminDialogsTest.HeadOfDepartmentNeedsADepartment
 401/485 Test #401: AdminDialogsTest.HeadOfDepartmentNeedsADepartment .........................................   Passed    0.09 sec
         Start 402: AdminDialogsTest.PasswordFormNeedsTwoEqualPasswords
-402/485 Test #402: AdminDialogsTest.PasswordFormNeedsTwoEqualPasswords .......................................   Passed    0.10 sec
+402/485 Test #402: AdminDialogsTest.PasswordFormNeedsTwoEqualPasswords .......................................   Passed    0.13 sec
         Start 403: AdminDialogsTest.TextFormNeedsAValue
-403/485 Test #403: AdminDialogsTest.TextFormNeedsAValue ......................................................   Passed    0.10 sec
+403/485 Test #403: AdminDialogsTest.TextFormNeedsAValue ......................................................   Passed    0.09 sec
         Start 404: AdminDialogsTest.CourseFormNeedsCodeTitleAndADepartment
-404/485 Test #404: AdminDialogsTest.CourseFormNeedsCodeTitleAndADepartment ...................................   Passed    0.10 sec
+404/485 Test #404: AdminDialogsTest.CourseFormNeedsCodeTitleAndADepartment ...................................   Passed    0.09 sec
         Start 405: AdminDialogsTest.ChoiceFormNeedsSomethingToChoose
-405/485 Test #405: AdminDialogsTest.ChoiceFormNeedsSomethingToChoose .........................................   Passed    0.05 sec
+405/485 Test #405: AdminDialogsTest.ChoiceFormNeedsSomethingToChoose .........................................   Passed    0.06 sec
         Start 406: HodWindowTest.ShowsOnlyTheCoursesOfTheHoDsDepartment
-406/485 Test #406: HodWindowTest.ShowsOnlyTheCoursesOfTheHoDsDepartment ......................................   Passed    1.30 sec
+406/485 Test #406: HodWindowTest.ShowsOnlyTheCoursesOfTheHoDsDepartment ......................................   Passed    1.52 sec
         Start 407: HodWindowTest.ListsTheAssignmentsOfTheCourse
-407/485 Test #407: HodWindowTest.ListsTheAssignmentsOfTheCourse ..............................................   Passed    1.25 sec
+407/485 Test #407: HodWindowTest.ListsTheAssignmentsOfTheCourse ..............................................   Passed    1.29 sec
         Start 408: HodWindowTest.WithoutASelectionThereIsAHintAndTheButtonsAreDisabled
-408/485 Test #408: HodWindowTest.WithoutASelectionThereIsAHintAndTheButtonsAreDisabled .......................   Passed    1.25 sec
+408/485 Test #408: HodWindowTest.WithoutASelectionThereIsAHintAndTheButtonsAreDisabled .......................   Passed    1.19 sec
         Start 409: HodWindowTest.ShowsOnlyWorkThatHasAMark
-409/485 Test #409: HodWindowTest.ShowsOnlyWorkThatHasAMark ...................................................   Passed    1.30 sec
+409/485 Test #409: HodWindowTest.ShowsOnlyWorkThatHasAMark ...................................................   Passed    1.28 sec
         Start 410: HodWindowTest.ApproveMovesTheWorkToModerated
-410/485 Test #410: HodWindowTest.ApproveMovesTheWorkToModerated ..............................................   Passed    1.24 sec
+410/485 Test #410: HodWindowTest.ApproveMovesTheWorkToModerated ..............................................   Passed    1.25 sec
         Start 411: HodWindowTest.ApproveAllApprovesEveryMarkedSubmission
-411/485 Test #411: HodWindowTest.ApproveAllApprovesEveryMarkedSubmission .....................................   Passed    1.27 sec
+411/485 Test #411: HodWindowTest.ApproveAllApprovesEveryMarkedSubmission .....................................   Passed    1.29 sec
         Start 412: HodWindowTest.ApproveAllWithNothingToApproveShowsAMessage
-412/485 Test #412: HodWindowTest.ApproveAllWithNothingToApproveShowsAMessage .................................   Passed    1.23 sec
+412/485 Test #412: HodWindowTest.ApproveAllWithNothingToApproveShowsAMessage .................................   Passed    1.19 sec
         Start 413: HodWindowTest.ApprovingTwiceShowsAMessageAndKeepsTheStatus
-413/485 Test #413: HodWindowTest.ApprovingTwiceShowsAMessageAndKeepsTheStatus ................................   Passed    1.28 sec
+413/485 Test #413: HodWindowTest.ApprovingTwiceShowsAMessageAndKeepsTheStatus ................................   Passed    1.20 sec
         Start 414: HodWindowTest.ChangeMarkShowsTheNewMarkAndWritesTheAuditLog
-414/485 Test #414: HodWindowTest.ChangeMarkShowsTheNewMarkAndWritesTheAuditLog ...............................   Passed    1.28 sec
+414/485 Test #414: HodWindowTest.ChangeMarkShowsTheNewMarkAndWritesTheAuditLog ...............................   Passed    1.25 sec
         Start 415: HodWindowTest.ChangeMarkNeedsAReason
-415/485 Test #415: HodWindowTest.ChangeMarkNeedsAReason ......................................................   Passed    1.71 sec
+415/485 Test #415: HodWindowTest.ChangeMarkNeedsAReason ......................................................   Passed    1.19 sec
         Start 416: HodWindowTest.ChangeMarkAboveTheMaximumIsRefused
-416/485 Test #416: HodWindowTest.ChangeMarkAboveTheMaximumIsRefused ..........................................   Passed    1.41 sec
+416/485 Test #416: HodWindowTest.ChangeMarkAboveTheMaximumIsRefused ..........................................   Passed    1.53 sec
         Start 417: HodWindowTest.ChangeMarkAfterApprovalIsRefused
-417/485 Test #417: HodWindowTest.ChangeMarkAfterApprovalIsRefused ............................................   Passed    1.22 sec
+417/485 Test #417: HodWindowTest.ChangeMarkAfterApprovalIsRefused ............................................   Passed    1.30 sec
         Start 418: HodWindowTest.ReleaseMakesTheMarksVisibleToTheStudentsAndNotifiesThem
 418/485 Test #418: HodWindowTest.ReleaseMakesTheMarksVisibleToTheStudentsAndNotifiesThem .....................   Passed    1.21 sec
         Start 419: HodWindowTest.ReleaseOnlyReleasesTheApprovedWork
-419/485 Test #419: HodWindowTest.ReleaseOnlyReleasesTheApprovedWork ..........................................   Passed    1.22 sec
+419/485 Test #419: HodWindowTest.ReleaseOnlyReleasesTheApprovedWork ..........................................   Passed    1.20 sec
         Start 420: HodWindowTest.ReleaseWithNothingModeratedShowsAMessage
 420/485 Test #420: HodWindowTest.ReleaseWithNothingModeratedShowsAMessage ....................................   Passed    1.21 sec
         Start 421: HodWindowTest.ReleaseWithoutAnAssignmentShowsAHint
-421/485 Test #421: HodWindowTest.ReleaseWithoutAnAssignmentShowsAHint ........................................   Passed    1.21 sec
+421/485 Test #421: HodWindowTest.ReleaseWithoutAnAssignmentShowsAHint ........................................   Passed    1.24 sec
         Start 422: HodWindowTest.ButtonsFollowTheStatusOfTheSelectedWork
-422/485 Test #422: HodWindowTest.ButtonsFollowTheStatusOfTheSelectedWork .....................................   Passed    1.21 sec
+422/485 Test #422: HodWindowTest.ButtonsFollowTheStatusOfTheSelectedWork .....................................   Passed    1.29 sec
         Start 423: HodWindowTest.LogOutButtonSendsTheSignal
-423/485 Test #423: HodWindowTest.LogOutButtonSendsTheSignal ..................................................   Passed    1.19 sec
+423/485 Test #423: HodWindowTest.LogOutButtonSendsTheSignal ..................................................   Passed    1.31 sec
         Start 424: HodWindowTest.HistoryDialogListsTheChangesWithNames
-424/485 Test #424: HodWindowTest.HistoryDialogListsTheChangesWithNames .......................................   Passed    1.20 sec
+424/485 Test #424: HodWindowTest.HistoryDialogListsTheChangesWithNames .......................................   Passed    1.29 sec
         Start 425: HodDialogsTest.ChangeMarkFormNeedsAReasonAndStartsAtTheCurrentMark
-425/485 Test #425: HodDialogsTest.ChangeMarkFormNeedsAReasonAndStartsAtTheCurrentMark ........................   Passed    0.09 sec
+425/485 Test #425: HodDialogsTest.ChangeMarkFormNeedsAReasonAndStartsAtTheCurrentMark ........................   Passed    0.10 sec
         Start 426: HodDialogsTest.ChangeMarkCannotBeAboveTheMaximum
-426/485 Test #426: HodDialogsTest.ChangeMarkCannotBeAboveTheMaximum ..........................................   Passed    0.09 sec
+426/485 Test #426: HodDialogsTest.ChangeMarkCannotBeAboveTheMaximum ..........................................   Passed    0.10 sec
         Start 427: UserWindowFactoryTest.HoDGetsTheHoDWindow
-427/485 Test #427: UserWindowFactoryTest.HoDGetsTheHoDWindow .................................................   Passed    0.20 sec
+427/485 Test #427: UserWindowFactoryTest.HoDGetsTheHoDWindow .................................................   Passed    0.22 sec
         Start 428: UserWindowFactoryTest.LecturerGetsTheLecturerWindow
-428/485 Test #428: UserWindowFactoryTest.LecturerGetsTheLecturerWindow .......................................   Passed    0.20 sec
+428/485 Test #428: UserWindowFactoryTest.LecturerGetsTheLecturerWindow .......................................   Passed    0.19 sec
         Start 429: UserWindowFactoryTest.StudentAndAdministratorGetTheirOwnWindows
-429/485 Test #429: UserWindowFactoryTest.StudentAndAdministratorGetTheirOwnWindows ...........................   Passed    0.20 sec
+429/485 Test #429: UserWindowFactoryTest.StudentAndAdministratorGetTheirOwnWindows ...........................   Passed    0.23 sec
         Start 430: LecturerWindowTest.ShowsOnlyTheCoursesTheLecturerTeaches
-430/485 Test #430: LecturerWindowTest.ShowsOnlyTheCoursesTheLecturerTeaches ..................................   Passed    1.30 sec
+430/485 Test #430: LecturerWindowTest.ShowsOnlyTheCoursesTheLecturerTeaches ..................................   Passed    1.34 sec
         Start 431: LecturerWindowTest.ListsTheAssignmentsOfTheSelectedCourse
-431/485 Test #431: LecturerWindowTest.ListsTheAssignmentsOfTheSelectedCourse .................................   Passed    1.30 sec
+431/485 Test #431: LecturerWindowTest.ListsTheAssignmentsOfTheSelectedCourse .................................   Passed    1.53 sec
         Start 432: LecturerWindowTest.WithoutASelectionThereIsAHintAndTheActionButtonsAreDisabled
-432/485 Test #432: LecturerWindowTest.WithoutASelectionThereIsAHintAndTheActionButtonsAreDisabled ............   Passed    1.30 sec
+432/485 Test #432: LecturerWindowTest.WithoutASelectionThereIsAHintAndTheActionButtonsAreDisabled ............   Passed    1.36 sec
         Start 433: LecturerWindowTest.SelectingAnAssignmentListsEveryEnrolledStudent
-433/485 Test #433: LecturerWindowTest.SelectingAnAssignmentListsEveryEnrolledStudent .........................   Passed    1.30 sec
+433/485 Test #433: LecturerWindowTest.SelectingAnAssignmentListsEveryEnrolledStudent .........................   Passed    1.32 sec
         Start 434: LecturerWindowTest.SubmittedWorkShowsStatusFilesAndTheLatestFile
-434/485 Test #434: LecturerWindowTest.SubmittedWorkShowsStatusFilesAndTheLatestFile ..........................   Passed    1.30 sec
+434/485 Test #434: LecturerWindowTest.SubmittedWorkShowsStatusFilesAndTheLatestFile ..........................   Passed    1.62 sec
         Start 435: LecturerWindowTest.CreateAssignmentIsListed
-435/485 Test #435: LecturerWindowTest.CreateAssignmentIsListed ...............................................   Passed    1.31 sec
+435/485 Test #435: LecturerWindowTest.CreateAssignmentIsListed ...............................................   Passed    1.62 sec
         Start 436: LecturerWindowTest.PastDeadlineIsRefusedWithAMessage
-436/485 Test #436: LecturerWindowTest.PastDeadlineIsRefusedWithAMessage ......................................   Passed    1.33 sec
+436/485 Test #436: LecturerWindowTest.PastDeadlineIsRefusedWithAMessage ......................................   Passed    2.21 sec
         Start 437: LecturerWindowTest.BlankTitleIsRefusedWithAMessage
-437/485 Test #437: LecturerWindowTest.BlankTitleIsRefusedWithAMessage ........................................   Passed    1.38 sec
+437/485 Test #437: LecturerWindowTest.BlankTitleIsRefusedWithAMessage ........................................   Passed    1.76 sec
         Start 438: LecturerWindowTest.MarkSavesTheMarkAndShowsItToTheLecturer
-438/485 Test #438: LecturerWindowTest.MarkSavesTheMarkAndShowsItToTheLecturer ................................   Passed    1.31 sec
+438/485 Test #438: LecturerWindowTest.MarkSavesTheMarkAndShowsItToTheLecturer ................................   Passed    2.08 sec
         Start 439: LecturerWindowTest.MarkErrorsAreShownAsMessagesAndNothingIsSaved
-439/485 Test #439: LecturerWindowTest.MarkErrorsAreShownAsMessagesAndNothingIsSaved ..........................   Passed    1.32 sec
+439/485 Test #439: LecturerWindowTest.MarkErrorsAreShownAsMessagesAndNothingIsSaved ..........................   Passed    2.22 sec
         Start 440: LecturerWindowTest.ReMarkNeedsAReason
-440/485 Test #440: LecturerWindowTest.ReMarkNeedsAReason .....................................................   Passed    1.31 sec
+440/485 Test #440: LecturerWindowTest.ReMarkNeedsAReason .....................................................   Passed    1.97 sec
         Start 441: LecturerWindowTest.ModeratedWorkCannotBeMarkedAgain
-441/485 Test #441: LecturerWindowTest.ModeratedWorkCannotBeMarkedAgain .......................................   Passed    1.35 sec
+441/485 Test #441: LecturerWindowTest.ModeratedWorkCannotBeMarkedAgain .......................................   Passed    1.67 sec
         Start 442: LecturerWindowTest.GrantExtensionChangesTheStudentsDeadline
-442/485 Test #442: LecturerWindowTest.GrantExtensionChangesTheStudentsDeadline ...............................   Passed    1.32 sec
+442/485 Test #442: LecturerWindowTest.GrantExtensionChangesTheStudentsDeadline ...............................   Passed    1.48 sec
         Start 443: LecturerWindowTest.ExtensionErrorsAreShownAsMessages
-443/485 Test #443: LecturerWindowTest.ExtensionErrorsAreShownAsMessages ......................................   Passed    1.36 sec
+443/485 Test #443: LecturerWindowTest.ExtensionErrorsAreShownAsMessages ......................................   Passed    1.43 sec
         Start 444: LecturerWindowTest.ExtensionWithoutASelectedAssignmentShowsAHint
-444/485 Test #444: LecturerWindowTest.ExtensionWithoutASelectedAssignmentShowsAHint ..........................   Passed    1.32 sec
+444/485 Test #444: LecturerWindowTest.ExtensionWithoutASelectedAssignmentShowsAHint ..........................   Passed    1.37 sec
         Start 445: LecturerWindowTest.ButtonsFollowTheSelectedStudent
-445/485 Test #445: LecturerWindowTest.ButtonsFollowTheSelectedStudent ........................................   Passed    1.30 sec
+445/485 Test #445: LecturerWindowTest.ButtonsFollowTheSelectedStudent ........................................   Passed    1.32 sec
         Start 446: LecturerWindowTest.LogOutButtonSendsTheSignal
 446/485 Test #446: LecturerWindowTest.LogOutButtonSendsTheSignal .............................................   Passed    1.33 sec
         Start 447: LecturerDialogsTest.AssignmentFormNeedsATitle
-447/485 Test #447: LecturerDialogsTest.AssignmentFormNeedsATitle .............................................   Passed    0.10 sec
+447/485 Test #447: LecturerDialogsTest.AssignmentFormNeedsATitle .............................................   Passed    0.19 sec
         Start 448: LecturerDialogsTest.MarkFormNeedsFeedback
-448/485 Test #448: LecturerDialogsTest.MarkFormNeedsFeedback .................................................   Passed    0.09 sec
+448/485 Test #448: LecturerDialogsTest.MarkFormNeedsFeedback .................................................   Passed    0.10 sec
         Start 449: LecturerDialogsTest.ReMarkFormAlsoNeedsAReasonAndShowsTheCurrentValues
 449/485 Test #449: LecturerDialogsTest.ReMarkFormAlsoNeedsAReasonAndShowsTheCurrentValues ....................   Passed    0.09 sec
         Start 450: LecturerDialogsTest.MarkCannotBeAboveTheMaximum
-450/485 Test #450: LecturerDialogsTest.MarkCannotBeAboveTheMaximum ...........................................   Passed    0.09 sec
+450/485 Test #450: LecturerDialogsTest.MarkCannotBeAboveTheMaximum ...........................................   Passed    0.10 sec
         Start 451: LecturerDialogsTest.ExtensionFormNeedsAReasonAndALaterDeadline
 451/485 Test #451: LecturerDialogsTest.ExtensionFormNeedsAReasonAndALaterDeadline ............................   Passed    0.10 sec
         Start 452: StudentWindowTest.ShowsOnlyTheCoursesTheStudentIsEnrolledIn
-452/485 Test #452: StudentWindowTest.ShowsOnlyTheCoursesTheStudentIsEnrolledIn ...............................   Passed    1.06 sec
+452/485 Test #452: StudentWindowTest.ShowsOnlyTheCoursesTheStudentIsEnrolledIn ...............................   Passed    1.03 sec
         Start 453: StudentWindowTest.ListsTheAssignmentsInDeadlineOrderWithTheirStatus
-453/485 Test #453: StudentWindowTest.ListsTheAssignmentsInDeadlineOrderWithTheirStatus .......................   Passed    1.41 sec
+453/485 Test #453: StudentWindowTest.ListsTheAssignmentsInDeadlineOrderWithTheirStatus .......................   Passed    1.01 sec
         Start 454: StudentWindowTest.WithoutASelectionThereIsAHintAndSubmitIsDisabled
-454/485 Test #454: StudentWindowTest.WithoutASelectionThereIsAHintAndSubmitIsDisabled ........................   Passed    1.07 sec
+454/485 Test #454: StudentWindowTest.WithoutASelectionThereIsAHintAndSubmitIsDisabled ........................   Passed    1.00 sec
         Start 455: StudentWindowTest.SelectingAnAssignmentShowsTheDetailsAndEnablesSubmit
-455/485 Test #455: StudentWindowTest.SelectingAnAssignmentShowsTheDetailsAndEnablesSubmit ....................   Passed    1.03 sec
+455/485 Test #455: StudentWindowTest.SelectingAnAssignmentShowsTheDetailsAndEnablesSubmit ....................   Passed    0.99 sec
         Start 456: StudentWindowTest.ShowsTheStudentsOwnDeadlineWhenThereIsAnExtension
-456/485 Test #456: StudentWindowTest.ShowsTheStudentsOwnDeadlineWhenThereIsAnExtension .......................   Passed    1.21 sec
+456/485 Test #456: StudentWindowTest.ShowsTheStudentsOwnDeadlineWhenThereIsAnExtension .......................   Passed    1.01 sec
         Start 457: StudentWindowTest.SubmitShowsAConfirmationAndUpdatesTheStatus
-457/485 Test #457: StudentWindowTest.SubmitShowsAConfirmationAndUpdatesTheStatus .............................   Passed    1.11 sec
+457/485 Test #457: StudentWindowTest.SubmitShowsAConfirmationAndUpdatesTheStatus .............................   Passed    1.00 sec
         Start 458: StudentWindowTest.ResubmitKeepsTheStatusAndCountsTheVersions
-458/485 Test #458: StudentWindowTest.ResubmitKeepsTheStatusAndCountsTheVersions ..............................   Passed    1.05 sec
+458/485 Test #458: StudentWindowTest.ResubmitKeepsTheStatusAndCountsTheVersions ..............................   Passed    1.10 sec
         Start 459: StudentWindowTest.UnsuitableFileShowsAMessageAndSavesNothing
-459/485 Test #459: StudentWindowTest.UnsuitableFileShowsAMessageAndSavesNothing ..............................   Passed    1.14 sec
+459/485 Test #459: StudentWindowTest.UnsuitableFileShowsAMessageAndSavesNothing ..............................   Passed    1.17 sec
         Start 460: StudentWindowTest.SubmitWithoutASelectionShowsAHint
-460/485 Test #460: StudentWindowTest.SubmitWithoutASelectionShowsAHint .......................................   Passed    1.10 sec
+460/485 Test #460: StudentWindowTest.SubmitWithoutASelectionShowsAHint .......................................   Passed    1.03 sec
         Start 461: StudentWindowTest.ResubmittingMarkedWorkIsRefusedWithAMessage
-461/485 Test #461: StudentWindowTest.ResubmittingMarkedWorkIsRefusedWithAMessage .............................   Passed    1.05 sec
+461/485 Test #461: StudentWindowTest.ResubmittingMarkedWorkIsRefusedWithAMessage .............................   Passed    1.26 sec
         Start 462: StudentWindowTest.MarkAndFeedbackStayHiddenUntilTheHoDReleasesThem
-462/485 Test #462: StudentWindowTest.MarkAndFeedbackStayHiddenUntilTheHoDReleasesThem ........................   Passed    1.05 sec
+462/485 Test #462: StudentWindowTest.MarkAndFeedbackStayHiddenUntilTheHoDReleasesThem ........................   Passed    1.19 sec
         Start 463: StudentWindowTest.DescribeShowsThePenaltyOfAReleasedLateMark
-463/485 Test #463: StudentWindowTest.DescribeShowsThePenaltyOfAReleasedLateMark ..............................   Passed    1.07 sec
+463/485 Test #463: StudentWindowTest.DescribeShowsThePenaltyOfAReleasedLateMark ..............................   Passed    1.11 sec
         Start 464: StudentWindowTest.ReleaseCreatesANoticeThatCanBeMarkedAsRead
-464/485 Test #464: StudentWindowTest.ReleaseCreatesANoticeThatCanBeMarkedAsRead ..............................   Passed    1.06 sec
+464/485 Test #464: StudentWindowTest.ReleaseCreatesANoticeThatCanBeMarkedAsRead ..............................   Passed    1.12 sec
         Start 465: StudentWindowTest.MarkReadWithoutASelectionShowsAHint
-465/485 Test #465: StudentWindowTest.MarkReadWithoutASelectionShowsAHint .....................................   Passed    1.05 sec
+465/485 Test #465: StudentWindowTest.MarkReadWithoutASelectionShowsAHint .....................................   Passed    1.11 sec
         Start 466: StudentWindowTest.LogOutButtonSendsTheSignal
-466/485 Test #466: StudentWindowTest.LogOutButtonSendsTheSignal ..............................................   Passed    1.08 sec
+466/485 Test #466: StudentWindowTest.LogOutButtonSendsTheSignal ..............................................   Passed    1.33 sec
         Start 467: UiFormatTest.MarksAreShownWithoutUselessZeros
-467/485 Test #467: UiFormatTest.MarksAreShownWithoutUselessZeros .............................................   Passed    0.05 sec
+467/485 Test #467: UiFormatTest.MarksAreShownWithoutUselessZeros .............................................   Passed    0.06 sec
         Start 468: FirstRunDialogTest.CreatesTheAdministratorAndAccepts
-468/485 Test #468: FirstRunDialogTest.CreatesTheAdministratorAndAccepts ......................................   Passed    0.40 sec
+468/485 Test #468: FirstRunDialogTest.CreatesTheAdministratorAndAccepts ......................................   Passed    0.52 sec
         Start 469: FirstRunDialogTest.PasswordsThatDoNotMatchAreRefused
-469/485 Test #469: FirstRunDialogTest.PasswordsThatDoNotMatchAreRefused ......................................   Passed    0.21 sec
+469/485 Test #469: FirstRunDialogTest.PasswordsThatDoNotMatchAreRefused ......................................   Passed    0.35 sec
         Start 470: FirstRunDialogTest.WeakPasswordShowsTheRule
-470/485 Test #470: FirstRunDialogTest.WeakPasswordShowsTheRule ...............................................   Passed    0.21 sec
+470/485 Test #470: FirstRunDialogTest.WeakPasswordShowsTheRule ...............................................   Passed    0.24 sec
         Start 471: FirstRunDialogTest.MissingNamesAreRefused
-471/485 Test #471: FirstRunDialogTest.MissingNamesAreRefused .................................................   Passed    0.22 sec
+471/485 Test #471: FirstRunDialogTest.MissingNamesAreRefused .................................................   Passed    0.27 sec
         Start 472: FirstRunDialogTest.CanCorrectAMistakeAndTryAgain
-472/485 Test #472: FirstRunDialogTest.CanCorrectAMistakeAndTryAgain ..........................................   Passed    0.31 sec
+472/485 Test #472: FirstRunDialogTest.CanCorrectAMistakeAndTryAgain ..........................................   Passed    0.39 sec
         Start 473: FirstRunDialogTest.PasswordFieldsHideTheText
-473/485 Test #473: FirstRunDialogTest.PasswordFieldsHideTheText ..............................................   Passed    0.20 sec
+473/485 Test #473: FirstRunDialogTest.PasswordFieldsHideTheText ..............................................   Passed    0.22 sec
         Start 474: LoginWindowTest.CorrectLoginGivesTheUserAndClearsTheForm
-474/485 Test #474: LoginWindowTest.CorrectLoginGivesTheUserAndClearsTheForm ..................................   Passed    0.45 sec
+474/485 Test #474: LoginWindowTest.CorrectLoginGivesTheUserAndClearsTheForm ..................................   Passed    0.51 sec
         Start 475: LoginWindowTest.WrongPasswordShowsAMessageAndKeepsTheUsername
-475/485 Test #475: LoginWindowTest.WrongPasswordShowsAMessageAndKeepsTheUsername .............................   Passed    0.42 sec
+475/485 Test #475: LoginWindowTest.WrongPasswordShowsAMessageAndKeepsTheUsername .............................   Passed    0.62 sec
         Start 476: LoginWindowTest.UnknownUserGetsTheSameMessage
-476/485 Test #476: LoginWindowTest.UnknownUserGetsTheSameMessage .............................................   Passed    0.40 sec
+476/485 Test #476: LoginWindowTest.UnknownUserGetsTheSameMessage .............................................   Passed    1.03 sec
         Start 477: LoginWindowTest.EmptyFieldsShowAMessage
-477/485 Test #477: LoginWindowTest.EmptyFieldsShowAMessage ...................................................   Passed    0.32 sec
+477/485 Test #477: LoginWindowTest.EmptyFieldsShowAMessage ...................................................   Passed    0.50 sec
         Start 478: LoginWindowTest.SpacesAroundTheUsernameAreIgnored
-478/485 Test #478: LoginWindowTest.SpacesAroundTheUsernameAreIgnored .........................................   Passed    0.40 sec
+478/485 Test #478: LoginWindowTest.SpacesAroundTheUsernameAreIgnored .........................................   Passed    0.68 sec
         Start 479: LoginWindowTest.DeactivatedAccountIsToldWhy
-479/485 Test #479: LoginWindowTest.DeactivatedAccountIsToldWhy ...............................................   Passed    0.63 sec
+479/485 Test #479: LoginWindowTest.DeactivatedAccountIsToldWhy ...............................................   Passed    0.92 sec
         Start 480: LoginWindowTest.AFailedLoginCanBeFollowedByASuccessfulOne
-480/485 Test #480: LoginWindowTest.AFailedLoginCanBeFollowedByASuccessfulOne .................................   Passed    0.51 sec
+480/485 Test #480: LoginWindowTest.AFailedLoginCanBeFollowedByASuccessfulOne .................................   Passed    1.07 sec
         Start 481: LoginWindowTest.EnterKeyInThePasswordFieldLogsIn
-481/485 Test #481: LoginWindowTest.EnterKeyInThePasswordFieldLogsIn ..........................................   Passed    0.42 sec
+481/485 Test #481: LoginWindowTest.EnterKeyInThePasswordFieldLogsIn ..........................................   Passed    0.61 sec
         Start 482: LoginWindowTest.PasswordFieldHidesTheText
-482/485 Test #482: LoginWindowTest.PasswordFieldHidesTheText .................................................   Passed    0.29 sec
+482/485 Test #482: LoginWindowTest.PasswordFieldHidesTheText .................................................   Passed    0.37 sec
         Start 483: RoleWindowTest.ShowsTheNameAndTheRole
-483/485 Test #483: RoleWindowTest.ShowsTheNameAndTheRole .....................................................   Passed    0.16 sec
+483/485 Test #483: RoleWindowTest.ShowsTheNameAndTheRole .....................................................   Passed    0.22 sec
         Start 484: RoleWindowTest.EveryRoleHasALabel
-484/485 Test #484: RoleWindowTest.EveryRoleHasALabel .........................................................   Passed    0.05 sec
+484/485 Test #484: RoleWindowTest.EveryRoleHasALabel .........................................................   Passed    0.06 sec
         Start 485: RoleWindowTest.LogOutButtonSendsTheSignal
-485/485 Test #485: RoleWindowTest.LogOutButtonSendsTheSignal .................................................   Passed    0.15 sec
+485/485 Test #485: RoleWindowTest.LogOutButtonSendsTheSignal .................................................   Passed    0.16 sec
 
 100% tests passed out of 485
 
-Total Test time (real) = 144.20 sec
+Total Test time (real) = 148.27 sec

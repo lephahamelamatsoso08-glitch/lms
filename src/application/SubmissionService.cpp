@@ -4,6 +4,7 @@
 #include <cctype>
 #include <chrono>
 #include <optional>
+#include <stdexcept>
 #include <utility>
 
 #include "Action.h"
@@ -116,7 +117,11 @@ SubmitResult SubmissionService::submit(const User& student, int assignmentId,
         (lateDays == 0) ? SubmissionStatus::Submitted : SubmissionStatus::Late;
     const int id = submissions_.add(Submission(0, assignmentId, student.id(), status, lateDays),
                                     version);
-    return SubmitResult{*submissions_.findById(id), 1, false, highestPossible};
+    const std::optional<Submission> savedSubmission = submissions_.findById(id);
+    if (!savedSubmission) {
+        throw std::runtime_error("Failed to retrieve the saved submission.");
+    }
+    return SubmitResult{*savedSubmission, 1, false, highestPossible};
 }
 
 double SubmissionService::mark(const User& lecturer, int submissionId, double rawMark,
