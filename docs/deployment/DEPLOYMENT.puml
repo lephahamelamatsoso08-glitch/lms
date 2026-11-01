@@ -1,0 +1,26 @@
+@startuml
+skinparam componentStyle rectangle
+title Moderated LMS v1.0 - UML Deployment Diagram
+node "School Windows computer" as host {
+  node "Windows operating system" {
+    artifact "lms.exe
+Qt 6 Widgets desktop client" as app
+    artifact "Qt runtime DLLs +
+platform plugin" as runtime
+    database "SQLite file
+%APPDATA%\LMS\lms.db" as db
+    folder "Existing submission files
+(path references)" as files
+  }
+}
+actor "Administrator / Lecturer /
+HoD / Student" as users
+users --> app : local GUI interaction
+app --> runtime : uses
+app --> db : parameterised SQL
+app --> files : stores and opens paths
+note bottom of host
+Offline deployment. One local application instance;
+no application server or internet required.
+end note
+@enduml
