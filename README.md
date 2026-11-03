@@ -291,3 +291,8 @@ Version **1.1** introduces **class-wide assignment deadline extensions**.
 ### View All Project Diagrams
 
 📐 [Open the clickable diagram index](docs/DIAGRAM_INDEX.md)
+
+
+## 🗺️ Development Roadmap
+
+[View the project roadmap](docs/ROADMAP.md)
