@@ -296,3 +296,7 @@ Version **1.1** introduces **class-wide assignment deadline extensions**.
 ## 🗺️ Development Roadmap
 
 [View the project roadmap](docs/ROADMAP.md)
+
+## 📊 Software Quality Dashboard
+
+[View testing, coverage, complexity and CI evidence](docs/QUALITY.md)
