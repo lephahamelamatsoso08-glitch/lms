@@ -284,3 +284,8 @@ Version **1.1** introduces **class-wide assignment deadline extensions**.
 **Designed, implemented, tested and maintained using Software Engineering principles.**
 
 </div>
+
+
+### View All Project Diagrams
+
+📐 [Open the clickable diagram index](docs/DIAGRAM_INDEX.md)
