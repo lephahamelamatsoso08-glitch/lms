@@ -2,6 +2,8 @@
 
 # 🎓 MODERATED LMS
 
+[![CI](https://github.com/lephahamelamatsoso08-glitch/lms/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lephahamelamatsoso08-glitch/lms/actions/workflows/ci.yml)
+
 ### A Software Engineering Project
 
 **An offline desktop Learning Management System with secure assessment moderation, role-based access control and automated testing.**
