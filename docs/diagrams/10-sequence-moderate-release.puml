@@ -1,0 +1,57 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 150
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign left
+actor HoD
+participant HodWindow as UI
+participant HodViewService as View
+participant ModerationService as Mod
+participant ISubmissionRepository as SR
+participant ITransactionRunner as TX
+participant AuditService as Audit
+participant IReleaseObserver as Obs
+
+HoD -> UI : select course and assignment
+UI -> View : rows(hod, assignmentId)
+alt not the HoD of the department
+  View --> UI : AccessDeniedError
+  UI --> HoD : show message
+else allowed
+  View --> UI : marked work with names, status and marks
+end
+
+opt HoD changes a mark
+  HoD -> UI : enter new mark and reason
+  UI -> Mod : changeMark(hod, submissionId, newMark, reason)
+  alt reason empty, mark out of range, or work not Marked
+    Mod --> UI : invalid_argument / logic_error
+    UI --> HoD : show message
+  else valid
+    Mod -> TX : runInTransaction(work)
+    TX -> SR : save(submission with new mark)
+    TX -> Audit : recordMarkChange(who, old, new, reason)
+    note right : both saves succeed together or neither
+  end
+end
+
+HoD -> UI : approve (selected or all marked)
+UI -> Mod : approve(hod, submissionId)
+Mod -> SR : save(status Moderated)
+
+HoD -> UI : release, then confirm
+UI -> Mod : release(hod, assignmentId)
+alt nothing is Moderated
+  Mod --> UI : logic_error
+  UI --> HoD : show message
+else
+  Mod -> TX : runInTransaction(release all Moderated)
+  TX -> SR : save(status Released, release time) for each
+  loop each attached observer
+    Mod -> Obs : onMarksReleased(assignmentId, studentIds)
+    note right : a failing observer is counted,\nthe release stays valid
+  end
+  Mod --> UI : ReleaseResult
+  UI --> HoD : confirmation
+end
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 150
+skinparam defaultFontName Arial
+|Student|
+start
+:Open the assignment;
+:Choose a file and submit;
+|System|
+if (File type allowed and\nstudent enrolled?) then (no)
+  :Show a message;
+  stop
+endif
+if (Before the student's\nown deadline?) then (yes)
+  :Save as Submitted\n(new file version);
+else (no)
+  :Count the late days;
+  :Save as Late and show the\nhighest possible mark;
+endif
+|Lecturer|
+:Open the submission and read the file;
+:Enter a mark and written feedback;
+|System|
+:Apply the late penalty\nto get the final mark;
+:Set status Marked;
+:Write the audit entry;
+|HoD|
+:Review the marked work\nof the department;
+if (Mark needs a change?) then (yes)
+  :Change the mark\nand give a reason;
+  |System|
+  :Save the change and\nwrite the audit entry;
+  |HoD|
+endif
+:Approve the marks;
+|System|
+:Set status Moderated;
+|HoD|
+:Confirm the release;
+|System|
+:Set status Released\nand record the time;
+:Notify the students;
+|Student|
+:View the final mark\nand the feedback;
+stop
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 170
+skinparam defaultFontName Arial
+skinparam componentStyle rectangle
+top to bottom direction
+
+component UI [
+<b>Presentation layer (Qt Widgets)</b>
+LoginWindow, FirstRunDialog, UserWindowFactory
+StudentWindow, LecturerWindow, HodWindow, AdminWindow
+dialogs of each window, RoleWindow (fallback)
+]
+component APP [
+<b>Composition root</b>
+AppContext (builds and connects every part)
+DemoData
+]
+component SERV [
+<b>Application layer (services)</b>
+AuthService, AdminService, AssignmentService
+SubmissionService, ModerationService
+NotificationService, AuditService
+StudentViewService, LecturerViewService
+HodViewService, AdminViewService
+]
+component DOM [
+<b>Domain layer</b>
+Entities: User and its four roles, Course, Assignment, Extension,
+Submission, SubmissionVersion, MarkAuditEntry, Notification
+Rules: IPenaltyStrategy, late days, status transitions, UserFactory
+Interfaces: repositories, IPasswordHasher, ITransactionRunner, IReleaseObserver
+]
+component DATA [
+<b>Data access layer</b>
+Sqlite repositories (6), SqliteTransactionRunner
+Argon2Hasher (libsodium)
+DatabaseConnection, Statement
+]
+database "SQLite file" as DB
+
+UI --> APP : uses
+UI --> SERV : calls services
+APP ..> SERV : creates
+APP ..> DATA : creates
+SERV --> DOM : depends on
+DATA ..> DOM : implements interfaces
+DATA --> DB : parameterised SQL
+@enduml

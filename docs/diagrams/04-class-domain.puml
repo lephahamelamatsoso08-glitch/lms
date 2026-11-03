@@ -1,0 +1,163 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 170
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+hide empty members
+top to bottom direction
+
+enum Role {
+  Admin
+  Lecturer
+  HoD
+  Student
+}
+enum Action {
+  ManageUsers, ManageCourses, AssignAndEnrol
+  ResetPassword, ViewAuditLog
+  CreateAssignment, GrantExtension, MarkSubmission
+  ModerateMarks, ReleaseMarks
+  ViewOwnCourses, SubmitWork, ViewReleasedMarks
+}
+enum SubmissionStatus {
+  Submitted
+  Late
+  Marked
+  Moderated
+  Released
+}
+
+abstract class User {
+  #id_: int
+  #username_: string
+  #fullName_: string
+  #active_: bool
+  +id(): int
+  +username(): string
+  +fullName(): string
+  +isActive(): bool
+  +getRole(): Role {abstract}
+  +canPerform(action: Action): bool {abstract}
+}
+class Admin
+class Lecturer
+class HoD {
+  -departmentId_: int
+  +departmentId(): int
+}
+class Student {
+  -studentNumber_: string
+  +studentNumber(): string
+}
+class UserData <<struct>> {
+  +id: int
+  +username: string
+  +fullName: string
+  +active: bool
+  +departmentId: int
+  +studentNumber: string
+}
+class UserFactory {
+  +{static} create(role: Role, data: UserData): User
+}
+
+class Course {
+  -id_: int
+  -code_: string
+  -title_: string
+  -departmentId_: int
+}
+class Assignment {
+  -id_: int
+  -courseId_: int
+  -title_: string
+  -deadline_: TimePoint
+  -maxMark_: double
+  +deadlineFor(extension: Extension): TimePoint
+  +grantExtension(studentId: int, newDeadline: TimePoint, reason: string): Extension
+}
+class Extension {
+  -id_: int
+  -assignmentId_: int
+  -studentId_: int
+  -newDeadline_: TimePoint
+  -reason_: string
+}
+class Submission {
+  -id_: int
+  -assignmentId_: int
+  -studentId_: int
+  -status_: SubmissionStatus
+  -lateDays_: int
+  -rawMark_: double [0..1]
+  -finalMark_: double [0..1]
+  -feedback_: string
+  -releasedAt_: TimePoint [0..1]
+  +{static} isAllowed(from: SubmissionStatus, to: SubmissionStatus): bool
+  +transitionTo(next: SubmissionStatus): void
+  +applyMark(rawMark: double, finalMark: double, feedback: string): void
+  +changeFinalMark(mark: double): void
+  +release(when: TimePoint): void
+}
+class SubmissionVersion <<struct>> {
+  +versionNo: int
+  +filePath: string
+  +submittedAt: TimePoint
+}
+class MarkAuditEntry {
+  -id_: int
+  -submissionId_: int
+  -changedBy_: int
+  -changedAt_: TimePoint
+  -oldValue_: double [0..1]
+  -newValue_: double
+  -reason_: string
+}
+class Notification {
+  -id_: int
+  -userId_: int
+  -message_: string
+  -createdAt_: TimePoint
+  -isRead_: bool
+}
+
+interface IPenaltyStrategy {
+  +finalMark(rawMark: double, maxMark: double, lateDays: int): double
+}
+class TenPercentPerDayPenalty {
+  -ratePerDay_: double
+  -maxLateDays_: int
+}
+interface IReleaseObserver {
+  +onMarksReleased(assignmentId: int, studentIds: int[*]): void
+}
+interface IPasswordHasher {
+  +hash(password: string): string
+  +verify(password: string, storedHash: string): bool
+}
+interface ITransactionRunner {
+  +runInTransaction(work: function): void
+}
+
+User <|-- Admin
+User <|-- Lecturer
+User <|-- HoD
+User <|-- Student
+UserFactory ..> User : creates
+UserFactory ..> UserData : reads
+User ..> Role : getRole
+User ..> Action : canPerform
+
+Course "1" -- "0..*" Assignment : has
+Assignment "1" -- "0..*" Extension : has
+Student "1" -- "0..*" Extension : receives
+Assignment "1" -- "0..*" Submission : receives
+Student "1" -- "0..*" Submission : makes
+Submission "1" *-- "1..*" SubmissionVersion : files
+Submission "1" -- "0..*" MarkAuditEntry : audited by
+User "1" -- "0..*" Notification : receives
+Lecturer "1..*" -- "0..*" Course : teaches
+Student "0..*" -- "0..*" Course : enrolled in
+Submission ..> SubmissionStatus
+IPenaltyStrategy <|.. TenPercentPerDayPenalty
+@enduml

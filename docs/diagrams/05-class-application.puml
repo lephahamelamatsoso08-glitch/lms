@@ -1,0 +1,117 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 170
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+hide empty members
+left to right direction
+
+class AuthService {
+  +login(username: string, password: string): User
+}
+class AdminService {
+  +createUser(admin: User, role: Role, data: UserData, password: string): int
+  +deactivateUser(admin: User, userId: int): void
+  +reactivateUser(admin: User, userId: int): void
+  +resetPassword(admin: User, userId: int, newPassword: string): void
+  +createDepartment(admin: User, name: string): int
+  +createCourse(admin: User, code: string, title: string, departmentId: int): int
+  +assignLecturer(admin: User, courseId: int, lecturerId: int): void
+  +enrolStudent(admin: User, courseId: int, studentId: int): void
+  +{static} checkPassword(password: string): void
+}
+class AssignmentService {
+  +myCourses(lecturer: User): Course[*]
+  +listAssignments(lecturer: User, courseId: int): Assignment[*]
+  +listSubmissions(lecturer: User, assignmentId: int): Submission[*]
+  +createAssignment(lecturer: User, courseId: int, title: string, deadline: TimePoint, maxMark: double): int
+  +grantExtension(lecturer: User, assignmentId: int, studentId: int, newDeadline: TimePoint, reason: string): int
+}
+class SubmissionService {
+  +submit(student: User, assignmentId: int, filePath: string): SubmitResult
+  +mark(lecturer: User, submissionId: int, rawMark: double, feedback: string, reason: string): double
+}
+class ModerationService {
+  -observers_: IReleaseObserver [0..*]
+  +attach(observer: IReleaseObserver): void
+  +listMarked(hod: User, assignmentId: int): Submission[*]
+  +approve(hod: User, submissionId: int): void
+  +changeMark(hod: User, submissionId: int, newMark: double, reason: string): void
+  +release(hod: User, assignmentId: int): ReleaseResult
+}
+class NotificationService {
+  +onMarksReleased(assignmentId: int, studentIds: int[*]): void
+  +list(user: User): Notification[*]
+  +unreadCount(user: User): int
+  +markRead(user: User, notificationId: int): void
+}
+class AuditService {
+  +recordMarkChange(submissionId: int, changedBy: int, oldValue: double, newValue: double, reason: string): int
+  +history(viewer: User, submissionId: int): MarkAuditEntry[*]
+  +all(viewer: User): MarkAuditEntry[*]
+}
+class StudentViewService {
+  +myCourses(student: User): Course[*]
+  +myAssignments(student: User, courseId: int): StudentAssignmentItem[*]
+  +mySubmission(student: User, assignmentId: int): StudentSubmissionView
+}
+class LecturerViewService {
+  +rows(lecturer: User, assignmentId: int): LecturerSubmissionRow[*]
+}
+class HodViewService {
+  +courses(hod: User): Course[*]
+  +assignments(hod: User, courseId: int): Assignment[*]
+  +rows(hod: User, assignmentId: int): HodSubmissionRow[*]
+  +history(hod: User, submissionId: int): HodAuditRow[*]
+}
+class AdminViewService {
+  +users(admin: User): AdminUserRow[*]
+  +departments(admin: User): DepartmentInfo[*]
+  +courses(admin: User): AdminCourseRow[*]
+  +auditLog(admin: User): AdminAuditRow[*]
+}
+
+class AuthenticationError <<exception>>
+class AccessDeniedError <<exception>>
+class SubmissionNotAllowedError <<exception>>
+
+interface "Repository interfaces" as Repos {
+  IUserRepository
+  ICourseRepository
+  IAssignmentRepository
+  ISubmissionRepository
+  IAuditRepository
+  INotificationRepository
+}
+interface IPasswordHasher
+interface IPenaltyStrategy
+interface ITransactionRunner
+interface IReleaseObserver
+
+AuthService --> Repos
+AuthService --> IPasswordHasher
+AdminService --> Repos
+AdminService --> IPasswordHasher
+AssignmentService --> Repos
+SubmissionService --> Repos
+SubmissionService --> IPenaltyStrategy
+SubmissionService --> AuditService
+SubmissionService --> ITransactionRunner
+ModerationService --> Repos
+ModerationService --> AuditService
+ModerationService --> ITransactionRunner
+ModerationService o--> "0..*" IReleaseObserver
+NotificationService ..|> IReleaseObserver
+NotificationService --> Repos
+NotificationService --> ITransactionRunner
+AuditService --> Repos
+StudentViewService --> Repos
+LecturerViewService --> Repos
+HodViewService --> Repos
+HodViewService --> AuditService
+AdminViewService --> Repos
+AdminViewService --> AuditService
+AuthService ..> AuthenticationError : throws
+SubmissionService ..> SubmissionNotAllowedError : throws
+ModerationService ..> AccessDeniedError : throws
+@enduml

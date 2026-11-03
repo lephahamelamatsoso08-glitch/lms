@@ -1,0 +1,112 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 170
+skinparam classAttributeIconSize 0
+skinparam defaultFontName Arial
+hide empty members
+left to right direction
+
+interface IUserRepository {
+  +add(user: User, passwordHash: string): int
+  +findById(id: int): User
+  +findByUsername(username: string): User
+  +findPasswordHash(username: string): string
+  +setPasswordHash(userId: int, hash: string): void
+  +setActive(userId: int, active: bool): void
+  +findAll(): User[*]
+}
+interface ICourseRepository {
+  +addDepartment(name: string): int
+  +add(course: Course): int
+  +findById(id: int): Course
+  +findByDepartment(departmentId: int): Course[*]
+  +findAll(): Course[*]
+  +findDepartments(): DepartmentInfo[*]
+  +enrolStudent(courseId: int, studentId: int): void
+  +assignLecturer(courseId: int, lecturerId: int): void
+  +isStudentEnrolled(studentId: int, courseId: int): bool
+  +isLecturerAssigned(lecturerId: int, courseId: int): bool
+  +findForStudent(studentId: int): Course[*]
+  +findForLecturer(lecturerId: int): Course[*]
+  +findStudents(courseId: int): StudentInfo[*]
+  +findLecturers(courseId: int): PersonInfo[*]
+}
+interface IAssignmentRepository {
+  +add(assignment: Assignment): int
+  +findById(id: int): Assignment
+  +findByCourse(courseId: int): Assignment[*]
+  +saveExtension(extension: Extension): int
+  +findExtension(assignmentId: int, studentId: int): Extension
+  +getDeadlineFor(studentId: int, assignmentId: int): TimePoint
+}
+interface ISubmissionRepository {
+  +add(submission: Submission, firstVersion: SubmissionVersion): int
+  +findById(id: int): Submission
+  +findByStudentAndAssignment(studentId: int, assignmentId: int): Submission
+  +findByAssignment(assignmentId: int): Submission[*]
+  +save(submission: Submission): void
+  +addVersion(submissionId: int, version: SubmissionVersion): int
+  +findVersions(submissionId: int): SubmissionVersion[*]
+}
+interface IAuditRepository {
+  +add(entry: MarkAuditEntry): int
+  +findBySubmission(submissionId: int): MarkAuditEntry[*]
+  +findAll(): MarkAuditEntry[*]
+}
+interface INotificationRepository {
+  +add(notification: Notification): int
+  +findForUser(userId: int): Notification[*]
+  +countUnread(userId: int): int
+  +markRead(userId: int, notificationId: int): bool
+}
+interface IPasswordHasher
+interface ITransactionRunner
+
+class SqliteUserRepository
+class SqliteCourseRepository
+class SqliteAssignmentRepository
+class SqliteSubmissionRepository
+class SqliteAuditRepository
+class SqliteNotificationRepository
+class SqliteTransactionRunner
+class Argon2Hasher {
+  Argon2id from libsodium, random salt
+}
+class DatabaseConnection {
+  +prepare(sql: string): Statement
+  +runScript(sql: string): void
+  +beginTransaction(): void
+  +commit(): void
+  +rollback(): void
+  +lastInsertId(): int
+}
+class Statement {
+  +bindInt(index: int, value: int): void
+  +bindDouble(index: int, value: double): void
+  +bindText(index: int, value: string): void
+  +bindNull(index: int): void
+  +step(): bool
+  +columnInt(column: int): int
+  +columnText(column: int): string
+}
+class DatabaseError <<exception>>
+
+IUserRepository <|.. SqliteUserRepository
+ICourseRepository <|.. SqliteCourseRepository
+IAssignmentRepository <|.. SqliteAssignmentRepository
+ISubmissionRepository <|.. SqliteSubmissionRepository
+IAuditRepository <|.. SqliteAuditRepository
+INotificationRepository <|.. SqliteNotificationRepository
+ITransactionRunner <|.. SqliteTransactionRunner
+IPasswordHasher <|.. Argon2Hasher
+
+SqliteUserRepository --> DatabaseConnection
+SqliteCourseRepository --> DatabaseConnection
+SqliteAssignmentRepository --> DatabaseConnection
+SqliteSubmissionRepository --> DatabaseConnection
+SqliteAuditRepository --> DatabaseConnection
+SqliteNotificationRepository --> DatabaseConnection
+SqliteTransactionRunner --> DatabaseConnection
+DatabaseConnection ..> Statement : creates
+Statement ..> DatabaseError : throws
+@enduml

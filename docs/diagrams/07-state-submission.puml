@@ -1,0 +1,18 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 170
+skinparam defaultFontName Arial
+hide empty description
+
+[*] --> Submitted : submitted on time
+[*] --> Late : submitted after the\nstudent's deadline
+Submitted --> Submitted : resubmit before the deadline\n(new file version)
+Submitted --> Marked : lecturer marks
+Late --> Marked : lecturer marks
+Marked --> Marked : lecturer re-marks (reason)\nor HoD changes the mark (reason)
+Marked --> Moderated : HoD approves
+Moderated --> Released : HoD releases
+Released --> [*]
+note right of Marked : The lecturer sees the mark.\nThe student does not.
+note right of Released : Only now the student sees\nthe mark and the feedback.\nA released mark is final.
+@enduml

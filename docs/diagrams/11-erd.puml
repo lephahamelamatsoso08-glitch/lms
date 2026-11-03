@@ -1,0 +1,114 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 170
+skinparam defaultFontName Arial
+hide circle
+skinparam linetype ortho
+
+entity user_account {
+  *id : INTEGER <<PK>>
+  --
+  username : TEXT <<unique>>
+  full_name : TEXT
+  password_hash : TEXT
+  role : TEXT
+  active : INTEGER
+}
+entity student {
+  *user_id : INTEGER <<PK, FK>>
+  --
+  student_number : TEXT <<unique>>
+}
+entity department {
+  *id : INTEGER <<PK>>
+  --
+  name : TEXT <<unique>>
+  hod_user_id : INTEGER <<FK, unique>>
+}
+entity course {
+  *id : INTEGER <<PK>>
+  --
+  code : TEXT <<unique>>
+  title : TEXT
+  department_id : INTEGER <<FK>>
+}
+entity course_lecturer {
+  *course_id : INTEGER <<PK, FK>>
+  *lecturer_id : INTEGER <<PK, FK>>
+}
+entity enrolment {
+  *course_id : INTEGER <<PK, FK>>
+  *student_id : INTEGER <<PK, FK>>
+}
+entity assignment {
+  *id : INTEGER <<PK>>
+  --
+  course_id : INTEGER <<FK>>
+  title : TEXT
+  deadline : TEXT
+  max_mark : REAL
+}
+entity extension {
+  *id : INTEGER <<PK>>
+  --
+  assignment_id : INTEGER <<FK>>
+  student_id : INTEGER <<FK>>
+  new_deadline : TEXT
+  reason : TEXT
+}
+entity submission {
+  *id : INTEGER <<PK>>
+  --
+  assignment_id : INTEGER <<FK>>
+  student_id : INTEGER <<FK>>
+  status : TEXT
+  late_days : INTEGER
+  raw_mark : REAL
+  final_mark : REAL
+  feedback : TEXT
+  released_at : TEXT
+}
+entity submission_version {
+  *id : INTEGER <<PK>>
+  --
+  submission_id : INTEGER <<FK>>
+  version_no : INTEGER
+  file_path : TEXT
+  submitted_at : TEXT
+}
+entity mark_audit {
+  *id : INTEGER <<PK>>
+  --
+  submission_id : INTEGER <<FK>>
+  changed_by : INTEGER <<FK>>
+  changed_at : TEXT
+  old_value : REAL
+  new_value : REAL
+  reason : TEXT
+}
+entity notification {
+  *id : INTEGER <<PK>>
+  --
+  user_id : INTEGER <<FK>>
+  message : TEXT
+  created_at : TEXT
+  is_read : INTEGER
+}
+
+user_account ||--o| student
+user_account |o--o| department : heads
+department ||--o{ course
+course ||--o{ course_lecturer
+user_account ||--o{ course_lecturer
+course ||--o{ enrolment
+student ||--o{ enrolment
+course ||--o{ assignment
+assignment ||--o{ extension
+student ||--o{ extension
+assignment ||--o{ submission
+student ||--o{ submission
+submission ||--|{ submission_version
+submission ||--o{ mark_audit
+user_account ||--o{ mark_audit
+user_account ||--o{ notification
+@enduml

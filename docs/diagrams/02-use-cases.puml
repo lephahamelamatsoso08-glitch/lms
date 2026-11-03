@@ -1,0 +1,74 @@
+@startuml
+left to right direction
+skinparam shadowing false
+skinparam dpi 170
+skinparam usecase {
+  BackgroundColor #FFFFFF
+  BorderColor #1F3864
+}
+skinparam actor {
+  BackgroundColor #FFFFFF
+  BorderColor #1F3864
+}
+skinparam rectangle {
+  BorderColor #1F3864
+}
+
+actor "User\n(abstract)" as User
+actor "Administrator" as Admin
+actor "Lecturer" as Lecturer
+actor "Head of Department" as HoD
+actor "Student" as Student
+
+User <|-- Admin
+User <|-- Lecturer
+User <|-- HoD
+User <|-- Student
+
+rectangle "Moderated LMS" {
+  usecase "UC-1\nLog in" as UC1
+  usecase "UC-2\nManage users" as UC2
+  usecase "UC-3\nManage departments\nand courses" as UC3
+  usecase "UC-4\nAssign lecturers\nand enrol students" as UC4
+  usecase "UC-20\nSet up first\nadministrator" as UC20
+  usecase "UC-5\nCreate assignment" as UC5
+  usecase "UC-6\nGrant extension" as UC6
+  usecase "UC-7\nMark submission" as UC7
+  usecase "UC-8\nWrite feedback" as UC8
+  usecase "UC-9\nModerate marks" as UC9
+  usecase "UC-10\nChange mark" as UC10
+  usecase "UC-11\nRelease marks" as UC11
+  usecase "UC-12\nNotify students" as UC12
+  usecase "UC-19\nView audit log" as UC19
+  usecase "UC-18\nRecord audit entry" as UC18
+  usecase "UC-13\nView courses\nand assignments" as UC13
+  usecase "UC-14\nSubmit assignment" as UC14
+  usecase "UC-15\nResubmit" as UC15
+  usecase "UC-16\nApply late penalty" as UC16
+  usecase "UC-17\nView released marks\nand feedback" as UC17
+}
+
+User --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC20
+Admin --> UC19
+Lecturer --> UC5
+Lecturer --> UC6
+Lecturer --> UC7
+HoD --> UC9
+HoD --> UC11
+HoD --> UC19
+Student --> UC13
+Student --> UC14
+Student --> UC17
+
+UC7 ..> UC8 : <<include>>
+UC7 ..> UC18 : <<include>>
+UC10 ..> UC18 : <<include>>
+UC15 ..> UC14 : <<extend>>
+UC16 ..> UC14 : <<extend>>
+UC10 ..> UC9 : <<extend>>
+UC12 ..> UC11 : <<extend>>
+@enduml

@@ -1,0 +1,53 @@
+@startgantt
+printscale weekly
+Project starts 2026-09-21
+saturday are closed
+sunday are closed
+
+-- Planning and requirements --
+[1 Planning and management] as [P1] starts 2026-09-21 and lasts 2 days
+[2 Requirements engineering] as [P2] starts at [P1]'s end and lasts 5 days
+[Gate 1] happens at [P2]'s end
+
+-- Design --
+[3.1-3.2 Architecture, class diagram] as [P31] starts at [P2]'s end and lasts 3 days
+[5.1 Test plan] as [P51] starts at [P2]'s end and lasts 3 days
+[3.3-3.4 Behavioural models, database] as [P33] starts at [P31]'s end and lasts 5 days
+[4.1 and 6.1 Setup: Git, CMake, CI] as [P41] starts at [P31]'s end and lasts 3 days
+[Gate 2] happens at [P33]'s end
+
+-- Implementation and testing --
+[4.2 Database and data-access layer] as [P42] starts at [P33]'s end and lasts 3 days
+[4.3 Business logic and security] as [P43] starts at [P42]'s end and lasts 4 days
+[5.2 Unit and integration tests] as [P52] starts at [P42]'s end and lasts 5 days
+[6.2 and 6.3 Static analysis, metrics, review] as [P6] starts at [P43]'s end and lasts 4 days
+[4.4 Qt interface] as [P44] starts at [P43]'s end and lasts 5 days
+[5.3 System and acceptance tests] as [P53] starts at [P44]'s end and lasts 2 days
+[Gate 3] happens at [P53]'s end
+
+-- Release and completion --
+[7 Deployment] as [P7] starts at [P44]'s end and lasts 3 days
+[Release v1.0] happens at [P7]'s end
+[8 Maintenance: CR1 and release v1.1] as [P8] starts at [P7]'s end and lasts 3 days
+[Release v1.1] happens at [P8]'s end
+[9 Final report and viva preparation] as [P9] starts at [P8]'s end and lasts 2 days
+[Report writing after each phase] starts 2026-09-23 and ends 2026-11-04
+[Submission deadline] happens on 2026-11-07
+
+[P1] is colored in Salmon/Red
+[P2] is colored in Salmon/Red
+[P31] is colored in Salmon/Red
+[P33] is colored in Salmon/Red
+[P42] is colored in Salmon/Red
+[P43] is colored in Salmon/Red
+[P44] is colored in Salmon/Red
+[P7] is colored in Salmon/Red
+[P8] is colored in Salmon/Red
+[P9] is colored in Salmon/Red
+[P51] is colored in LightBlue/Blue
+[P41] is colored in LightBlue/Blue
+[P52] is colored in LightBlue/Blue
+[P6] is colored in LightBlue/Blue
+[P53] is colored in LightBlue/Blue
+[Report writing after each phase] is colored in LightGray/Gray
+@endgantt

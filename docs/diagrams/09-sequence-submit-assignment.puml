@@ -1,0 +1,47 @@
+@startuml
+skinparam shadowing false
+skinparam dpi 150
+skinparam defaultFontName Arial
+skinparam sequenceMessageAlign left
+actor Student
+participant StudentWindow as UI
+participant SubmissionService as Svc
+participant IAssignmentRepository as AR
+participant ICourseRepository as CR
+participant IPenaltyStrategy as PS
+participant ISubmissionRepository as SR
+
+Student -> UI : choose file, click Submit
+UI -> Svc : submit(student, assignmentId, filePath)
+Svc -> Svc : check role (SubmitWork) and file type
+alt not an active student, or file type not allowed
+  Svc --> UI : AccessDeniedError / invalid_argument
+  UI --> Student : show message
+else allowed
+  Svc -> AR : findById(assignmentId)
+  Svc -> CR : isStudentEnrolled(studentId, courseId)
+  alt not enrolled
+    Svc --> UI : AccessDeniedError
+    UI --> Student : show message
+  else enrolled
+    Svc -> AR : getDeadlineFor(studentId, assignmentId)
+    note right : the student's own deadline,\nwith an extension if there is one
+    Svc -> Svc : lateDays = calculateLateDays(deadline, now)
+    Svc -> PS : finalMark(maxMark, maxMark, lateDays)
+    PS --> Svc : highest possible mark
+    Svc -> SR : findByStudentAndAssignment(studentId, assignmentId)
+    alt no submission yet, lateDays = 0 (on time)
+      Svc -> SR : add(Submission Submitted, version 1)
+    else no submission yet, lateDays > 0 (late path)
+      Svc -> SR : add(Submission Late with lateDays, version 1)
+    else submission exists, status Submitted, lateDays = 0 (resubmission path)
+      Svc -> SR : addVersion(submissionId, new version)
+    else submission exists, late or already marked
+      Svc --> UI : SubmissionNotAllowedError
+      UI --> Student : show message
+    end
+    Svc --> UI : SubmitResult (version, late days, highest mark)
+    UI --> Student : confirmation
+  end
+end
+@enduml
